@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_employee_form_inherited" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherited</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']/button[1]" position="before">
+                    <button string="Tạo tài khoản" type="object" name="diligo_create" groups="base.group_erp_manager"
+                            class="oe_stat_button" icon="fa-user"
+                            attrs="{'invisible': [('user_id', '!=', False)]}"/>
+                    <button string="Phân quyền" type="object" name="diligo_create" groups="base.group_erp_manager"
+                            class="oe_stat_button" icon="fa-edit"
+                            attrs="{'invisible': [('user_id', '=', False)]}"/>
+                </xpath>
+
+                <xpath expr="//div[@class='oe_title']" position="replace">
+                    <div class="oe_title" style="width:70%">
+                        <label for="name" class="oe_edit_only" modifiers="{}"/>
+                        <h1>
+                            <field name="name" placeholder="Tên nhân viên" required="True"
+                                   modifiers="{'required':true}"/>
+                        </h1>
+                        <div>
+                            <div style="width: 50%;float: right;">
+                                <label for="employee_id" modifiers="{}"/>
+                                <h3 modifiers="{}">
+                                    <field name="employee_id" modifiers="{}" style="width:50%" readonly="1" force_save="1"/>
+                                </h3>
+                            </div>
+                             <div>
+                                <label for="employee_code" modifiers="{}"/>
+                                <h3>
+                                    <field name="employee_code" modifiers="{}" style="width:50%" readonly="1" force_save="1"/>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//header//button" position="replace">
+                    <field name="state" widget="statusbar" statusbar_visible="working,maternity,terminated"/>
+                </xpath>
+                <xpath expr="//field[@name='mobile_phone']" position="before">
+                    <field name="email"/>
+                </xpath>
+                <xpath expr="//field[@name='mobile_phone']" position="after">
+                    <field name="birthday"/>
+                </xpath>
+               <xpath expr="//field[@name='work_location_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="channel_id" required="1" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                    <field name="area" string="Khu vực"/>
+                    <field name="area_manager" string="Khu vực quản lý" widget="many2many_tags"/>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="replace">
+                    <field name="department_id" required="1" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                    <field name="position"/>
+                    <field name="group_job"/>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="replace">
+                    <field name="job_id" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='identification_id']" position="replace">
+                    <field name="identification_id"/>
+                    <field name="issue_date"/>
+                    <field name="id_issue_place"/>
+                    <field name="mst_account_id"/>
+                </xpath>
+                <xpath expr="//field[@name='study_school']" position="after">
+                    <field name="graduation_year"/>
+                    <field name="classification"/>
+                </xpath>
+<!--                <xpath expr="//div[@class='oe_chatter']" position="replace">-->
+<!--                </xpath>-->
+                <xpath expr="//field[@name='parent_id']" position="replace">
+                    <field name="parent_id" domain="[('id', '!=', id)]"/>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='joining_date']" position="after">
+                    <field name="work_duration"/>
+                </xpath>
+<!--                <xpath expr="//page[@name='received_badges']" position="replace">-->
+<!--                </xpath>-->
+<!--                <xpath expr="//group[@name='payroll_group']" position="attributes">-->
+<!--                    <attribute name="invisible">1</attribute>-->
+<!--                </xpath>-->
+                <xpath expr="//group[@name='application_group']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='address_home_id']" position="replace">
+                    <field name="address_home_id" invisible="1"/>
+                    <field name="res_country_state"/>
+                    <field name="res_country_district" domain="[('state_id', '=', res_country_state)]"/>
+                    <field name="res_country_ward" domain="[('district_id', '=', res_country_district)]"/>
+                    <field name="apartment_number"/>
+                    <field name="address_home" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='id_attachment_id']" position="after">
+                    <field name="bank"/>
+                    <field name="bank_branch"/>
+                    <field name="bank_account"/>
+                </xpath>
+                <page name="hr_settings" position="after">
+                    <page name="stage_history" string="Lịch sử trạng thái">
+                        <field name="stages_history">
+                            <tree create="0">
+                                <field name="state" string="Trạng thái"/>
+                                <field name="start_date" string="Ngày bắt đầu"/>
+                                <field name="end_date" string="Ngày kết thúc"/>
+                                <field name="duration" sum="Total" string="Thời gian (Ngày)"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+                <xpath expr="//field[@name='private_email']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='pin']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sci_hr_employee_view_search_inherit" model="ir.ui.view">
+            <field name="name">sci_hr_employee_view_search_inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" string="Nhân viên"
+                           filter_domain="['|','|','|','|',('work_email', 'ilike', self), ('employee_id', 'ilike', self),
+                           ('name', 'ilike', self), ('mobile_phone', 'ilike', self), ('work_phone', 'ilike', self)]"/>
+                </xpath>
+                <xpath expr="//filter[@name='group_job']" position="after">
+                    <filter string="Ngày vào làm" name="group_joining_date"
+                            context="{'group_by':'joining_date:month'}"/>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="channel_id" icon="fa-star" enable_counters="1"/>
+				</xpath>
+            </field>
+        </record>
+
+         <record id="view_employee_tree_inherited" model="ir.ui.view">
+            <field name="name">hr.employee.tree.inherited</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='activity_ids']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='activity_user_id']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='activity_date_deadline']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='company_id']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="work_duration"/>
+                </xpath>
+             </field>
+         </record>
+
+        <template id="print_employee_badge_inherit" inherit_id="hr.print_employee_badge">
+            <xpath expr="//div[@class='col-md-6']" position="replace">
+                <table style="width:243pt; height:153pt; border: 1pt solid black; border-collapse:separate; border-radius:8pt; margin:5pt">
+                    <td style="width:33%;" valign="center">
+                        <table style="width:77pt; height:150pt">
+                            <tr style="height:30%">
+                                <td align="center" valign="center">
+                                    <img t-if="employee.company_id.logo" t-att-src="image_data_uri(employee.company_id.logo)" style="max-height:45pt;max-width:90%" alt="Company Logo"/>
+                                </td>
+                            </tr>
+                            <tr style="height:70%;">
+                                <td align="center" valign="center">
+                                    <img t-att-src="image_data_uri(employee.avatar_1920)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:67%" valign="center">
+                        <table style="width:155pt; height:85pt">
+                            <tr><th><div style="font-size:15pt; margin-bottom:0pt;margin-top:0pt;" align="center"><t t-esc="employee.name"/></div></th></tr>
+                            <tr><td><div align="center" style="font-size:10pt;margin-bottom:5pt;"><t t-esc="employee.job_id.name"/></div></td></tr>
+                            <tr><td><div t-if="employee.employee_id" t-field="employee.employee_id" t-options="{'widget': 'barcode', 'width': 600, 'height': 120, 'img_style': 'max-height:50pt;max-width:100%;', 'img_align': 'center'}"/></td></tr>
+                        </table>
+                    </td>
+                </table>
+            </xpath>
+        </template>
+
+        <menuitem
+            id="hr.menu_human_resources_configuration"
+            name="Configuration"
+            parent="hr.menu_hr_root"
+            groups="hr.group_hr_manager"
+            sequence="100"/>
+    </data>
+</odoo>

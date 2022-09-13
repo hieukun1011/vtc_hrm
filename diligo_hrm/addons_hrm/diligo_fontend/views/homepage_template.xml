@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+
+    <!--    template list job-->
+    <template id="diligo_homepage" inherit_id="website.homepage">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <section id="main">
+                <div class="introduce ">
+
+                    <div class="introduce-center">
+                        <h2 class="introduce-title ">Việc làm Diligo</h2>
+                        <h1 class="introduce-subtitle">
+                            <span>30</span>
+                            công việc đang chờ bạn
+                        </h1>
+                        <img class="introduce-thumb d-lg-block d-xl-block"
+                             src="/diligo_fontend/static/src/img/undraw_voice_interface_re_206s.svg" alt=""/>
+                        <form class="search-box">
+                            <input placeholder="Tìm kiếm việc làm tại diligo"/>
+                            <button class="search-btn" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <p class="introduce-center d-none d-lg-block d-xl-block">
+                    </p>
+                    <!-- <div class="introduce-thumb2 "><img src="./img/undraw_transfer_money_rywa.svg " alt=" "></div> -->
+                    <!-- <div><a href="# " class="btn btn-rounded ">Gia nhập cùng Diligo</a> -->
+                </div>
+                <!--                </div>-->
+                <div class="middle d-block">
+                    <div class="job container ">
+                        <div class="job-title ">
+                            <strong>Tìm việc theo vị trí</strong>
+                        </div>
+                        <div class="job-details ">
+                            <div class="job-detail-box ">
+                                <div class="job-find row">
+                                    <div href="# " class="job-find-card">
+                                        <img src="/diligo_fontend/static/src/img/viecvp.png " alt=" "
+                                             class="job-find-img"/>
+                                        <div class="job-detail-box row">
+                                            <div class="d-flex flex-column ml-4">
+                                                <t t-foreach="jobs_office" t-as="office">
+                                                    <a t-attf-href="/jobs/detail/#{ slug(office) }"
+                                                       class="job-detail-link ">
+                                                        <p t-field="office.name" style="margin-bottom: 0;" t-att-title="office.name"/>
+                                                    </a>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div href="# " class="job-find-card">
+                                        <img src="/diligo_fontend/static/src/img/nhamay.png " alt=" "
+                                             class="job-find-img"/>
+                                        <div class="job-detail-box row">
+                                            <div class="d-flex flex-column ml-4">
+                                                <t t-foreach="jobs_factory" t-as="factory">
+                                                    <a t-attf-href="/jobs/detail/#{ slug(factory) }"
+                                                       class="job-detail-link ">
+                                                         <p t-field="factory.name" style="margin-bottom: 0;"  t-att-title="factory.name"/>
+                                                    </a>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div href="# " class="job-find-card">
+                                        <img src="/diligo_fontend/static/src/img/miennam.png " alt=" "
+                                             class="job-find-img"/>
+                                        <div class="job-detail-box row">
+                                            <div class="d-flex flex-column ml-4">
+                                                <t t-foreach="jobs_south" t-as="south">
+                                                    <a t-attf-href="/jobs/detail/#{ slug(south) }"
+                                                       class="job-detail-link ">
+                                                         <p t-field="south.name" style="margin-bottom: 0;" t-att-title="south.name"/>
+                                                    </a>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div href="# " class="job-find-card">
+                                        <img src="/diligo_fontend/static/src/img/npp.png " alt=" "
+                                             class="job-find-img"/>
+                                        <div class="job-detail-box row">
+                                            <div class="d-flex flex-column ml-4">
+                                                <a href="/apply-distributors" class="job-detail-link ">Đăng ký</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about container">
+                        <div class="about-image ">
+                            <img src="/diligo_fontend/static/src/img/tgd.jpg " alt=" " id="viewer "/>
+                        </div>
+                        <div class="about-desc ">
+                            <div class="about-desc-title ">
+                                Lắng nghe người Diligo Holdings
+                            </div>
+                            <div class="about-desc-member ">
+                                <img src="/diligo_fontend/static/src/img/tgd.jpg " alt=" " class="thumbnail "
+                                     onclick="ChangeImage( '/diligo_fontend/static/src/img/tgd.jpg'); changeQuote(
+                        'Trong mỗi con người đều có rất nhiều năng lượng đang ngủ. Muốn đánh thức nó thì phải kích hoạt, phải đặt ra những thách thức thật sự');changeText( 'Vũ Đức Sỹ - Tổng giám đốc'); "/>
+                                <img src="/diligo_fontend/static/src/img/tbtc.jpg " alt=" " class="thumbnail "
+                                     onclick="ChangeImage( '/diligo_fontend/static/src/img/tbtc.jpg '); changeQuote( 'Sức mạnh của niềm tin vào ngày mai tươi sáng đã giúp chúng ta vượt qua nhiều trở ngại chông gai. Sức mạnh của việc hội tụ tài năng đã giúp chúng ta tiến những bước tiến dài trên các lĩnh vực mà chúng ta cạnh tranh. Cùng nhau, chúng ta hội tụ khát vọng và tài năng Việt Nam để tạo nên một sức mạnh kinh doanh thần kỳ. Cùng nhau, chúng ta sẽ xây dựng nên một tương lai ấm no hạnh phúc cho mọi người');changeText(
+                        'Trưởng ban tài chính'); "/>
+                                <img src="/diligo_fontend/static/src/img/ketoantruong.jpg " alt=" "
+                                     class="thumbnail "
+                                     onclick="ChangeImage( '/diligo_fontend/static/src/img/ketoantruong.jpg '); changeQuote(
+                            'Trong công việc, mình được hoàn toàn tự chủ và sáng tạo trong việc. Các sếp và đồng nghiệp của mình đều trẻ trung, cởi mở, hứng thú trong việc ứng dụng công nghệ mới. Có lẽ sự kết hợp của tất cả các yếu tố này khiến mỗi ngày tại Diligo với mình đều là một ngày tràn đầy sự thú vị');changeText( 'Kế toán trưởng'); "/>
+                                <img src="/diligo_fontend/static/src/img/truongbancntt.jpg " alt=" "
+                                     class="thumbnail "
+                                     onclick="ChangeImage( '/diligo_fontend/static/src/img/truongbancntt.jpg '); changeQuote(
+                        'Trong đợt dịch lần thứ 4 này, chúng ta có thể thấy rằng công nghệ một lần nữa khẳng định tầm quan trọng, công nghệ chính là một phép thuật. Diligo là một môi trường tuyệt vời cho các ý tưởng và cơ hội hiện thực hóa chúng !');changeText( 'Trưởng ban công nghệ'); "/>
+                                <img src="/diligo_fontend/static/src/img/truongbanhientai.jpg " alt=" "
+                                     class="thumbnail " onclick="ChangeImage( '/diligo_fontend/static/src/img/truongbanhientai.jpg '); changeQuote(
+                        'Tại Diligo, bạn luôn được khuyến khích để tìm ra những thứ mới, hoặc tìm ra giải pháp đột phá cho các vấn đề cũ');changeText( 'Trưởng ban hiền tài'); "/>
+                                <img src="/diligo_fontend/static/src/img/truongekipdichvukhachhang.jpg " alt=" "
+                                     class="thumbnail " onclick="ChangeImage( '/diligo_fontend/static/src/img/truongekipdichvukhachhang.jpg '); changeQuote(
+                        'Tại Diligo, bạn luôn được khuyến khích để tìm ra những thứ mới, hoặc tìm ra giải pháp đột phá cho các vấn đề cũ');changeText( 'Trưởng Ekip dịch vụ khách hàng'); "/>
+                                <img src="/diligo_fontend/static/src/img/hieutruong.jpg " alt=" " class="thumbnail "
+                                     onclick="ChangeImage( '/diligo_fontend/static/src/img/hieutruong.jpg '); changeQuote(
+                        'Tại Diligo, bạn luôn được khuyến khích để tìm ra những thứ mới, hoặc tìm ra giải pháp đột phá cho các vấn đề cũ');changeText( 'Hiệu trưởng trường Diligo'); "/>
+
+                            </div>
+                            <div class="about-desc-quote ">
+                                <p id="quotes ">"Trong mỗi con người đều có rất nhiều năng lượng đang ngủ. Muốn đánh
+                                    thức nó thì phải kích hoạt, phải đặt ra những thách thức thật sự "
+                                </p>
+                            </div>
+                            <div class="about-desc-author ">
+                                <p id="author ">Vũ Đức Sỹ - Tổng giám đốc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="research container">
+                        <div class="research-box ">
+                            <div class="research-box-item ">
+                                <div class="research-icon ">
+                                    <img src="/diligo_fontend/static/src/img/icon1.PNG " alt=" "/>
+                                </div>
+                                <div class="research-title ">Phúc lợi cạnh tranh</div>
+                                <div class="research-desc ">
+                                    <p>Diligo thấu hiểu và quan tâm tới đội ngũ CBNV bằng những phúc lợi thiết thực,
+                                        cạnh tranh và vượt trội trên thị trường.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="research-box ">
+                            <div class="research-box-item ">
+                                <div class="research-icon ">
+                                    <img src="/diligo_fontend/static/src/img/icon2.PNG " alt=" "/>
+                                </div>
+                                <div class="research-title ">Môi trường nhân văn và có trách nhiệm</div>
+                                <div class="research-desc ">
+                                    <p>Gia nhập Diligo, các bạn sẽ được làm việc trong môi trường nhân văn, đề cao
+                                        con
+                                        người, nơi làm việc lý tưởng để cống hiến tận tâm và phát triển sự nghiệp
+                                        bền
+                                        vững.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="research-box ">
+                            <div class="research-box-item ">
+                                <div class="research-icon ">
+                                    <img src="/diligo_fontend/static/src/img/icon3.png " alt=" "/>
+                                </div>
+                                <div class="research-title ">Diligo có tầm nhìn Quốc tế</div>
+                                <div class="research-desc ">
+                                    <p>Với tầm nhìn vươn tầm khu vực và quốc tế, Diligo đã và đang hợp tác với những
+                                        thương hiệu hàng đầu thế giới; là cơ hội phát triển nghề nghiệp với các dự
+                                        án
+                                        lớn.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="research-box ">
+                            <div class="research-box-item ">
+                                <div class="research-icon ">
+                                    <img src="/diligo_fontend/static/src/img/icon4.png " alt=" "/>
+                                </div>
+                                <div class="research-title ">Đồng hành cùng Diligo</div>
+                                <div class="research-desc ">
+                                    <p>Người Diligo tự hào được đồng hành và truyền cảm hứng mỗi ngày từ “khát vọng
+                                        dẫn
+                                        đầu” mạnh mẽ...
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="life-content">
+                    <div class="life-icon "></div>
+                    <strong>Tin tức - Văn hóa</strong>
+                    <div class="life-wrap container">
+                        <div class="life-box ">
+                            <div class="life-box-item ">
+                                <div class="life-box-image ">
+                                    <img src="/diligo_fontend/static/src/img/life1.jpg" alt=" "/>
+                                </div>
+                                <div class="life-box-desc ">DILIGO HOLDINGS HỢP TÁC ĐÀO TẠO VÀ PHÁT TRIỂN NGUỒN NHÂN LỰC
+                                    VỚI VIỆN ĐÀO TẠO QUỐC TẾ FPT
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="life-box ">
+                            <div class="life-box-item ">
+                                <div class="life-box-image ">
+                                    <img src="/diligo_fontend/static/src/img/life2.jpg " alt=" "/>
+                                </div>
+                                <div class="life-box-desc ">Họp tổng kết AOP 2021
+                                    <p class="life-box-desc ">Diligo Holdings</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="life-box ">
+                            <div class="life-box-item ">
+                                <div class="life-box-image ">
+                                    <img src="/diligo_fontend/static/src/img/life3.jpg " alt=" "/>
+                                </div>
+                                <div class="life-box-desc ">Kick-off dự án HRM</div>
+
+                            </div>
+                        </div>
+
+                        <div class="life-box ">
+                            <div class="life-box-item ">
+                                <div class="life-box-image ">
+                                    <img src="/diligo_fontend/static/src/img/vanhoa.jpg " alt=" "/>
+                                </div>
+                                <div class="life-box-desc ">DILIGO Holdings cùng Hội Chữ thập đỏ Việt Nam trao tặng vật
+                                    tư y tế cho nhân dân Ấn Độ
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="life-box ">
+                            <div class="life-box-item ">
+                                <div class="life-box-image ">
+                                    <img src="/diligo_fontend/static/src/img/vanhoa2.jpg " alt=" "/>
+                                </div>
+                                <div class="life-box-desc ">DILIGO Holdings bàn giao Bộ y tế 300.000 khẩu trang Niva N95
+                                    hỗ trợ Campuchia
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="life-box ">
+                            <div class="life-box-item ">
+                                <div class="life-box-image ">
+                                    <img src="/diligo_fontend/static/src/img/vanhoa3.jpg " alt=" "/>
+                                </div>
+                                <div class="life-box-desc ">Tuyển tập bài test và bộ câu hỏi phỏng vấn IT thường gặp
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer" t-ignore="true" t-if="not no_footer">
+                <div class="footer container">
+                    <div class="footer_info ">
+                        <h2>Đối tác cung cấp nguồn lực</h2>
+                        <p>Đồng hành cùng chúng tôi</p>
+                    </div>
+                    <div class="footer_partner ">
+                        <img class="logo-partner " src="/diligo_fontend/static/src/img/fpt-aptech.png " alt=" "/>
+                        <img class="logo-partner " src="/diligo_fontend/static/src/img/fpt-university.png " alt=" "/>
+                        <img class="logo-partner " src="/diligo_fontend/static/src/img/fpt-arena.png " alt=" "/>
+                        <img class="logo-partner " src="/diligo_fontend/static/src/img/fpt-greenwich.png " alt=" "/>
+                        <img class="logo-partner " src="/diligo_fontend/static/src/img/fpt-polytechnic.png " alt=" "/>
+                    </div>
+                </div>
+            </footer>
+            <script type="text/javascript ">
+                function ChangeImage(a) {
+                document.getElementById("viewer ").src = a;
+                }
+
+                function changeQuote(quote) {
+                document.getElementById("quotes ").innerHTML = '" ' +
+                quote + ' "';
+                }
+
+                function changeText(author) {
+                document.getElementById("author ").innerHTML = author
+                }
+            </script>
+            <script><![CDATA[
+                var i = 0;
+                var images = [];
+                var slideTime = 3000; // 3 seconds
+
+                images[0] = '/diligo_fontend/static/src/img/bg-waves-top2.svg';
+                images[1] = '/diligo_fontend/static/src/img/slide3.png';
+<!--                images[2] = '/diligo_fontend/static/src/img/slide2.png';-->
+
+                function changePicture() {
+                    document.querySelector('.introduce').style.backgroundImage = "url(" + images[i] + ")";
+
+                    if (i < images.length - 1) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+<!--                    if(document.querySelector('.introduce').style.backgroundImage === (`url"${images[0]}"`){-->
+<!--                        document.querySelector('.introduce-center').style.opacity = 1-->
+<!--                    } else {-->
+<!--                        document.querySelector('.introduce-center').style.opacity = 0-->
+<!--                    }-->
+
+                    setTimeout(changePicture, slideTime);
+
+                }
+
+
+                window.onload = changePicture;
+            ]]></script>
+        </xpath>
+
+    </template>
+
+    <template id="footer_custom" inherit_id="website.layout" name="Default" active="True">
+        <xpath expr="//footer" position="replace">
+
+        </xpath>
+    </template>
+</data>
+

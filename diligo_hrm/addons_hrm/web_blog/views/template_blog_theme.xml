@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="blog_designer_snippets" inherit_id="mass_mailing.email_designer_snippets" primary="True" groups="base.group_user">
+        <xpath expr="//div[@id='email_designer_default_headers']" position="replace">
+        </xpath>
+        <xpath expr="//div[@id='email_designer_default_extra']" position="replace">
+        </xpath>
+        <xpath expr="//div[@id='email_designer_default_inner']" position="replace">
+        </xpath>
+        <xpath expr="//div[@id='email_designer_default_footer']" position="replace">
+        </xpath>
+        <xpath expr="//div[@id='email_designer_default_body']" position="replace">
+            <div class="o_panel_header">Body</div>
+                <div class="o_panel_body" id="email_designer_body_elements">
+                    <t t-snippet="mass_mailing.s_title" t-thumbnail="/mass_mailing/static/src/img/snippets_thumbs/s_title.svg"/>
+                    <t t-snippet="web_blog.s_picture_new" t-thumbnail="/mass_mailing/static/src/img/snippets_thumbs/s_picture.svg"/>
+                </div>
+        </xpath>
+    </template>
+    <template id="s_picture_new" name="Picture">
+        <div class="s_picture pt48 pb24 px-3 o_cc o_cc2 o_mail_snippet_general" data-snippet="s_picture">
+            <img src="/mass_mailing/static/src/img/theme_default/s_default_image_block_image.jpg" class="img-thumbnail padding-large mx-auto d-block" width="500" alt=""/>
+        </div>
+    </template>
+</odoo>

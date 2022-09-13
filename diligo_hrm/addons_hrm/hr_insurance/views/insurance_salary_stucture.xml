@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--         Insurance rule -->
+        <record id="hr_payslip_rule_insurance_BHXH" model="hr.salary.rule">
+            <field name="code">INSUR_BHXH</field>
+            <field name="name"> Khấu trừ BHXH </field>
+            <field name="category_id" ref="om_hr_payroll.DED"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = -(inputs.INSUR_BHXH.amount)</field>
+            <field name="appears_on_payslip" eval="True"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record id="hr_payslip_rule_insurance_BHYT" model="hr.salary.rule">
+            <field name="code">INSUR_BHYT</field>
+            <field name="name"> Khấu trừ BHYT </field>
+            <field name="category_id" ref="om_hr_payroll.DED"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = -(inputs.INSUR_BHYT.amount)</field>
+            <field name="appears_on_payslip" eval="True"/>
+            <field name="sequence" eval="11"/>
+        </record>
+        <record id="hr_payslip_rule_insurance_BHTN" model="hr.salary.rule">
+            <field name="code">INSUR_BHTN</field>
+            <field name="name"> Khấu trừ BHTN </field>
+            <field name="category_id" ref="om_hr_payroll.DED"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = -(inputs.INSUR_BHTN.amount)</field>
+            <field name="appears_on_payslip" eval="True"/>
+            <field name="sequence" eval="12"/>
+        </record>
+
+        <record id="hr_rule_input_insurance_BHXH" model="hr.rule.input">
+            <field name="code">INSUR_BHXH</field>
+            <field name="name">Khấu trừ BHXH</field>
+            <field name="input_id" ref="hr_payslip_rule_insurance_BHXH"/>
+        </record>
+        <record id="hr_rule_input_insurance_BHTN" model="hr.rule.input">
+            <field name="code">INSUR_BHTN</field>
+            <field name="name">Khấu trừ BHTN</field>
+            <field name="input_id" ref="hr_payslip_rule_insurance_BHTN"/>
+        </record>
+        <record id="hr_rule_input_insurance_BHYT" model="hr.rule.input">
+            <field name="code">INSUR_BHYT</field>
+            <field name="name">Khấu trừ BHYT</field>
+            <field name="input_id" ref="hr_payslip_rule_insurance_BHYT"/>
+        </record>
+
+<!--        KPI-->
+        <record id="hr_rule_kpi" model="hr.salary.rule">
+            <field name="name">Lương trách nhiệm KPIs (PP) - Nhân viên</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">KPIs</field>
+            <field name="category_id" ref="om_hr_payroll.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.KPIs.amount / worked_days.WORK100.number_of_days * (worked_days.WORKDAY.number_of_days + (worked_days.NP.number_of_days if worked_days.NP else 0) + (worked_days.NB.number_of_days if worked_days.NB else 0) + (worked_days.GLOBAL.number_of_days if worked_days.GLOBAL else 0))</field>
+        </record>
+
+        <record id="hr_rule_kpi_master" model="hr.salary.rule">
+            <field name="name">Lương trách nhiệm KPIs (PP) - Quản lý</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">KPIs</field>
+            <field name="category_id" ref="om_hr_payroll.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.KPIs_Master.amount / worked_days.WORK100.number_of_days * (worked_days.WORKDAY.number_of_days + (worked_days.NP.number_of_days if worked_days.NP else 0) + (worked_days.NB.number_of_days if worked_days.NB else 0) + (worked_days.GLOBAL.number_of_days if worked_days.GLOBAL else 0))</field>
+        </record>
+
+        <record id="hr_rule_input_insurance_Kpi" model="hr.rule.input">
+            <field name="code">KPIs</field>
+            <field name="name">Lương trách nhiệm KPI(PP)</field>
+            <field name="input_id" ref="hr_rule_kpi"/>
+        </record>
+        <record id="hr_rule_input_insurance_Kpi_master" model="hr.rule.input">
+            <field name="code">KPIs_Master</field>
+            <field name="name">Lương trách nhiệm KPI(PP) - Quản lý</field>
+            <field name="input_id" ref="hr_rule_kpi_master"/>
+        </record>
+
+        <record id="om_hr_payroll.structure_base" model="hr.payroll.structure">
+            <field eval="[(4, ref('hr_payslip_rule_insurance_BHXH')), (4, ref('hr_payslip_rule_insurance_BHYT')), (4, ref('hr_payslip_rule_insurance_BHTN')), (4, ref('hr_rule_kpi'))]" name="rule_ids"/>
+        </record>
+         <record id="om_hr_payroll.structure_master" model="hr.payroll.structure">
+            <field eval="[(4, ref('hr_payslip_rule_insurance_BHXH')), (4, ref('hr_payslip_rule_insurance_BHYT')), (4, ref('hr_payslip_rule_insurance_BHTN')), (4, ref('hr_rule_kpi_master'))]" name="rule_ids"/>
+        </record>
+         <record id="om_hr_payroll.structure_product" model="hr.payroll.structure">
+            <field eval="[(4, ref('hr_payslip_rule_insurance_BHXH')), (4, ref('hr_payslip_rule_insurance_BHYT')), (4, ref('hr_payslip_rule_insurance_BHTN')), (4, ref('hr_rule_kpi'))]" name="rule_ids"/>
+        </record>
+        <record id="om_hr_payroll.structure_technical" model="hr.payroll.structure">
+            <field eval="[(4, ref('hr_payslip_rule_insurance_BHXH')), (4, ref('hr_payslip_rule_insurance_BHYT')), (4, ref('hr_payslip_rule_insurance_BHTN')), (4, ref('hr_rule_kpi'))]" name="rule_ids"/>
+        </record>
+    </data>
+</odoo>

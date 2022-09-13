@@ -1,0 +1,223 @@
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__name
+msgid "Phase Name"
+msgstr "Tên giai đoạn"
+
+#. module: project
+#: model:ir.model,name:project.model_project_update
+#: model_terms:ir.ui.view,arch_db:project.project_update_view_form
+msgid "Project Update"
+msgstr "Cập nhật dự án"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.project_update_all_action
+#: model_terms:ir.ui.view,arch_db:project.project_view_kanban_inherit_project
+msgid "Project Updates"
+msgstr "Cập nhật dự án"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__phase_id
+#: model:ir.model.fields,field_description:project_task_timer.field_report_project_task_user__phase_id
+msgid "Project Phase"
+msgstr "Giai đoạn dự án"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model.fields,field_description:project.field_project_task__user_ids
+#: model:ir.model.fields,field_description:project.field_project_task_burndown_chart_report__user_ids
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__user_ids
+#: model_terms:ir.ui.view,arch_db:project.portal_tasks_list
+#: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_form
+#: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_kanban
+#: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_search
+#: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_tree
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+#, python-format
+msgid "Assignees"
+msgstr "Người được giao"
+
+#. module: project_task_timer
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__manager_ids
+msgid "Project Manager"
+msgstr "Người quản lý"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: model:ir.model.fields,field_description:project.field_project_task__parent_id
+#: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_form
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+#, python-format
+msgid "Parent Task"
+msgstr "Nhiệm vụ lớn"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model.fields,field_description:project.field_project_milestone__deadline
+#: model:ir.model.fields,field_description:project.field_project_task__date_deadline
+#: model:ir.model.fields,field_description:project.field_project_task_burndown_chart_report__date_deadline
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__date_deadline
+#: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+#, python-format
+msgid "Deadline"
+msgstr "Ngày hoàn thành"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__duration
+msgid "Real Duration"
+msgstr "Thời lượng thực"
+
+#. modules: project, project_task_timer
+#: model:ir.model.fields,field_description:project.field_project_project__sequence
+#: model:ir.model.fields,field_description:project.field_project_project_stage__sequence
+#: model:ir.model.fields,field_description:project.field_project_task__sequence
+#: model:ir.model.fields,field_description:project.field_project_task_type__sequence
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__sequence
+msgid "Sequence"
+msgstr "Quy tắc mã"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+msgid "Internal Note"
+msgstr "Ghi chú nội bộ"
+
+#. module: project, project_task_timer
+#: model:ir.model.fields,field_description:project.field_project_task__repeat_until
+#: model:ir.model.fields,field_description:project.field_project_task_recurrence__repeat_until
+#: model:ir.model.fields.selection,name:project.selection__project_task__repeat_type__until
+#: model:ir.model.fields.selection,name:project.selection__project_task_recurrence__repeat_type__until
+#: model:ir.model.fields,field_description:project_task_timer.field_account_analytic_line__date_end
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__end_date
+#: model_terms:ir.ui.view,arch_db:project.view_project
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__company_id
+#: model:ir.model.fields,field_description:project.field_project_task__company_id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__date_end
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__date_end
+msgid "Ending Date"
+msgstr "Ngày kết thúc"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_task__recurrence_update__subsequent
+msgid "This and following tasks"
+msgstr "Nhiệm vụ này và các nhiệm vụ sau"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.project_tags_action
+#: model:ir.model.fields,field_description:project.field_project_project__tag_ids
+#: model:ir.model.fields,field_description:project.field_project_task__tag_ids
+#: model:ir.ui.menu,name:project.menu_project_tags_act
+#: model_terms:ir.ui.view,arch_db:project.project_tags_form_view
+#: model_terms:ir.ui.view,arch_db:project.project_tags_tree_view
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+msgid "Tags"
+msgstr "Từ khóa"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/xml/project_templates.xml:0
+#: model:ir.actions.act_window,name:project.project_milestone_all
+#, python-format
+msgid "Milestones"
+msgstr "Các mốc quan trọng"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/xml/project_templates.xml:0
+#, python-format
+msgid "Add Milestone"
+msgstr "Thêm mốc quan trọng"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/right_panel/project_utils.js:0
+#, python-format
+msgid "New Milestone"
+msgstr "Mốc quan trọng mới"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__date_start
+#: model:ir.model.fields,field_description:project_task_timer.field_account_analytic_line__date_start
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__date_start
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__start_date
+#: model_terms:ir.ui.view,arch_db:project.view_project
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: hr_timesheet
+#: code:addons/hr_timesheet/models/project.py:0
+#: code:addons/hr_timesheet/models/project.py:0
+#: model:ir.actions.act_window,name:hr_timesheet.act_hr_timesheet_line_by_project
+#: model:ir.actions.act_window,name:hr_timesheet.timesheet_action_from_employee
+#: model:ir.model.fields,field_description:hr_timesheet.field_project_project__allow_timesheets
+#: model:ir.model.fields,field_description:hr_timesheet.field_project_task__timesheet_ids
+#: model:ir.ui.menu,name:hr_timesheet.menu_hr_time_tracking
+#: model:ir.ui.menu,name:hr_timesheet.menu_timesheets_reports_timesheet
+#: model:ir.ui.menu,name:hr_timesheet.timesheet_menu_root
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.hr_department_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.portal_layout
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.portal_my_home_timesheet
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.portal_my_task
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.portal_my_timesheets
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.project_invoice_form
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.project_sharing_inherit_project_task_view_form
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.view_hr_timesheet_line_graph
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.view_hr_timesheet_line_pivot
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.view_project_kanban_inherited
+#: model_terms:ir.ui.view,arch_db:hr_timesheet.view_task_form2_inherited
+#, python-format
+msgid "Timesheets"
+msgstr "Nhiệm vụ phụ"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_task_form
+msgid "Extra Info"
+msgstr "Thông tin thêm"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_sharing_quick_create_task_form
+#: model_terms:ir.ui.view,arch_db:project_task_timer.quick_create_task_form_inherit
+msgid "Task Title"
+msgstr "Nội dung công việc"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_message_user_assigned
+msgid "You have been assigned to the"
+msgstr "Bạn đã được phân công/gán cho"
+
+#. module: project_task_timer
+#: model:ir.ui.menu,name:project_task_timer.all_task_menu
+#: model:ir.actions.act_window,name:project_task_timer.open_all_task_tree
+msgid "All Task"
+msgstr "Tất cả nhiệm vụ"
+
+#. module: mail
+#: code:addons/mail/wizard/mail_wizard_invite.py:0
+#, python-format
+msgid "Invitation to follow %(document_model)s: %(document_name)s"
+msgstr "Mời theo dõi công việc %(document_model)s: %(document_name)s"
+
+#. module: mail
+#: code:addons/mail/wizard/mail_wizard_invite.py:0
+#, python-format
+msgid "%(user_name)s invited you to follow %(document)s document: %(title)s"
+msgstr ""
+"%(user_name)s đã mời bạn theo dõi %(document)s : %(title)s"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.project_share_wizard_action
+#: model_terms:ir.ui.view,arch_db:project.project_share_wizard_view_form
+msgid "Share Project"
+msgstr "Chia sẻ"

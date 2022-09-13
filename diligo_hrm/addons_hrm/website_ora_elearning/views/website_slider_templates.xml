@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="o_wslides_sidebar_collapse_inherit" inherit_id="website_slides.course_sidebar">
+            <xpath expr="//a[@class='btn btn-primary btn-block o_wslides_js_course_join_link']" position="replace">
+                <a t-if="not channel.is_member and channel.enroll == 'public' and channel.internal_training == False" role="button"
+                    class="btn btn-primary btn-block o_wslides_js_course_join_link"
+                    title="Start Course" aria-label="Start Course Channel"
+                    t-att-href="'#'"
+                    t-att-data-channel-id="channel.id"
+                    t-att-data-channel-enroll="channel.enroll">
+                    <span class="cta-title text_small_caps">
+                        <t t-if="channel.channel_type == 'documentation'">Start Course</t>
+                        <t t-else="">Join Course</t>
+                    </span>
+                </a>
+            </xpath>
+            <xpath expr="//div[@id='o_wslides_sidebar_collapse']" position="replace">
+                <div id="o_wslides_sidebar_collapse" class="collapse d-md-block">
+                    <table class="table table-sm mt-3">
+                        <tr t-if="channel.user_id">
+                            <td class="border-top-0">Responsible</td>
+                            <td class="border-top-0"><span t-field="channel.user_id"/></td>
+                        </tr>
+                        <tr>
+                            <td class="border-top-0">Last Update</td>
+                            <td class="border-top-0"><t t-esc="channel.slide_last_update" t-options="{'widget': 'date'}"/></td>
+                        </tr>
+                        <tr t-if="channel.total_time">
+                            <td class="border-top-0">Completion Time</td>
+                            <td class="border-top-0"><t class="font-weight-bold" t-esc="channel.total_time" t-options="{'widget': 'duration', 'unit': 'hour', 'round': 'minute'}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Members</td>
+                            <td><t t-esc="channel.members_count"/></td>
+                        </tr>
+                    </table>
+
+                    <div class="mt-3">
+                        <button role="button" class="btn btn-link btn-block" title="Share Channel"
+                            aria-label="Share Channel"
+                            data-toggle="modal" t-att-data-target="'#slideChannelShareModal_%s' % channel.id">
+                            <i class="fa fa-share-square fa-fw"/> Share
+                        </button>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="slide_content_detailed_inherit" inherit_id="website_slides.slide_content_detailed">
+            <xpath expr="//div[@class='btn-group flex-grow-1 flex-sm-0']" position="replace">
+            </xpath>
+        </template>
+
+        <template id="courses_home_inherit" inherit_id="website_slides.courses_home">
+            <xpath expr="//section[@class='s_banner overflow-hidden bg-900']" position="replace">
+                <section class="s_banner overflow-hidden bg-900" style="background-image: url(&quot;/website_ora_elearning/static/src/img/background_elearning.jpg&quot;);height:20rem; background-size:cover; background-position:100% center; background-repeat: no-repeat" data-snippet="s_banner">
+                    <div class="container py-5">
+                        <h1 t-if="search_my" class="display-3 mb-0">My Courses</h1>
+                        <h1 t-elif="search_slide_type=='certification'" class="display-3 mb-0">Certifications</h1>
+<!--                        <h1 t-else="" class="display-3 mb-0">All Courses</h1>-->
+                    </div>
+                </section>
+            </xpath>
+            <xpath expr="//div[@class='o_wslides_home_content_section mb-3'][2]" position="replace">
+            </xpath>
+            <xpath expr="//div[@class='o_wslides_home_content_section mb-3'][2]" position="replace">
+                <t t-if="channel_ht">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Ban hiền tài</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_ht[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="channel_ptsp">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Ban phát triển thương hiệu và sản phẩm</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_ptsp[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="channel_ccu">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Ban chuỗi cung ứng</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_ccu[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="channel_nm">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Nhà máy</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_nm[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="channel_mh">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Mua hàng</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_mh[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="channel_kv">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Kho vận</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_kv[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t><t t-if="channel_khcc">
+                    <t t-set="void_count" t-value="3 - len(channels_my[:3])"/>
+                    <div class="o_wslides_home_content_section mb-3">
+                        <div class="row o_wslides_home_content_section_title align-items-center">
+                            <div class="col">
+                                <a href="/slides/all" class="float-right">View all</a>
+                                <h5 class="m-0">Khách hàng cung ứng</h5>
+                                <hr class="mt-2 pb-1 mb-1"/>
+                            </div>
+                        </div>
+                        <div class="row mx-n2 mt8">
+                            <t t-foreach="channel_khcc[:3]" t-as="channel">
+                                <div class="col-md-4 col-sm-6 px-2 col-xs-12 d-flex flex-grow-1">
+                                    <t t-call="website_slides.course_card"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>
+

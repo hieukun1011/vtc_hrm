@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="approval_product_tree_view" model="ir.ui.view">
+        <field name="name">approval.product.tree</field>
+        <field name="model">approval.product</field>
+        <field name="arch" type="xml">
+            <tree string="Product" multi_edit="1" sample="1">
+                <field name="name" string="Product Name"/>
+                <field name="price" />
+                <field name="category" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="approval_product_form_view" model="ir.ui.view">
+        <field name="name">approval.product.form</field>
+        <field name="model">approval.product</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form string="Product">
+                <sheet name="product_form">
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" string="Product Name"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="o_text_overflow" name="name" placeholder="e.g. Cheese Burger"/>
+
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="is_sale"/>
+                            <field name="category"/>
+                            <field name="price"/>
+                        </group>
+                        <group>
+
+
+                        </group>
+
+                    </group>
+
+                    <notebook>
+                        <page string="Mô tả">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="approval_product_action" model="ir.actions.act_window">
+        <field name="name">Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">approval.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+        id="approvals.approvals_menu_product"
+        parent="approvals.approvals_menu_root"
+        name="Products"
+        action="approval_product_action"
+        sequence="30"/>
+
+
+
+</odoo>

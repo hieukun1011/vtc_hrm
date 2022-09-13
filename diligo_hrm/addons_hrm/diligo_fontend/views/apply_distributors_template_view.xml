@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+
+    <!--    template list job-->
+    <template id="apply_distributors" name="Apply distributors">
+        <t t-call="web.frontend_layout">
+            <main class="register container">
+                <div class="form container">
+                    <a href="/#" class="form-return">Back</a>
+                    <div class="form-register">
+                        <h3>ĐĂNG KÝ LÀM NHÀ PHÂN PHỐI/ĐẠI LÝ</h3>
+                        <form action="" class="form-register">
+                            <h4 class="form-title">Thông tin về nhà phân phối/Đại lý</h4>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Nhập tên nhà phân phối/đại lý"/>
+                            </div>
+                            <div class="form-register-field">
+                                <div id="yourBtn" onclick="getFile()">Chọn ảnh cửa hàng</div>
+                                <div style='height: 0px;width: 0px; overflow:hidden;'>
+                                    <input accept="image/*" id="upfile" type="file" value="upload"
+                                           onchange="sub(this)"/>
+                                </div>
+                            </div>
+                            <div class="form-register-dropdown">
+                                <div class="form-dropdown">
+                                    <div class="form-address">
+                                        <label for="emergency_contact_district"
+                                               class="col-sm-2 control-label">Tỉnh thành:
+                                        </label>
+                                        <div class="col-sm-12">
+                                            <select name="emergency_contact_district" id="sl_state"
+                                                    class="form-control"
+                                                    placeholder="Tỉnh thành" required="1">
+                                                <option disabled="1" selected="1"/>
+                                                <t t-foreach='countries' t-as='country'>
+                                                    <option t-att-name="'%s' % country.id"
+                                                            t-att-value="'%s' % country.id">
+                                                        <span t-esc='country.name'/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-address">
+                                        <label for="district" class="col-sm-2 control-label">Quận/huyện:
+                                        </label>
+                                        <div class="col-sm-12">
+                                            <select name="district" id="district" class="form-control"
+                                                    placeholder="Quận/huyện" required="1">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-subaddress">
+                                    <label for="wards" class="col-sm-2 control-label">Phường/xã:
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <select name="wards" id="sl_wards" class="form-control"
+                                                placeholder="Phường/xã" required="1">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Nhập địa chỉ"/>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input"
+                                       placeholder="Nhập họ và tên chủ nhà phân phối/đại lý"/>
+                            </div>
+                            <div class="form-upload">
+                                <b>Chọn hình CMND / CCCD (mặt trước + sau)</b>
+                                <div class="form-upload-wrap">
+                                    <div class="form-upload-field">
+                                        <span>CMND mặt trước</span>
+                                        <label for="file-upload-front" >
+                                            Upload
+                                        </label>
+                                        <input accept="image/*" type="file" id="file-upload-front" name="file1"/>
+                                    </div>
+                                    <div class="form-upload-field">
+                                        <span>CMND mặt sau</span>
+                                        <label for="file-upload-back" >
+                                            Upload
+                                        </label>
+                                        <input accept="image/*" type="file" id="file-upload-back" name="file2"/>
+                                    </div>
+                                </div>
+                            </div>
+<!--                            <div class="form-register-field">-->
+<!--                                <input type="text" class="form-input" placeholder="Nhập tên nhà phân phối/đại lý"/>-->
+<!--                            </div>-->
+                            <div class="form-register-field">
+                                <input type="tel" class="form-input" placeholder="Nhập số điện thoại di động"/>
+                            </div>
+                            <div class="form-wrap">
+                                <p>Có sử dụng tài khoản ngân hàng</p>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Tên chủ tài khoản ngân hàng"/>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Nhập tên ngân hàng"/>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Nhập chi nhánh ngân hàng"/>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Nhập số tài khoản ngân hàng"/>
+                            </div>
+                            <div class="form-register-field">
+                                <input type="text" class="form-input" placeholder="Nhập mã nhân viên hướng dẫn"/>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn submit-btn">GỬI THÔNG TIN</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <script type="text/javascript ">
+                function getFile() {
+                    document.getElementById("upfile").click();
+                }
+
+                function sub(obj) {
+                    var file = obj.value;
+                    var fileName = file.split("\\");
+                    document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+                    document.myForm.submit();
+                    event.preventDefault();
+                }
+            </script>
+        </t>
+    </template>
+
+</data>
+

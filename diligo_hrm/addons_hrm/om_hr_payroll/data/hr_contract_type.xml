@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="hr_contract_type_b0" model="hr.contract.type">
+            <field name="name">B0</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">0</field>
+            <field name="hra">250000</field>
+            <field name="travel_allowance">200000</field>
+            <field name="da">300000</field>
+            <field name="kpi_allowance">1220000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b1" model="hr.contract.type">
+            <field name="name">B1</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">1</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">300000</field>
+            <field name="kpi_allowance">1420000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b2" model="hr.contract.type">
+            <field name="name">B2</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">2</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">300000</field>
+            <field name="kpi_allowance">1720000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b3" model="hr.contract.type">
+            <field name="name">B3</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">3</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">2020000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b4" model="hr.contract.type">
+            <field name="name">B4</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">4</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">2420000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b5" model="hr.contract.type">
+            <field name="name">B5</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">5</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">2920000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b6" model="hr.contract.type">
+            <field name="name">B6</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">6</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">3320000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b7" model="hr.contract.type">
+            <field name="name">B7</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">7</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">3720000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+         <record id="hr_contract_type_b8" model="hr.contract.type">
+            <field name="name">B8</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">8</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">600000</field>
+            <field name="kpi_allowance">4120000</field>
+             <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b9" model="hr.contract.type">
+            <field name="name">B9</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">9</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">700000</field>
+            <field name="kpi_allowance">4720000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+        <record id="hr_contract_type_b10" model="hr.contract.type">
+            <field name="name">B10</field>
+            <field name="block_type">technical</field>
+            <field name="sequence">10</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">800000</field>
+            <field name="kpi_allowance">5320000</field>
+            <field name="other_allowance">4730000</field>
+        </record>
+
+<!--        Bac NV san xuat truc tiep-->
+        <record id="hr_contract_type_a0" model="hr.contract.type">
+            <field name="name">A0</field>
+            <field name="block_type">product</field>
+            <field name="sequence">0</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">300000</field>
+            <field name="kpi_allowance">150000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a1" model="hr.contract.type">
+            <field name="name">A1</field>
+            <field name="block_type">product</field>
+            <field name="sequence">1</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">300000</field>
+            <field name="kpi_allowance">300000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a2" model="hr.contract.type">
+            <field name="name">A2</field>
+            <field name="block_type">product</field>
+            <field name="sequence">2</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">300000</field>
+            <field name="kpi_allowance">400000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a3" model="hr.contract.type">
+            <field name="name">A3</field>
+            <field name="block_type">product</field>
+            <field name="sequence">3</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">500000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a4" model="hr.contract.type">
+            <field name="name">A4</field>
+            <field name="block_type">product</field>
+            <field name="sequence">4</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">800000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a5" model="hr.contract.type">
+            <field name="name">A5</field>
+            <field name="block_type">product</field>
+            <field name="sequence">5</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">1000000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a6" model="hr.contract.type">
+            <field name="name">A6</field>
+            <field name="block_type">product</field>
+            <field name="sequence">6</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">1200000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a7" model="hr.contract.type">
+            <field name="name">A7</field>
+            <field name="block_type">product</field>
+            <field name="sequence">7</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">500000</field>
+            <field name="kpi_allowance">1400000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+         <record id="hr_contract_type_a8" model="hr.contract.type">
+            <field name="name">A8</field>
+            <field name="block_type">product</field>
+            <field name="sequence">8</field>
+             <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">600000</field>
+            <field name="kpi_allowance">1600000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+        <record id="hr_contract_type_a9" model="hr.contract.type">
+            <field name="name">A9</field>
+            <field name="block_type">product</field>
+            <field name="sequence">9</field>
+            <field name="travel_allowance">200000</field>
+            <field name="hra">250000</field>
+            <field name="da">700000</field>
+            <field name="kpi_allowance">1800000</field>
+            <field name="other_allowance">4420000</field>
+        </record>
+
+        !--        Bac NV khoi van phong-->
+        <record id="hr_contract_type_4d" model="hr.contract.type">
+            <field name="name">4D</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">1</field>
+            <field name="other_allowance">4800000</field>
+            <field name="kpi_allowance">1000000</field>
+            <field name="mobile_allowance">200000</field>
+            <field name="car_allowance">200000</field>
+        </record>
+        <record id="hr_contract_type_4c" model="hr.contract.type">
+            <field name="name">4C</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">2</field>
+            <field name="other_allowance">4800000</field>
+            <field name="kpi_allowance">5000000</field>
+            <field name="mobile_allowance">300000</field>
+            <field name="car_allowance">300000</field>
+        </record>
+        <record id="hr_contract_type_4b" model="hr.contract.type">
+            <field name="name">4B</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">3</field>
+            <field name="other_allowance">4800000</field>
+            <field name="kpi_allowance">9000000</field>
+            <field name="mobile_allowance">500000</field>
+            <field name="car_allowance">500000</field>
+        </record>
+        <record id="hr_contract_type_4a" model="hr.contract.type">
+            <field name="name">4A</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">4</field>
+            <field name="other_allowance">4800000</field>
+            <field name="kpi_allowance">13000000</field>
+            <field name="mobile_allowance">500000</field>
+            <field name="car_allowance">500000</field>
+        </record>
+        <record id="hr_contract_type_3d" model="hr.contract.type">
+            <field name="name">3D</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">5</field>
+            <field name="other_allowance">10000000</field>
+            <field name="kpi_allowance">2000000</field>
+            <field name="mobile_allowance">500000</field>
+            <field name="car_allowance">1000000</field>
+        </record>
+        <record id="hr_contract_type_3c" model="hr.contract.type">
+            <field name="name">3C</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">6</field>
+            <field name="other_allowance">10000000</field>
+            <field name="kpi_allowance">7000000</field>
+            <field name="mobile_allowance">500000</field>
+            <field name="car_allowance">2000000</field>
+        </record>
+        <record id="hr_contract_type_3b" model="hr.contract.type">
+            <field name="name">3B</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">7</field>
+            <field name="other_allowance">10000000</field>
+            <field name="kpi_allowance">12000000</field>
+            <field name="mobile_allowance">500000</field>
+            <field name="car_allowance">2000000</field>
+        </record>
+         <record id="hr_contract_type_3a" model="hr.contract.type">
+            <field name="name">3A</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">8</field>
+             <field name="other_allowance">10000000</field>
+            <field name="kpi_allowance">17000000</field>
+            <field name="mobile_allowance">500000</field>
+            <field name="car_allowance">2000000</field>
+        </record>
+         <record id="hr_contract_type_2d" model="hr.contract.type">
+            <field name="name">2D</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">9</field>
+            <field name="other_allowance">15000000</field>
+            <field name="kpi_allowance">13000000</field>
+            <field name="mobile_allowance">1000000</field>
+            <field name="car_allowance">1000000</field>
+        </record>
+        <record id="hr_contract_type_2c" model="hr.contract.type">
+            <field name="name">2C</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">10</field>
+            <field name="other_allowance">20000000</field>
+            <field name="kpi_allowance">23000000</field>
+            <field name="mobile_allowance">1000000</field>
+            <field name="car_allowance">3000000</field>
+        </record>
+        <record id="hr_contract_type_2b" model="hr.contract.type">
+            <field name="name">2B</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">11</field>
+            <field name="other_allowance">25000000</field>
+            <field name="kpi_allowance">33000000</field>
+            <field name="mobile_allowance">1000000</field>
+            <field name="car_allowance">5000000</field>
+        </record>
+         <record id="hr_contract_type_2a" model="hr.contract.type">
+            <field name="name">2A</field>
+            <field name="block_type">officer</field>
+            <field name="sequence">12</field>
+             <field name="other_allowance">25000000</field>
+            <field name="kpi_allowance">43000000</field>
+            <field name="mobile_allowance">1000000</field>
+            <field name="car_allowance">8000000</field>
+        </record>
+    </data>
+</odoo>

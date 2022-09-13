@@ -1,0 +1,30 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_group_user_hr_recruitment_period,group.user.hr.recruitment.period,model_hr_recruitment_period,base.group_user,1,0,0,0
+access_group_hr_manager_hr_recruitment_period,group.hr.manager.hr.recruitment.period,model_hr_recruitment_period,hr.group_hr_manager,1,1,1,1
+access_group_hr_user_hr_job_position,group_hr_user_hr_job_position,model_hr_job_position,hr.group_hr_user,1,1,1,0
+access_group_hr_manager_hr_job_position,group.hr.manager.hr.job.position,model_hr_job_position,hr.group_hr_manager,1,1,1,1
+access_group_hr_user_hr_group_job,group_hr_user_hr_group_job,model_hr_group_job,hr.group_hr_user,1,1,1,0
+access_group_hr_manager_hr_group_job,group.hr.manager.hr.group.job,model_hr_group_job,hr.group_hr_manager,1,1,1,1
+access_hr_applicant_state_hr_applicant_state,access_hr_applicant_state_hr_applicant_state,model_hr_applicant_state,hr.group_hr_user,1,1,1,0
+access_group_hr_manager_hr_applicant_state,access_group_hr_manager_hr_applicant_state,model_hr_applicant_state,hr.group_hr_manager,1,1,1,1
+access_group_hr_manager_hr_job_welfare,access_group_hr_manager_hr_job_welfare,model_hr_job_welfare,,1,1,1,1
+access_group_hr_user_hr_job_welfare,group_hr_user_hr_job_welfare,model_hr_job_welfare,hr.group_hr_user,1,1,1,0
+access_group_hr_manager_hr_job_welfare,group.hr.manager.hr.job.welfare,model_hr_job_welfare,hr.group_hr_manager,1,1,1,1
+access_group_hr_user_hr_channel,group.group_hr_user_hr_channel,model_hr_channel,hr.group_hr_user,1,1,1,0
+access_group_user_hr_channel,access_group_user_hr_channel,model_hr_channel,base.group_user,1,1,1,0
+access_group_hr_manager_hr_channel,group.hr.manager.hr.channel,model_hr_channel,hr.group_hr_manager,1,1,1,1
+access_group_hr_manager_hr_industry_job,group.hr.manager.hr.industry.job,model_hr_industry_job,hr.group_hr_manager,1,1,1,1
+access_hr_industry_job_public,access_hr_industry_job_public,model_hr_industry_job,base.group_public,1,0,0,0
+access_hr_employee_status_history_hr_user,hr.employee.status.history.user,model_hr_employee_status_history,hr.group_hr_user,1,0,0,0
+access_hr_employee_status_history_hr_manager,hr.employee.status.history.manager,model_hr_employee_status_history,hr.group_hr_manager,1,1,1,0
+hr.access_hr_employee_user,hr.employee user,model_hr_employee,hr.group_hr_user,1,1,1,0
+access_hr_distributors_employee_user,access_hr_distributors_employee_user,model_hr_distributors,hr.group_hr_user,1,1,1,0
+access_hr_distributors_employee_manager,access_hr_distributors_employee_manager,model_hr_distributors,hr.group_hr_manager,1,1,1,1
+hr_recruitment.access_hr_applicant_user,hr.applicant.user,model_hr_applicant,hr_recruitment.group_hr_recruitment_user,1,1,1,0
+hr.access_hr_job_user,hr.job user,model_hr_job,hr.group_hr_user,1,1,1,0
+access_group_hr_user_hr_recruitment_period,group.hr.user.hr.recruitment.period,model_hr_recruitment_period,hr.group_hr_user,1,0,1,0
+access_group_hr_manager_hr_industry_job,group.hr.manager.hr.industry.job,model_hr_industry_job,hr.group_hr_user,1,1,1,0
+
+access_report_job_manager,access_report_job_manager,model_report_job,hr.group_hr_user,1,1,1,0
+access_report_recruitment_user,access_report_recruitment_user,model_report_recruitment,hr.group_hr_user,1,1,1,0
+access_group_hr_employee_status_history_user,access_group_hr_employee_status_history_user,model_hr_employee_status_history,hr.group_hr_user,1,1,1,0

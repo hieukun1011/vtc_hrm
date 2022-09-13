@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="employee_laudatory_tree" model="ir.ui.view">
+            <field name="name">laudatory.action.tree</field>
+            <field name="model">laudatory.action</field>
+            <field name="arch" type="xml">
+                <tree string="Laudatory Action">
+                    <field name="name"/>
+                    <field name="announcement_type"/>
+                    <field name="reward_reason"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="employee_laudatory_form" model="ir.ui.view">
+            <field name="name">laudatory.action.form</field>
+            <field name="model">laudatory.action</field>
+            <field name="arch" type="xml">
+                <form string="Laudatory Action">
+                    <header>
+                        <button name="confirm" type="object" string="Confirm" class="oe_highlight" states="draft"/>
+                        <button name="cancel" type="object" string="Cancel"  class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,action,cancel"/>
+                    </header>
+                    <sheet>
+<!--                        <button name="attachment" class="oe_stat_button" icon="" type="action">-->
+<!--                            <field name="contracts_count" widget="statinfo" string="Contracts"/>-->
+<!--                        </button>-->
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="announcement_type" required="1"/>
+                            </group>
+                            <group>
+                                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"
+                                invisible="1"/>
+                                <field name="department_ids" widget="many2many_tags"
+                                       attrs="{'invisible': [('announcement_type', '!=', 'department')]}"/>
+                                <field name="employee_ids" widget="many2many_tags"
+                                       attrs="{'invisible': [('announcement_type', '!=', 'employee')]}"/>
+                                <field name="position_ids" widget="many2many_tags"
+                                       attrs="{'invisible': [('announcement_type', '!=', 'job_position')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="Disciplinary Information"
+                                  string="Thông tin khen thưởng">
+                                <group colspan="4">
+                                    <group>
+                                        <field name="reward_reason" required="True"/>
+                                    </group>
+                                    <group>
+                                        <field name="attachment_ids" widget="many2many_binary" class="oe_inline"
+                                               attrs="{'invisible' :[('state','=','draft')],'readonly': [('state','=','action')]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="action_information" string="Thông tin hành động">
+                                <group>
+                                    <field name="action_information"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_laudatory_action" model="ir.actions.act_window">
+            <field name="name">laudatory</field>
+            <field name="res_model">laudatory.action</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','in',('draft','action','cancel'))]</field>
+             <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click tạo mới
+                </p>
+            </field>
+        </record>
+        <record id="action_laudatory_details" model="ir.actions.act_window">
+            <field name="name">Khen thưởng</field>
+            <field name="res_model">laudatory.action</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['|', '|', ('employee_ids', 'in', active_id),
+                                              ('department_ids.member_ids', 'in', active_id),
+                                              ('position_ids.employee_ids', 'in', active_id),
+                                              ('state', 'in', ['action'])]
+            </field>
+        </record>
+
+
+        <record id="employee_form_inherit_laudatory" model="ir.ui.view">
+            <field name="name">laudatory.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <!--Add Discipline button in the Employee Form-->
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(action_laudatory_details)d"
+                            class="oe_stat_button"
+                            icon="fa-trophy"
+                            type="action"
+                    >
+                        <field string="Khen thưởng" name="laudatory_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem id="laudatory_action_create" action="action_laudatory_action"
+                  name="Khen thưởng" parent="hr_reward_warning.hr_announcement_menu"
+                  sequence="23"/>
+    </data>
+</odoo>

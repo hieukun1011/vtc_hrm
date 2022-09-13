@@ -1,0 +1,445 @@
+/* view list job recruitment */
+/* Màn hình laptop hoặc desktop lớn*/
+.btn-primary{
+	background-color: #216541!important;
+	border-color: #216541!important;
+}
+@media (min-width: 1200px){
+.o_search{
+	height: 130px;
+	background-color: #216541;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+.col-md-3 {
+-ms-flex: 0 0 25%;
+flex: 0 0 25%;
+max-width: 26%;
+}
+.o_search .o_name_search{
+	width: 270px;
+	height: 50px;
+}
+
+.o_search .o_industry_search{
+	width: 270px;
+	height: 50px;
+}
+
+.o_search .o_location_search{
+	width: 270px;
+	height: 50px;
+}
+
+.o_search .o_button_search{
+	width: 170px;
+	height: 50px;
+}
+.o_item_01{
+background-color: red;
+margin: 0 10px;
+}
+.o_item_02{
+background-color: green;
+margin: 0 10px;
+}
+.o_item_03{
+background-color: blue;
+margin: 0 10px;
+}
+.o_item_04{
+background-color: yellow;
+margin: 0 10px;
+}
+.list_jobs .box{
+width: 360px;
+height: 240px;
+border: 1px solid #d3d3d3;
+background-color: #f8f8f8;
+padding: 15px;
+}
+}
+/* Màn hình máy tính bảng lớn hoặc máy tính màng hình trung bình */
+@media (min-width: 992px) and (max-width: 1199px){
+.o_search{
+	height: 130px;
+	background-color: #007ac1;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.o_search .o_name_search{
+	width: 200px;
+	height: 50px;
+}
+
+.o_search .o_industry_search{
+	width: 200px;
+	height: 50px;
+}
+
+.o_search .o_location_search{
+	width: 200px;
+	height: 50px;
+}
+
+.o_search .o_button_search{
+	width: 200px;
+	height: 50px;
+}
+.list_jobs .box{
+width: 310px;
+height: 260px;
+border: 1px solid #d3d3d3;
+background-color: #f8f8f8;
+padding: 15px;
+margin:auto;
+}
+}
+/* Màn hình máy tính bảng nhỏ hoặc máy tính màng hình nhỏ */
+@media (min-width: 768px) and (max-width: 991px) {
+.o_search{
+	height: 130px;
+	background-color: #007ac1;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.o_search .o_name_search{
+	width: 150px;
+	height: 50px;
+}
+
+.o_search .o_industry_search{
+	width: 150px;
+	height: 50px;
+}
+
+.o_search .o_location_search{
+	width: 150px;
+	height: 50px;
+}
+
+.o_search .o_button_search{
+	width: 150px;
+	height: 50px;
+}
+.list_jobs .box{
+/* width: 360px; */
+/* height: 240px; */
+height:auto;
+border: 1px solid #d3d3d3;
+background-color: #f8f8f8;
+padding: 15px;
+margin:5px;
+}
+}
+/* Màn hình máy tính bảng rất nhỏ hoặc điện thoại di động */
+@media (max-width: 767px) {
+.row.o_search{
+    display:none;
+}
+
+.s_website_form_send{
+    margin-right: 0;
+}
+
+#wrap.row{
+    width: 50%!important
+}
+.row{
+    padding-left: 0!important;
+    justify-content: flex-start;
+}
+.row .s_website_form_label_content{
+    padding-left:0!important;
+    width: 86px !important;
+}
+
+.rowspan{
+    padding-left:0!important;
+    width: 86px !important;
+}
+
+.rowspan:last-child{
+    padding-left:0!important;
+    width: 100% !important;
+}
+
+
+#wrap.row span{
+    padding-left:0!important;
+    width: 50%
+}
+}
+#footer{
+    margin-top:0;
+}
+
+.special-check{
+    padding-left: 0!important;
+}
+
+#footer .footer{
+    padding: 8rem 2.438rem 11.438rem;
+}
+
+.page-item.active .page-link {
+    background-color: #216541!important;
+    border-color: #216541!important;
+    color: #fff!important;
+}
+
+.page-link{
+    color:#216541!important;
+}
+
+.o_search{
+	height: auto;
+	background-color: #007ac1;
+	text-align: center;
+	display: flex;
+	justify-content:center;
+    align-items: center;
+}
+
+.o_search .o_name_search{
+	width: 250px;
+	height: 50px;
+}
+
+.o_search .o_industry_search{
+	width: 250px;
+	height: 50px;
+}
+
+.o_search .o_location_search{
+	width: 250px;
+	height: 50px;
+}
+
+.o_search .o_button_search{
+	width: 250px;
+	height: 50px;
+}
+.list_jobs .box{
+width: 350px;
+height: 240px;
+border: 1px solid #d3d3d3;
+background-color: #f8f8f8;
+padding: 15px;
+margin:auto;
+}
+}
+/* Điện thoại di động hoặc màng hình cực nhỏ */
+@media (max-width: 480px) {
+.o_search{
+	height: auto;
+	background-color: #007ac1;
+	text-align: center;
+	display: flex;
+	justify-content:center;
+    align-items: center;
+}
+
+.o_search .o_name_search{
+	width: 250px;
+	height: 50px;
+}
+
+.o_search .o_industry_search{
+	width: 250px;
+	height: 50px;
+}
+
+.o_search .o_location_search{
+	width: 250px;
+	height: 50px;
+}
+
+.o_search .o_button_search{
+	width: 250px;
+	height: 50px;
+}
+.list_jobs .box{
+width: 350px;
+height: 240px;
+border: 1px solid #d3d3d3;
+background-color: #f8f8f8;
+padding: 15px;
+margin:auto;
+}
+}
+
+.list_jobs .title{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.list_jobs .title span{
+    color: #216541;
+}
+
+
+/* view job detail */
+.left-col{
+     border: 1px solid #e3dfdf;
+     width: 100%;
+     padding: 25px 30px;
+ }
+.right-col{
+     width: 100%;
+     padding:0px 15px 15px 15px;
+}
+.hr-logo{
+      width: 100px;
+      height: 100px;
+}
+.right-col .box{
+      max-width: 290px;
+      height:auto;
+      border-bottom: 1px solid #d0d3d6
+}
+.card-img{
+      padding-top:5px;
+}
+.card-img img{
+      max-height:100px;
+      overflow:hidden;
+}
+.o_website_form_required .col-form-label:after, .o_website_form_required_custom .col-form-label:after {
+    color: red;
+}
+.job_tags{
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 0 #ddd;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    padding: 4px 10px;
+    line-height: normal;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+span{
+     font-family: serif;
+
+}
+#form_jobs{
+    border-top: 3px solid red;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 2%;
+}
+
+.btn{
+    border-color: #216541!important;
+    padding: 5px !important;
+    font-size: 16px;
+}
+
+.s_website_form_send{
+    margin-right: 35px;
+}
+
+  .wrapper.banner {
+  padding-bottom: 248px !important;
+  padding-top: 147px;
+}
+  .wrapper.banner .row {
+  margin-right: 0;
+  margin-left: 0;
+  z-index: 59;
+  position: relative;
+}
+  .wrapper.banner .row .bg3 {
+  height: 500px;
+  background-image: url(../img/tracuu.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+  .wrapper.banner .row .result-form {
+  margin-left: 60px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+  .wrapper.banner .row .result-form .result-check {
+  padding: 45px 30px 54px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+  .wrapper.banner .row .result-form .result-check h5 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 30px;
+  color: #4f4f4f;
+}
+  .wrapper.banner .row .result-form .result-check p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 60px;
+  color: #4f4f4f;
+}
+  .wrapper.banner .row .result-form .result-check input {
+  height: 50px;
+  background: #fff;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 32px;
+  color: #343a40;
+}
+  .wrapper.banner .row .result-form .result-check .btn {
+  display: block;
+  margin: auto;
+  width: 264px;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#f7c746), to(#f9cb46));
+  background: linear-gradient(90deg, #f7c746 0, #f9cb46 100%);
+  border-radius: 5px;
+  color: #272727;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: none;
+  margin-top: 31px;
+}
+
+  .wrapper.banner:after {
+  width: 280px;
+  height: 200px;
+  background-image: url(../img/after.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  content: "";
+}

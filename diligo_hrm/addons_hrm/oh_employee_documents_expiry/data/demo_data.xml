@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+          <record id="work_data" model="hr.work.location">
+            <field name="name">Building 3, Third Floor</field>
+            <field name="address_id" ref="base.main_partner"/>
+        </record>
+
+        <record id="employee_document_id" model="hr.employee">
+              <field name="name">Joe</field>
+              <field name="job_title">Chief Medical Officer</field>
+              <field name="work_location_id" ref="work_data"/>
+              <field name="work_phone">(376)-3852-7863</field>
+              <field name="work_email">joe@example.com</field>
+              <field name="image_1920" type="base64"
+                     file="oh_employee_documents_expiry/static/image/employee_image.jpeg"/>
+        </record>
+
+        <record id="document_one" model="document.type">
+            <field name="name">Sơ yếu lý lịch</field>
+        </record>
+
+        <record id="document_two" model="document.type">
+            <field name="name">CMTND</field>
+        </record>
+
+        <record id="document_three" model="document.type">
+            <field name="name">Giấy khai sinh</field>
+        </record>
+        <record id="document_document4" model="document.type">
+            <field name="name">Sổ hộ khẩu</field>
+        </record>
+        <record id="entry_document5" model="document.type">
+            <field name="name">Giấy khám sức khỏe</field>
+        </record>
+        <record id="entry_document6" model="document.type">
+            <field name="name">Bằng cấp, chứng chỉ</field>
+        </record>
+        <record id="entry_document7" model="document.type">
+            <field name="name">Ảnh thẻ</field>
+        </record>
+
+        <record id="document_action_one" model="hr.employee.document">
+            <field name="name">DC01</field>
+            <field name="employee_ref" ref="employee_document_id"/>
+        </record>
+
+
+    </data>
+</odoo>

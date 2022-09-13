@@ -1,0 +1,371 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* diligo_fontend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-05 01:57+0000\n"
+"PO-Revision-Date: 2022-04-05 01:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"\"Trong mỗi con người đều có rất nhiều năng lượng đang ngủ. Muốn đánh\n"
+"                                    thức nó thì phải kích hoạt, phải đặt ra những thách thức thật sự \""
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "<b>Chọn hình CMND / CCCD (mặt trước + sau)</b>"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"<span>30</span>\n"
+"                            công việc đang chờ bạn"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "<span>CMND mặt sau</span>"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "<span>CMND mặt trước</span>"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "<strong>Tin tức - Văn hóa</strong>"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "<strong>Tìm việc theo vị trí</strong>"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Back"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Chọn ảnh cửa hàng"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Có sử dụng tài khoản ngân hàng"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"DILIGO HOLDINGS HỢP TÁC ĐÀO TẠO VÀ PHÁT TRIỂN NGUỒN NHÂN LỰC\n"
+"                                    VỚI VIỆN ĐÀO TẠO QUỐC TẾ FPT"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"DILIGO Holdings bàn giao Bộ y tế 300.000 khẩu trang Niva N95\n"
+"                                    hỗ trợ Campuchia"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"DILIGO Holdings cùng Hội Chữ thập đỏ Việt Nam trao tặng vật\n"
+"                                    tư y tế cho nhân dân Ấn Độ"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Diligo Holdings"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Diligo có tầm nhìn Quốc tế"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"Diligo thấu hiểu và quan tâm tới đội ngũ CBNV bằng những phúc lợi thiết thực,\n"
+"                                        cạnh tranh và vượt trội trên thị trường."
+msgstr ""
+
+#. module: diligo_fontend
+#: model:ir.model.fields.selection,name:diligo_fontend.selection__hr_job__work_address__distributors
+msgid "Distributors"
+msgstr "Nhà phân phối"
+
+#. module: diligo_fontend
+#. openerp-web
+#: code:addons/diligo_fontend/static/src/xml/view.xml:0
+#: code:addons/diligo_fontend/static/src/xml/view.xml:0
+#, python-format
+msgid "Download"
+msgstr ""
+
+#. module: diligo_fontend
+#. openerp-web
+#: code:addons/diligo_fontend/static/src/xml/view.xml:0
+#, python-format
+msgid "Export All"
+msgstr ""
+
+#. module: diligo_fontend
+#: model:ir.model.fields.selection,name:diligo_fontend.selection__hr_job__work_address__factory
+msgid "Factory"
+msgstr "Nhà máy"
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"Gia nhập Diligo, các bạn sẽ được làm việc trong môi trường nhân văn, đề cao\n"
+"                                        con\n"
+"                                        người, nơi làm việc lý tưởng để cống hiến tận tâm và phát triển sự nghiệp\n"
+"                                        bền\n"
+"                                        vững."
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "GỬI THÔNG TIN"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Họp tổng kết AOP 2021"
+msgstr ""
+
+#. module: diligo_fontend
+#: model:ir.model.fields.selection,name:diligo_fontend.selection__hr_job__work_address__inventory
+msgid "Inventory"
+msgstr "Kho"
+
+#. module: diligo_fontend
+#: model:ir.model,name:diligo_fontend.model_hr_job
+msgid "Job Position"
+msgstr "Chức vụ"
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Kick-off dự án HRM"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Lắng nghe người Diligo Holdings"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Môi trường nhân văn và có trách nhiệm"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"Người Diligo tự hào được đồng hành và truyền cảm hứng mỗi ngày từ “khát vọng\n"
+"                                        dẫn\n"
+"                                        đầu” mạnh mẽ..."
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập chi nhánh ngân hàng"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập họ và tên chủ nhà phân phối/đại lý"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập mã nhân viên hướng dẫn"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập số tài khoản ngân hàng"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập số điện thoại di động"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập tên ngân hàng"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập tên nhà phân phối/đại lý"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Nhập địa chỉ"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.hr_job_form_inherit
+msgid "Nơi làm việc"
+msgstr ""
+
+#. module: diligo_fontend
+#: model:ir.model.fields.selection,name:diligo_fontend.selection__hr_job__work_address__office
+msgid "Office"
+msgstr "Văn phòng"
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Phúc lợi cạnh tranh"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Phường/xã"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Phường/xã:"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Quận/huyện"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Quận/huyện:"
+msgstr ""
+
+#. module: diligo_fontend
+#. openerp-web
+#: code:addons/diligo_fontend/static/src/xml/view.xml:0
+#, python-format
+msgid "Select a CSV or Excel file to import."
+msgstr ""
+
+#. module: diligo_fontend
+#: model:ir.model.fields.selection,name:diligo_fontend.selection__hr_job__work_address__south
+msgid "South"
+msgstr "Miền Nam"
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Thông tin về nhà phân phối/Đại lý"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Tuyển tập bài test và bộ câu hỏi phỏng vấn IT thường gặp"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Tên chủ tài khoản ngân hàng"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Tìm kiếm việc làm tại diligo"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Tỉnh thành"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Tỉnh thành:"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "Upload"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Việc làm Diligo"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Vũ Đức Sỹ - Tổng giám đốc"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid ""
+"Với tầm nhìn vươn tầm khu vực và quốc tế, Diligo đã và đang hợp tác với những\n"
+"                                        thương hiệu hàng đầu thế giới; là cơ hội phát triển nghề nghiệp với các dự\n"
+"                                        án\n"
+"                                        lớn."
+msgstr ""
+
+#. module: diligo_fontend
+#: model:ir.model.fields,field_description:diligo_fontend.field_hr_job__work_address
+msgid "Work address"
+msgstr "Địa chỉ làm việc"
+
+#. module: diligo_fontend
+#. openerp-web
+#: code:addons/diligo_fontend/static/src/xml/view.xml:0
+#, python-format
+msgid "Xuất dữ liệu"
+msgstr ""
+
+#. module: diligo_fontend
+#. openerp-web
+#: code:addons/diligo_fontend/static/src/xml/view.xml:0
+#, python-format
+msgid "Xuất tất cả dữ liệu"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.apply_distributors
+msgid "ĐĂNG KÝ LÀM NHÀ PHÂN PHỐI/ĐẠI LÝ"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Đăng ký"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Đối tác cung cấp nguồn lực"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Đồng hành cùng Diligo"
+msgstr ""
+
+#. module: diligo_fontend
+#: model_terms:ir.ui.view,arch_db:diligo_fontend.diligo_homepage
+msgid "Đồng hành cùng chúng tôi"
+msgstr ""

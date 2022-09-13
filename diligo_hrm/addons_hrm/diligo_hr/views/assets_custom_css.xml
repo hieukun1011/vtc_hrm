@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="web_hr_recruitment" name="Website Recruitment" inherit_id="web.frontend_layout">
+        <xpath expr="." position="inside">
+            <link href="/diligo_hr/static/src/css/website_hr_recruitment.css" type="text/css" rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>

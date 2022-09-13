@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_slide_slide_form_inherit_ora" model="ir.ui.view">
+            <field name="name">slide.slide.form</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+            <field name="arch" type="xml">
+                <div class="oe_button_box" position="inside">
+                    <button name="action_open_responses" type="object" class="oe_stat_button" icon="fa-pencil-square-o">
+                        <field name="response_count" widget="statinfo"/>
+                    </button>
+                </div>
+                <page name="quiz" position="after">
+                    <page name="ora" string="ORA">
+                        <separator string="Open Response Assessment"/>
+                        <notebook>
+                            <page name="prompt" string="Prompts">
+                                <field name="prompt_ids">
+                                    <tree string="Prompts">
+                                        <field name='sequence' widget='handle'/>
+                                        <field name="name"/>
+                                        <field name="question_name"/>
+                                        <field name="response_type"/>
+                                    </tree>
+                                    <form>
+                                        <label for="question_name"/>
+                                        <field name="question_name"/>
+                                        <label for="name"/>
+                                        <field name="name"/>
+                                        <label for="response_type"/>
+                                        <field name="response_type"/>
+                                    </form>
+                                </field>
+                                <field name="response_ids" invisible="1"/>
+                            </page>
+                            <page name="rubric" string="Rubric">
+                                <field name="rubric_ids">
+                                    <tree string="Rubric">
+                                        <field name="criterian_name"/>
+                                        <field name="name"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="criterian_name"/>
+                                            <field name="name"/>
+                                        </group>
+                                        <label for="criterian_ids"/>
+                                        <field name="criterian_ids">
+                                            <tree string="Options" editable="top">
+                                                <field name="name"/>
+                                                <field name="option_desc"/>
+                                                <field name="option_points"/>
+                                            </tree>
+                                        </field>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name="settings" string="Settings">
+                                <group>
+                                    <field name="peer_assessment"/>
+                                    <field name="peer_limit" attrs="{
+                                        'required':[('peer_assessment', '=', True)],
+                                        'invisible': [('peer_assessment','=',False)]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </page>
+                </page>
+                <xpath expr="//div/h1/field[@name='name']" position="attributes">
+                    <attribute name="placeholder">Ví dụ: Khóa học hội nhập văn hóa Diligo Holding</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="ora_response_view_form" model="ir.ui.view">
+            <field name="name">ora.response.view.form</field>
+            <field name="model">ora.response</field>
+            <field name="arch" type="xml">
+                <form string="ORA Response" create="false">
+                    <header>
+                        <button name="action_mark_assessed" type="object" string="Mark Assessed" class="oe_highlight"
+                                states="submitted"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group col="2">
+                            <group>
+                                <field name="slide_id" readonly="1"/>
+                                <field name="create_date" readonly="1"/>
+                                <field name="user_id" readonly="1"/>
+                                <field name="submitted_date" readonly="0"/>
+                            </group>
+                            <group>
+                                <field name="staff_id" attrs="{'readonly':[('state','in',('assessed', 'inactive'))]}"/>
+                                <field name="xp_points"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="prompts" string="Prompts">
+                                <field name="user_response_line" mode="kanban" readonly="1">
+                                    <kanban default_order="question_sequence DESC">
+                                        <field name="question_sequence"/>
+                                        <field name="prompt_id"/>
+                                        <field name="create_date"/>
+                                        <field name="question_name"/>
+                                        <field name="response_type"/>
+                                        <field name="value_text_box"/>
+                                        <field name="value_richtext_box"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div class="oe_module_vignette" style="width: 900px;">
+                                                    <div class="oe_module_desc">
+                                                        <div class="float-right">
+                                                            <field name="create_date"/>
+                                                        </div>
+                                                        <!-- <div><p><strong>Prompt <field name="question_sequence"/></strong></p></div> -->
+                                                        <div>
+                                                            <p>
+                                                                <field name="question_name" widget="html"/>
+                                                            </p>
+                                                            <div>
+                                                                <p>
+                                                                    <strong>Response</strong>
+                                                                </p>
+                                                            </div>
+                                                            <t t-if="record.response_type.raw_value == 'text'">
+                                                                <p style="overflow-wrap: break-word;">
+                                                                    <field name="value_text_box"/>
+                                                                </p>
+                                                            </t>
+                                                            <t t-if="record.response_type.raw_value == 'rich_text'">
+                                                                <p style="overflow-wrap: break-word;">
+                                                                    <field name="value_richtext_box" widget="html"/>
+                                                                </p>
+                                                            </t>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                            </page>
+                            <page name="rubric" string="Rubric">
+                                <field name="slide_rubric_staff_line"
+                                       attrs="{'readonly':[('state','in',('assessed', 'inactive'))]}">
+                                    <tree string="Rubric">
+                                        <field name="assess_type"/>
+                                        <field name="user_id"/>
+                                        <field name="create_date"/>
+                                        <field name="total_score"/>
+                                        <field name="state"/>
+                                    </tree>
+                                    <form>
+                                        <div class="oe_title">
+                                            <h1>
+                                                <field name="assess_type"/>
+                                            </h1>
+                                        </div>
+                                        <group>
+                                            <group>
+                                                <field name='create_date'/>
+                                                <field name="total_score"/>
+                                            </group>
+                                            <group>
+                                                <field name="user_id"/>
+                                                <field name="state"/>
+                                            </group>
+                                        </group>
+                                        <separator string="Options"/>
+                                        <field name="option_ids">
+                                            <tree editable="bottom">
+                                                <field name="criteria_id"/>
+                                                <field name="criteria_desc"/>
+                                                <field name="option_id" domain="[('rubric_id', '=', criteria_id)]"/>
+                                                <field name="criteria_option_desc"/>
+                                                <field name="criteria_option_point"/>
+                                                <field name="assess_explanation"/>
+                                            </tree>
+                                        </field>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name="feedback" string="Feedback">
+                                <group>
+                                    <field name="can_resubmit"
+                                           attrs="{'readonly':[('state','in',('assessed', 'inactive'))]}"/>
+                                </group>
+                                <field name="feedback" attrs="{'readonly':[('state','in',('assessed', 'inactive'))]}"
+                                       widget="html"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="ora_response_view_tree" model="ir.ui.view">
+            <field name="name">ora.response.view.tree</field>
+            <field name="model">ora.response</field>
+            <field name="arch" type="xml">
+                <tree string="ORA Response" decoration-muted="state == 'inactive'" create="0">
+                    <field name="slide_id"/>
+                    <field name="create_date"/>
+                    <field name="xp_points"/>
+                    <field name="user_id"/>
+                    <field name="staff_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ora_user_input_view_search" model="ir.ui.view">
+            <field name="name">ora.response.search</field>
+            <field name="model">ora.response</field>
+            <field name="arch" type="xml">
+                <search string="ORA Responses">
+                    <field name="slide_id"/>
+                    <field name="user_id"/>
+                    <field name="staff_id"/>
+                    <filter name="completed" string="Assessed" domain="[('state', '=', 'assessed')]"/>
+                    <filter string="Submitted" name="submitted" domain="[('state', '=', 'submitted')]"/>
+                    <filter string="Active" name="active" domain="[('state', '=', 'active')]"/>
+                    <filter string="Inactive" name="inactive" domain="[('state', '=', 'inactive')]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="state" string="Status" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Staff" name="group_by_staff" domain="[]" context="{'group_by': 'staff_id'}"/>
+                        <filter string="Users" name="group_by_user" domain="[]" context="{'group_by': 'user_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_slide_slide_form_inherit" model="ir.ui.view">
+            <field name="name">slide.slide.form</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_published']" position="after">
+                    <field name="website_published"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="slide_channel_view_form_inherit" model="ir.ui.view">
+            <field name="name">slide.channel.view.form.inherit</field>
+            <field name="model">slide.channel</field>
+            <field name="inherit_id" ref="website_slides.view_slide_channel_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='visibility']" position="after">
+                    <field name="website_published"/>
+                    <field name="internal_training"/>
+                </xpath>
+                <xpath expr="//field[@name='website_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="general_course"/>
+                    <field name="general_course_type"
+                           attrs="{'invisible':[('general_course', '=', False)], 'required':[('general_course', '=', True)]}"/>
+                    <field name="department_id"
+                           attrs="{'invisible':[('general_course', '=', True)], 'required':[('general_course', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page name="participation_employee" string="Participation employee"
+                          attrs="{'invisible':[('internal_training', '=', False)]}">
+                        <field name="employee_id" widget="many2many_tags"/>
+                    </page>
+                    <page name="information_lecturers" string="Information lecturers">
+                        <group>
+                            <field name="lecturers"/>
+                        </group>
+                        <group>
+                            <field name="name_lecturers"/>
+                            <field name="phone_lecturers"/>
+                            <field name="email_lecturers"/>
+                        </group>
+                        <group>
+                            <field name="rating"/>
+                            <field name="experience_lecturers"/>
+                            <field name="position_lecturers"/>
+                        </group>
+                        <group>
+                            <field name="count_source"/>
+                            <field name="count_student"/>
+                        </group>
+                        <field name="introduce_lecturers"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="slide_channel_action_to_channel_lecturers" model="ir.actions.act_window">
+            <field name="name">Slide channel</field>
+            <field name="res_model">slide.channel</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">
+                [('lecturers', '=', active_id)]
+            </field>
+        </record>
+
+        <record id="slide_channel_partner_action_to_channel_lecturers" model="ir.actions.act_window">
+            <field name="name">Slide channel partner</field>
+            <field name="res_model">slide.channel.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">
+                [('channel_id.lecturers', '=', active_id)]
+            </field>
+        </record>
+
+        <record id="channel_lecturers_view_tree" model="ir.ui.view">
+            <field name="name">channel.lecturers.view.tree</field>
+            <field name="model">channel.lecturers</field>
+            <field name="arch" type="xml">
+                <tree string="Channel lecturers">
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="position"/>
+                    <field name="user_id"/>
+                    <field name="experience"/>
+                    <field name="count_source"/>
+                    <field name="count_student"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="channel_lecturers_view_form" model="ir.ui.view">
+            <field name="name">channel.lecturers.view.form</field>
+            <field name="model">channel.lecturers</field>
+            <field name="arch" type="xml">
+                <form string="Channel lecturers">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="%(slide_channel_action_to_channel_lecturers)d"
+                                    type="action" icon="fa-solid fa-graduation-cap" >
+                                <field string="Khóa học" name="count_source" widget="statinfo"/>
+                            </button>
+                            <button class="oe_stat_button" name="%(slide_channel_partner_action_to_channel_lecturers)d"
+                                    type="action" icon="fa-users" >
+                                <field string="Học viên" name="count_student" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" string="Name lecturers"/>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="VD: Nguyễn Văn A"/>
+                            </h1>
+                            <field name="user_id"/>
+                        </div>
+                        <group>
+                            <group string="Information">
+                                <field name="email"/>
+                                <field name="phone"/>
+                            </group>
+                            <group string="Job Information">
+                                <field name="position"/>
+                                <field name="experience"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="slide_channel" string="Slide channel">
+                                <field name="slide_channel_ids">
+                                </field>
+                            </page>
+                            <page name="introduce" string="Introduce">
+                                <field name="introduce" placeholder="Giới thiệu tổng quan người đào tạo"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <!--                    <div class="oe_chatter">-->
+                    <!--                        <field name="message_follower_ids" groups="base.group_user"/>-->
+                    <!--                        <field name="activity_ids"/>-->
+                    <!--                        <field name="message_ids"/>-->
+                    <!--                    </div>-->
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_ora_response">
+            <field name="name">ORA Responses</field>
+            <field name="res_model">ora.response</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ora_response_view_tree"></field>
+            <field name="search_view_id" ref="ora_user_input_view_search"/>
+            <field name="context">{'search_default_group_by_user': True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    Nobody has replied to your prompts yet
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_ora_response_reporting">
+            <field name="name">ORA Responses</field>
+            <field name="res_model">ora.response</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ora_response_view_tree"></field>
+            <field name="search_view_id" ref="ora_user_input_view_search"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_channel_lecturers_view">
+            <field name="name">Channel lecturers</field>
+            <field name="res_model">channel.lecturers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context"></field>
+        </record>
+
+        <menuitem name="Channel lecturers"
+                  id="menu_channel_lecturers"
+                  action="action_channel_lecturers_view"
+                  parent="website_slides.website_slides_menu_courses"/>
+
+        <menuitem name="ORA Responses"
+                  id="menu_ora_responses"
+                  action="action_ora_response"
+                  parent="website_slides.website_slides_menu_courses"
+                  sequence="10"/>
+        <menuitem name="ORA Responses"
+                  id="menu_ora_responses_reporting"
+                  action="action_ora_response_reporting"
+                  parent="website_slides.website_slides_menu_report"
+                  sequence="100"/>
+    </data>
+</odoo>

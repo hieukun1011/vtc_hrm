@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_job_template3" model="ir.attachment">
+            <field name="name">BÁO CÁO CHI TIẾT THEO VỊ TRÍ TUYỂN DỤNG QUA WEB</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="diligo_hr/static/xls/bao_cao_chi_tiet_tuyen_dung.xlsx"/>
+<!--            <field name="datas_fname">bao_cao_vat_tu_theo_khoa_hoc.xlsx</field>-->
+        </record>
+
+        <record id="report_recruitment_template2" model="ir.attachment">
+            <field name="name">BÁO CÁO TUYỂN DỤNG</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="diligo_hr/static/xls/bao_cao_tong_the_tuyen_dung.xlsx"/>
+<!--            <field name="datas_fname">bao_cao_vat_tu_theo_khoa_hoc.xlsx</field>-->
+        </record>
+
+    </data>
+</odoo>

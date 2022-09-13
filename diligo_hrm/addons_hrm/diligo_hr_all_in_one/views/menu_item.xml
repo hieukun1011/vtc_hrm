@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="hr_manager_menuitem"
+              name="Menu item"
+              parent="base.menu_administration"
+              groups="hr.group_hr_manager"
+              sequence="4"
+    />
+
+        <menuitem id="hr_document_menuitem"
+                  name="Hr document"
+                  parent="hr_manager_menuitem"
+                  groups="hr.group_hr_manager"
+        />
+
+            <menuitem id="hr_document_template_menuitem"
+                      name="Document Templates"
+                      parent="hr_document_menuitem"
+                      sequence="4"
+                      action="oh_employee_documents_expiry.hr_document_template_action"
+                      groups="hr.group_hr_manager"/>
+
+            <menuitem
+                    id="calendar.mail_menu_calendar"
+                    name="Calendar"
+                    parent="hr_manager_menuitem"
+                    sequence="10"
+                    action="calendar.action_calendar_event"
+                    groups="hr.group_hr_manager"/>
+
+            <menuitem name="Contacts"
+                    id="contacts.menu_contacts"
+                    sequence="20"
+                    parent="hr_manager_menuitem"
+                    groups="hr.group_hr_manager"/>
+
+<!--            <menuitem name="Invoicing"-->
+<!--                    id="account.menu_finance"-->
+<!--                    parent="hr_manager_menuitem"-->
+<!--                    groups="hr.group_hr_manager"/>-->
+
+<!--            <menuitem name="Project"-->
+<!--                    id="project.menu_main_pm"-->
+<!--                    sequence="70"/>-->
+
+            <menuitem name="Invoicing"
+                id="account.menu_finance"
+                groups="account.group_account_readonly,account.group_account_invoice"
+                web_icon="account,static/description/icon.png"
+                sequence="1"/>
+
+            <menuitem name="Project"
+                    id="project.menu_main_pm"
+                    groups="project.group_project_manager,project.group_project_user"
+                    web_icon="project,static/description/icon.png"
+                    sequence="70"/>
+
+            <menuitem id="hr_timesheet.timesheet_menu_root"
+                    parent="hr_manager_menuitem"
+                    name="Timesheets"
+                    sequence="75"
+                    groups="hr.group_hr_manager"
+                    />
+
+            <menuitem name="Website"
+                    id="website.menu_website_configuration"
+                    parent="hr_manager_menuitem"
+                    sequence="95"
+                    groups="hr.group_hr_manager"
+                    />
+
+            <menuitem id="employe_document_menuitem"
+                      name="Documents"
+                      parent="hr_document_menuitem"
+                      action="oh_employee_documents_expiry.hr_employee_document_action"
+                      groups="hr.group_hr_manager" />
+
+            <menuitem id="vn_base_unit"
+                      name="VN-Base Unit"
+                      parent="hr_manager_menuitem"
+                      groups="hr.group_hr_manager"
+                      sequence="76"
+            />
+
+                <menuitem id="country_state_menu_item"
+                          name="Tỉnh Thành"
+                          parent="vn_base_unit"
+                          sequence="1"
+                          action="base.action_country_state"/>
+
+                <menuitem id="country_district_menu_item"
+                          name="Quận/Huyện"
+                          parent="vn_base_unit"
+                          sequence="2"
+                          action="base_unit_vn.open_view_res_country_district"/>
+
+                <menuitem id="country_ward_menu_item"
+                          name="Phường/Xã"
+                          parent="vn_base_unit"
+                          sequence="3"
+                          action="base_unit_vn.open_view_res_country_ward"/>
+
+                <menuitem id="nation_menu_item"
+                          name="Dân Tộc"
+                          parent="vn_base_unit"
+                          sequence="4"
+                          action="base_unit_vn.open_view_nation"/>
+
+
+
+            <menuitem id="utm.menu_link_tracker_root"
+                      parent="hr_document_menuitem"
+                      name="Link Tracker"
+                      groups="hr.group_hr_manager"/>
+            <menuitem id="hr.menu_config_plan_types"
+                      parent="hr_document_menuitem"
+                      name="Planning Types"
+                      sequence="77"
+                      groups="hr.group_hr_manager"/>
+            <menuitem id="hr.menu_config_plan_plan"
+                      parent="hr_document_menuitem"
+                      name="Kế hoạch"
+                      sequence="78"
+                      groups="hr.group_hr_manager"/>
+
+</odoo>

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_insurance_officer,hr.insurance.officer,hr_insurance.model_hr_insurance,hr.group_hr_user,1,1,1,1
+access_hr_insurance_employee,hr.insurance.employee,hr_insurance.model_hr_insurance,hr.group_hr_manager,1,1,1,1
+access_hr_insurance_manager,hr.insurance.manager,hr_insurance.model_hr_insurance,base.group_user,1,0,0,0
+
+access_hr_payroll_kpi_payroll_user,hr.payroll.kpi.payroll.user,model_payroll_kpi,om_hr_payroll.group_hr_payroll_user,1,1,1,1
+access_hr_payroll_kpi_hr_user,hr.payroll.kpi.hr.user,model_payroll_kpi,hr.group_hr_user,1,0,0,0
+access_sh_employee_kpi_payroll_user,sh.employee.kpi.payroll.user,model_sh_employee_kpi,om_hr_payroll.group_hr_payroll_user,1,1,1,1
+access_sh_employee_kpi_hr_user,sh.employee.kpi.hr.user,model_sh_employee_kpi,hr.group_hr_user,1,0,0,0

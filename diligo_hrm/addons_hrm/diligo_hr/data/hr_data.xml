@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="email_template_aplicant_state" model="mail.template">
+            <field name="name">Thư mời phỏng vấn</field>
+            <field name="model_id" ref="diligo_hr.model_hr_applicant_state"/>
+            <field name="email_to">{{ object.applicant_id.email_from }}</field>
+            <field name="subject">Thư mời phỏng vấn</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" width="650"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 13px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Thân gửi bạn
+                                <b>
+                                    <t t-out="object.applicant_id.name or ''">,</t>
+                                </b>
+                                <br/>
+                                Lời đầu tiên, thay mặt Công ty Diligo Holdings, Ban Nhân sự xin gửi đến bạn lời chào trân trọng nhất.
+                                <br/>
+                                Thay mặt công ty, chúng tôi trân trọng mời bạn đến tham dự buổi phỏng vấn ở vị trí
+                                <b>
+                                    <t t-out="object.applicant_id.job_id.name or ''"></t>
+                                </b>
+                                <br/>
+                                Thời gian và địa điểm như sau:
+                                <br/>
+                                1. Thời gian:
+                                <b>
+                                    <t t-out='format_datetime(dt=object.start, tz=object.mail_tz, lang_code=object.env.lang) or ""'></t>
+                                </b>
+                                <br/>
+                                2. Địa điểm: Tầng 2, tòa nhà N03T5, Khu Ngoại Giao Đoàn, phường Xuân Tảo, quận Bắc Từ Liêm, Hà Nội
+                                <br/>
+                                3. Giấy tờ cần chuẩn bị: 1 bản CV photo.
+                                <br/>
+                                4. Thông tin liên lạc:  Ms. Ngân - 0869102858
+                                <br/>
+                                Website:
+                                <b>
+                                    <t t-out="object.applicant_id.company_id.website or ''"></t>
+                                </b>
+                                <br/>
+                                Khi nhận được email này, bạn vui lòng xác nhận về việc tham dự.
+                                <br/>
+                                Trân trọng cảm ơn bạn
+                                <div style="font-size: 11px; color: grey;">
+                                    <t t-if="object.applicant_id.user_id">
+                                        ---------------
+                                        <br/>
+                                        <strong t-out="object.applicant_id.user_id.name or ''"></strong>
+                                        <br/>
+                                        Email:
+                                        <t t-out="object.applicant_id.user_id.email or ''"></t>
+                                        <br/>
+                                        Phone:
+                                        <t t-out="object.applicant_id.user_id.phone or ''"></t>
+                                    </t>
+                                    <t t-else="">
+                                        ---------------
+                                        <br/>
+                                        <t>Diligo Holdings</t>
+                                        <br/>
+                                        Tử tế từ tâm
+                                    </t>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <record id="hr_employee_code_action" model="ir.sequence">
+            <field name="name">HR Employee Code</field>
+            <field name="code">diligo_employee_code_action</field>
+            <field name="prefix"></field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

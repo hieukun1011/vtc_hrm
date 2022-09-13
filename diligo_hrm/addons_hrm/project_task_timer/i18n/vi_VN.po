@@ -1,0 +1,476 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_task_timer
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 07:00+0000\n"
+"PO-Revision-Date: 2022-04-26 07:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_task_phase_kanban
+msgid ""
+"<br/>\n"
+"\t\t\t\t\t\t\t\t\t\tProject -"
+msgstr ""
+
+#. module: project_task_timer
+#: model:mail.template,body_html:project_task_timer.rating_project_request_email_template
+msgid ""
+"<div>\n"
+"    <t t-set=\"access_token\" t-value=\"object.rating_get_access_token()\"/>\n"
+"    <t t-set=\"partner\" t-value=\"object.rating_get_partner_id()\"/>\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">\n"
+"    <tbody>\n"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"            <t t-if=\"partner.name\">\n"
+"                Hello <t t-out=\"partner.name or ''\">Brandon Freeman</t>,<br/><br/>\n"
+"            </t>\n"
+"            <t t-else=\"\">\n"
+"                Hello,<br/><br/>\n"
+"            </t>\n"
+"            Please take a moment to rate our services related to the task \"<strong t-out=\"object.name or ''\">Planning and budget</strong>\"\n"
+"            <t t-if=\"object.rating_get_rated_partner_id().name\">\n"
+"                assigned to <strong t-out=\"object.rating_get_rated_partner_id().name or ''\">Mitchell Admin</strong>.<br/>\n"
+"            </t>\n"
+"            <t t-else=\"\">\n"
+"                .<br/>\n"
+"            </t>\n"
+"        </td></tr>\n"
+"        <tr><td style=\"text-align: center;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"                <tr><td style=\"font-size: 13px;\">\n"
+"                    <strong>Tell us how you feel about our service</strong><br/>\n"
+"                    <span style=\"text-color: #888888\">(click on one of these smileys)</span>\n"
+"                </td></tr>\n"
+"                <tr><td style=\"font-size: 13px;\">\n"
+"                    <table style=\"width:100%;text-align:center;margin-top:2rem;\">\n"
+"                        <tr>\n"
+"                            <td>\n"
+"                                <a t-attf-href=\"/rate/{{ access_token }}/5\">\n"
+"                                    <img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Satisfied\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <a t-attf-href=\"/rate/{{ access_token }}/3\">\n"
+"                                    <img alt=\"Okay\" src=\"/rating/static/src/img/rating_3.png\" title=\"Okay\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <a t-attf-href=\"/rate/{{ access_token }}/1\">\n"
+"                                    <img alt=\"Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Dissatisfied\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td></tr>\n"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"            We appreciate your feedback. It helps us to improve continuously.\n"
+"            <t t-if=\"object.project_id.rating_status == 'stage'\">\n"
+"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey has been sent because your task has been moved to the stage <b t-out=\"object.stage_id.name or ''\">In progress</b></span>\n"
+"            </t>\n"
+"            <t t-if=\"object.project_id.rating_status == 'periodic'\">\n"
+"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey is sent <b t-out=\"object.project_id.rating_status_period or ''\">Weekly</b> as long as the task is in the <b t-out=\"object.stage_id.name or ''\">In progress</b> stage.</span>\n"
+"            </t>\n"
+"        </td></tr>\n"
+"    </tbody>\n"
+"    </table>\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: project_task_timer
+#: model:mail.template,body_html:project_task_timer.mail_template_data_project_task
+msgid ""
+"<div>\n"
+"    Dear <t t-out=\"object.partner_id.name or 'customer'\">Brandon Freeman</t>,<br/>\n"
+"    Thank you for your enquiry.<br/>\n"
+"    If you have any questions, please let us know.\n"
+"    <br/><br/>\n"
+"    Thank you,\n"
+"    <t t-if=\"user.signature\">\n"
+"        <br/>\n"
+"        <t t-out=\"user.signature or ''\">--<br/>Mitchell Admin</t>\n"
+"    </t>\n"
+"</div>\n"
+"        "
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_task_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                        \t<i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('date_start', '=', False), ('date_end', '=', False)]}\" modifiers=\"{&quot;invisible&quot;: [[&quot;date_start&quot;, &quot;=&quot;, false], [&quot;date_end&quot;, &quot;=&quot;, false]]}\"/>"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.ui.menu,name:project_task_timer.all_task_menu
+msgid "All Task"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.actions.act_window,name:project_task_timer.open_all_task_tree
+msgid "All task"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model,name:project_task_timer.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Chi tiết phân tích"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__user_id
+msgid "Assignee"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__user_assigned
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__user_id
+msgid "Assignees"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__company_id
+msgid "Company"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__task_count
+msgid "Count"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__create_date
+msgid "Create Date"
+msgstr "Ngày tạo"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_tree
+msgid "Công ty"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_project__deadline_count
+msgid "DeadLine"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__date_deadline
+msgid "Deadline"
+msgstr "Ngày hoàn thành"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_project__deadline_count_with_subtasks
+msgid "Deadline Count With Subtasks"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model,name:project_task_timer.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: project_task_timer
+#: model:ir.actions.act_window,name:project_task_timer.action_view_task_inherit
+msgid "Employee Task"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_account_analytic_line__date_end
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__date_end
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__end_date
+msgid "Ending Date"
+msgstr "Ngày kết thúc"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_task_form
+msgid "Extra Info"
+msgstr "Thông tin thêm"
+
+#. module: project_task_timer
+#: model:ir.actions.act_window,name:project_task_timer.open_task_phase_form
+#: model:ir.ui.menu,name:project_task_timer.menu_action_view_task
+#: model:ir.ui.menu,name:project_task_timer.menu_project_phases
+msgid "Giai đoạn dự án"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+msgid "Giai đoạn..."
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_message_user_assigned
+msgid "Hi"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__id
+msgid "ID"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+msgid "Internal Note"
+msgstr "Ghi chú nội bộ"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__is_user_working
+msgid "Is Current User Working"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_project__project_phase_count
+msgid "Job Note"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_task_form
+msgid "Ngày kế hoạch"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_tree
+msgid "Ngày kết thúc"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_tree
+msgid "Người được giao"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_hr_emp_inherit_form
+msgid "Nhiệm vụ"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_hr_emp_inherit_kanban
+msgid "Nhiệm vụ:"
+msgstr ""
+
+#. module: project_task_timer
+#: model:mail.template,name:project_task_timer.mail_template_data_project_task
+msgid "Nhiệm vụ: Lời cảm ơn Lễ tân"
+msgstr ""
+
+#. module: project_task_timer
+#: model:mail.template,name:project_task_timer.rating_project_request_email_template
+msgid "Nhiệm vụ: Yêu cầu xếp hạng"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__notes
+msgid "Notes"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_task_form
+msgid "Nội dung công việc"
+msgstr ""
+
+#. module: project_task_timer
+#: code:addons/project_task_timer/models/project_task_timer.py:0
+#, python-format
+msgid "Nội dung công việc %s"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_task_search_form
+msgid "Phase"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__name
+msgid "Phase Name"
+msgstr "Tên giai đoạn"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_project_form_inherit
+msgid "Phases"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model,name:project_task_timer.model_project_project
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__project_id
+msgid "Project"
+msgstr "Dự án"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_project__user_id2
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__manager_ids
+msgid "Project Manager"
+msgstr "Người quản lý"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__phase_id
+#: model:ir.model.fields,field_description:project_task_timer.field_report_project_task_user__phase_id
+msgid "Project Phase"
+msgstr "Giai đoạn dự án"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_search
+msgid "Project Phases"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_project__project_priority_count_with_subtasks
+msgid "Project Priority Count With Subtasks"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__duration
+msgid "Real Duration"
+msgstr "Thời lượng thực"
+
+#. module: project_task_timer
+#: model:mail.template,subject:project_task_timer.mail_template_data_project_task
+msgid "Reception of {{ object.name }}"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__sequence
+msgid "Sequence"
+msgstr "Quy tắc mã"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_account_analytic_line__date_start
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__date_start
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task_phase__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__child_ids
+msgid "Sub-tasks"
+msgstr "Nhiệm vụ phụ"
+
+#. module: project_task_timer
+#: model:ir.model,name:project_task_timer.model_project_task
+msgid "Task"
+msgstr "Công việc"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_hr_employee__task_count
+#: model:ir.model.fields,field_description:project_task_timer.field_project_project__project_priority_count
+msgid "Task Count"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model,name:project_task_timer.model_project_task_phase
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_tree
+msgid "Task Phase"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.quick_create_task_form_inherit
+msgid "Task Title"
+msgstr "Nội dung công việc"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_task_phase_kanban
+#: model_terms:ir.ui.view,arch_db:project_task_timer.task_phase_edit
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_hr_emp_inherit_kanban
+msgid "Tasks"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model,name:project_task_timer.model_report_project_task_user
+msgid "Tasks Analysis"
+msgstr "Phân tích nhiệm vụ"
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.view_project_form_inherit
+msgid "Tasks In Progress"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,help:project_task_timer.field_project_task__is_user_working
+msgid "Technical field indicating whether the current user is working. "
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_account_analytic_line__timer_duration
+msgid "Time Duration (Minutes)"
+msgstr ""
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_project_task__task_timer
+msgid "Timer"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_message_user_assigned
+msgid "View"
+msgstr ""
+
+#. module: project_task_timer
+#: model_terms:ir.ui.view,arch_db:project_task_timer.project_message_user_assigned
+msgid "You have been assigned to the"
+msgstr "Bạn đã được phân công/gán cho"
+
+#. module: project_task_timer
+#: model:ir.model.fields,field_description:project_task_timer.field_account_analytic_line__set_time
+msgid "date_end"
+msgstr "Ngày kết thúc"
+
+#. module: project_task_timer
+#: model:mail.template,subject:project_task_timer.rating_project_request_email_template
+msgid "{{ object.project_id.company_id.name }}: Satisfaction Survey"
+msgstr ""
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/components/attachment_box/attachment_box.xml:0
+#, python-format
+msgid "Add attachments"
+msgstr "Thêm tệp đính kèm"

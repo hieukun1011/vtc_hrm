@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem name="Recruitment"
+                  id="hr_recruitment.menu_hr_recruitment_root"
+                  web_icon="hr_recruitment,static/description/icon.png"
+                  groups="hr_recruitment.group_hr_recruitment_user"
+                  sequence="4"/>
+    </data>
+</odoo>

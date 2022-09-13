@@ -1,0 +1,259 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_blog
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-13 06:35+0000\n"
+"PO-Revision-Date: 2022-04-13 06:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_blog
+#: model:res.groups,name:web_blog.blog_group_manager
+msgid "Administrator"
+msgstr "Người quản trị"
+
+#. module: web_blog
+#: model:ir.model.fields.selection,name:web_blog.selection__blog__state__approve
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Approve"
+msgstr "Phê duyệt"
+
+#. module: web_blog
+#: model:ir.actions.act_window,name:web_blog.blog_website_action
+#: model:ir.ui.menu,name:web_blog.menu_blog
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_tree_view
+msgid "Blog"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.ui.menu,name:web_blog.blog_menu_config_groups
+msgid "Blog Groups"
+msgstr "Nhóm blog"
+
+#. module: web_blog
+#: model:ir.module.category,name:web_blog.module_category_blog
+msgid "Blog Permission"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.actions.act_window,name:web_blog.blog_tag_action
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_tag_view_tree
+msgid "Blog Tags"
+msgstr ""
+
+#. module: web_blog
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Blog Title"
+msgstr "Tiêu đề blog"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__tag_ids
+msgid "Category"
+msgstr "Danh mục"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__color
+msgid "Color Index"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.ui.menu,name:web_blog.blog_menu_configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__content
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: web_blog
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_tag_view_form
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_tag_view_search
+msgid "Blog Tag"
+msgstr "Nhãn blog"
+
+#. module: web_blog
+#: model:ir.ui.menu,name:web_blog.blog_menu
+msgid "Blog"
+msgstr "Blog"
+
+#. module: web_blog
+#: model_terms:ir.actions.act_window,help:web_blog.blog_website_action
+msgid "Create a blog"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__create_uid
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__create_date
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__description
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__display_name
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields.selection,name:web_blog.selection__blog__state__draft
+msgid "Draft"
+msgstr "Bản nháp"
+
+#. module: web_blog
+#: model:ir.module.category,description:web_blog.module_category_blog
+msgid "Help you management your blog."
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__id
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__id
+msgid "ID"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog____last_update
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__write_uid
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__write_date
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: web_blog
+#: model:res.groups,name:web_blog.blog_group_user
+msgid "Officer"
+msgstr "Cán bộ"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__website_published
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Push on website"
+msgstr "Đẩy lên website"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__question
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Push on the support"
+msgstr "Đẩy lên trợ giúp"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__date_push
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Date push"
+msgstr "Ngày đăng bài"
+
+#. module: web_blog
+#: model_terms:ir.ui.view,arch_db:web_blog.blog_form_view
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog_tag__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__state
+msgid "State"
+msgstr ""
+
+#. module: web_blog
+#: model:res.groups,comment:web_blog.blog_group_user
+msgid "The user will be able to approve document created by employees."
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields,field_description:web_blog.field_blog__name
+msgid "Title Blog"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model.fields.selection,name:web_blog.selection__blog__state__wait
+msgid "Waiting"
+msgstr "Chờ đợi"
+
+#. module: web_blog
+#: model:ir.model,name:web_blog.model_blog
+msgid "blog"
+msgstr ""
+
+#. module: web_blog
+#: model:ir.model,name:web_blog.model_blog_tag
+msgid "blog.tag"
+msgstr ""
+
+#. module: web_blog
+#: model_terms:ir.ui.view,arch_db:web_blog.res_config_settings_view_form_blog
+msgid ""
+"Edit tasks' description collaboratively in real time. See each author's text"
+" in a distinct color."
+msgstr ""
+"Cộng tác chỉnh sửa nội dung blog trong thời gian thực. Xem văn bản của từng tác giả "
+"trong một màu sắc riêng biệt."
+
+#. module: web_blog
+#: model:ir.actions.act_window,name:web_blog.blog_config_settings_action
+#: model:ir.ui.menu,name:web_blog.blog_config_settings_menu_action
+msgid "Settings"
+msgstr "Thiết lập"

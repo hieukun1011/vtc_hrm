@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_employee_insurance_form" model="ir.ui.view">
+            <field name="name">hr.employee.Insurance_form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='hr_settings']" position="after">
+                    <page name="insurance" string="Insurance" groups="hr.group_hr_manager">
+                        <group>
+                            <field name="is_insurance"/>
+                            <field name="reason_insurance" attrs="{'invisible':[('is_insurance','=',True)]}"/>
+                        </group>
+                        <field name="insurance" context="{'default_employee_id':id}">
+                            <tree string="Employee Insurance">
+                                <field name="policy_id"/>
+                                <field name="sum_insured" widget="monetary_format"/>
+                                <field name="amount"/>
+                                <field name="state"/>
+                            </tree>
+                            <form string="Employee Insurance">
+                                <header>
+                                 <field name="state" widget="statusbar" statusbar_visible="active,expired"/>
+                                </header>
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="employee_id" invisible="1"/>
+                                            <field name="policy_id"/>
+                                        </group>
+                                        <group>
+                                            <field name="sum_insured" widget="monetary_format"/>
+                                            <field name="amount"/>
+                                            <field name="company_id" invisible="1"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="employee_insurance__details_form" model="ir.ui.view">
+            <field name="name">Employee Insurance</field>
+            <field name="model">hr.insurance</field>
+            <field name="arch" type="xml">
+                <form string="Employee Insurance">
+                    <header>
+                     <field name="state" widget="statusbar" statusbar_visible="active,expired"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="policy_id"/>
+                            </group>
+                            <group>
+                                <field name="sum_insured" widget="monetary_format"/>
+                                <field name="amount"/>
+                                <field name="company_id" invisible="1"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="employee_insurance_details_tree" model="ir.ui.view">
+            <field name="name">Employee Insurance</field>
+            <field name="model">hr.insurance</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Insurance">
+                     <field name="employee_id"/>
+                    <field name="policy_id"/>
+                    <field name="sum_insured" widget="monetary_format"/>
+                    <field name="amount"/>
+                    <field name="company_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_employee_insurance_details" model="ir.actions.act_window">
+            <field name="name">Employee Insurance</field>
+            <field name="res_model">hr.insurance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    You have'nt created any policy yet.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="hr_employee_insurance_menu"
+                name="Insurance"
+                parent="hr.menu_hr_root"
+                action="action_employee_insurance_details"/>
+    </data>
+</odoo>

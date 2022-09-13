@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+         <record id="hr_job_form_inherit" model="ir.ui.view">
+            <field name="name">hr.job.form.inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="diligo_hr.hr_job_survey"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="work_address" string="Nơi làm việc" required="1"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

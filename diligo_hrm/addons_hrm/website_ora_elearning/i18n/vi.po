@@ -1,0 +1,1186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_ora_elearning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-24 03:50+0000\n"
+"PO-Revision-Date: 2022-02-24 03:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_aside_training_category_inherited
+msgid "<i class=\"fa fa-flag text-warning\"/> Assessment"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_fullscreen_sidebar_category_ora_inherit
+msgid ""
+"<i class=\"fa fa-flag-checkered text-warning mr-2\"/>\n"
+"                        Assessment"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.o_wslides_sidebar_collapse_inherit
+msgid "<i class=\"fa fa-share-square fa-fw\"/> Share"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<i class=\"fa fa-users\"/> Peer Assessment"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_content_quiz_prompt
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_content_quiz_prompt_active
+msgid "<span class=\"input-group-text\">Your Response</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<span class=\"ml-2\">Your response has been assessed.</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_content_peer_responses
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<span id=\"response_button_text\">View Response</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_assessed_response_prompts
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_peer_responses_cards
+msgid "<span style=\"font-weight: bold;\">Assessment</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<span>Resubmit Copy</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<span>Resubmit Fresh</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<span>Save Your Progress</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_peer_responses_cards
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+msgid "<span>Submit</span>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+msgid "<strong>Response</strong>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__ora_response__state__active
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Active"
+msgstr "Tích cực"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__can_resubmit
+msgid "Allow Resubmit"
+msgstr "Cho phép gửi lại"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__assess_explanation
+msgid "Assess Explanation"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__assess_type
+msgid "Assess Type"
+msgstr "Loại đánh giá"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__ora_response__state__assessed
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Assessed"
+msgstr "Đánh giá"
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Assessment"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_peer_responses_cards
+#, python-format
+msgid "Assessment Explanation"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.actions.server,name:website_ora_elearning.website_ora_elearning_cron_peer_ir_actions_server
+#: model:ir.cron,cron_name:website_ora_elearning.website_ora_elearning_cron_peer
+#: model:ir.cron,name:website_ora_elearning.website_ora_elearning_cron_peer
+msgid "Assign Response to Users"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+#, python-format
+msgid "Avatar"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_peer_responses_cards
+#, python-format
+msgid "Complete the rubric and submit the assessment."
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__open_response_rubric_staff__state__completed
+msgid "Completed"
+msgstr "Hoàn thành"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.o_wslides_sidebar_collapse_inherit
+msgid "Completion Time"
+msgstr "Thời gian hoàn thành"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__slide_id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__slide_id
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__create_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__create_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__create_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__create_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__create_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__create_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__create_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__create_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__create_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__create_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__create_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__create_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__criteria_id
+msgid "Criteria"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__criterian_name
+msgid "Criterian Name"
+msgstr "Tên phiếu"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__criteria_desc
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__display_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__display_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__display_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__display_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__display_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__display_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__feedback
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+msgid "Feedback"
+msgstr "Nhận xét"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/js/ora_fullscreen.js:0
+#: code:addons/website_ora_elearning/static/src/js/website_ora.js:0
+#, python-format
+msgid "Hide Response"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__id
+msgid "ID"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_needaction
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_has_error
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__open_response_rubric_staff__state__in_progress
+msgid "In Progress"
+msgstr "Trong tiến trình"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__ora_response__state__inactive
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt____last_update
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric____last_update
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess____last_update
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff____last_update
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line____last_update
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response____last_update
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.o_wslides_sidebar_collapse_inherit
+msgid "Last Update"
+msgstr "Người cập nhật"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__write_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__write_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__write_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__write_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__write_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__write_uid
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__write_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__write_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__write_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__write_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__write_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__write_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_content_peer_responses
+#, python-format
+msgid "Learner Response"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+msgid "Mark Assessed"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.o_wslides_sidebar_collapse_inherit
+msgid "Members"
+msgstr "Thành viên"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.actions.act_window,help:website_ora_elearning.action_ora_response
+msgid "Nobody has replied to your prompts yet"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.view_slide_slide_form_inherit_ora
+msgid "ORA"
+msgstr "Đánh giá phản hồi"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_tree
+msgid "ORA Response"
+msgstr "Phản hồi ORA"
+
+#. module: website_ora_elearning
+#: model:ir.actions.act_window,name:website_ora_elearning.action_ora_response
+#: model:ir.actions.act_window,name:website_ora_elearning.action_ora_response_reporting
+#: model:ir.ui.menu,name:website_ora_elearning.menu_ora_responses
+#: model:ir.ui.menu,name:website_ora_elearning.menu_ora_responses_reporting
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "ORA Responses"
+msgstr "Phản hồi ORA"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.view_slide_slide_form_inherit_ora
+msgid "Open Response Assessment"
+msgstr "Đánh giá phản hồi"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__option_ids
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__name
+msgid "Option"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__criteria_option_desc
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__option_desc
+msgid "Option Description"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__criterian_ids
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__option_id
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.view_slide_slide_form_inherit_ora
+msgid "Options"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__open_response_rubric_staff__assess_type__peer
+msgid "Peer"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_slide__peer_assessment
+#, python-format
+msgid "Peer Assessment"
+msgstr "Đánh giá"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_slide__peer_limit
+msgid "Peer Limit"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__criteria_option_point
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__option_points
+msgid "Points"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__prompt_id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_slide__prompt_ids
+msgid "Prompt"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__user_response_line
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.view_slide_slide_form_inherit_ora
+msgid "Prompts"
+msgstr "Lời nhắc"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__question_name
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__question_name
+msgid "Question"
+msgstr "Câu hỏi"
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_ora_response
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__response_id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__response_id
+msgid "Response"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_assess__response_assess_id
+msgid "Response Assess"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__response_type
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__response_type
+msgid "Response Type"
+msgstr "Loại phản hồi"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_slide__response_count
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_slide__response_ids
+msgid "Responses"
+msgstr "Phản hồi"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.o_wslides_sidebar_collapse_inherit
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Resubmit Copy"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Resubmit Fresh"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__open_response_prompt__response_type__rich_text
+msgid "Rich Text"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__value_richtext_box
+msgid "Richtext answer"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__slide_rubric_ids
+#: model:ir.model.fields,field_description:website_ora_elearning.field_rubric_criterian__rubric_id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_slide__rubric_ids
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_response_view_form
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.view_slide_slide_form_inherit_ora
+msgid "Rubric"
+msgstr "Phiếu tự đánh giá"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Save Your Progress"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__sequence
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__question_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.view_slide_slide_form_inherit_ora
+msgid "Settings"
+msgstr "Thiết lập"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.o_wslides_sidebar_collapse_inherit
+msgid "Share Channel"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_prompt__slide_id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric__slide_id
+msgid "Slide"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__slide_rubric_staff_line
+msgid "Slide Rubric Staff Line"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_slide_slide
+msgid "Slides"
+msgstr "Slide"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__staff_id
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__open_response_rubric_staff__assess_type__staff
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Staff"
+msgstr "Nhân viên"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__state
+msgid "State"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__state
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Submit"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__ora_response__state__submitted
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Submitted"
+msgstr "Đã đệ trình"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__submitted_date
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__submitted_date
+msgid "Submitted Date"
+msgstr "Ngày nộp"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__open_response_prompt__response_type__text
+msgid "Text"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_user_line__value_text_box
+msgid "Text answer"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+#, python-format
+msgid "There is no peer responses to assess."
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__total_score
+msgid "Total Score"
+msgstr "Tổng điểm"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_open_response_rubric_staff__user_id
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__user_id
+msgid "User"
+msgstr "Người sử dụng"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.ora_user_input_view_search
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/js/ora_fullscreen.js:0
+#: code:addons/website_ora_elearning/static/src/js/website_ora.js:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "View Response"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,help:website_ora_elearning.field_ora_response__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_ora_response__xp_points
+msgid "XP Points"
+msgstr "Điểm XP"
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Your Response"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "Your response has been assessed."
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_content_detailed_inherit_ora
+#, python-format
+msgid "Your response has been submitted successfully on"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_content_peer_responses
+#, python-format
+msgid "assessed on"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_open_response_prompt
+msgid "open.response.prompt"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_open_response_rubric
+msgid "open.response.rubric"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_open_response_rubric_assess
+msgid "open.response.rubric.assess"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_open_response_rubric_staff
+msgid "open.response.rubric.staff"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_open_response_user_line
+msgid "open.response.user.line"
+msgstr ""
+
+#. module: website_ora_elearning
+#. openerp-web
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#: code:addons/website_ora_elearning/static/src/xml/slide_ora.xml:0
+#, python-format
+msgid "points)"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_peer_responses_cards
+msgid ""
+"points)\n"
+"                                                                <br/>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.lesson_assessed_response_prompts
+msgid ""
+"points)\n"
+"                                                            <br/>"
+msgstr ""
+
+#. module: website_ora_elearning
+#: model:ir.model,name:website_ora_elearning.model_rubric_criterian
+msgid "rubric.criterian"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel_partner__channel_id
+#: model:ir.model.fields,field_description:website_slides.field_slide_slide_partner__channel_id
+#: model_terms:ir.ui.view,arch_db:website_slides.slide_channel_partner_view_search
+msgid "Channel"
+msgstr "Khóa học"
+
+#. module: website_slides
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel_partner__partner_id
+#: model:ir.model.fields,field_description:website_slides.field_slide_slide_partner__partner_id
+msgid "Partner"
+msgstr "Người tham dự"
+
+#. module: website_slides
+#: model_terms:ir.ui.view,arch_db:website_slides.view_slide_channel_form
+msgid "Karma"
+msgstr "Duyên"
+
+#. module: portal_rating
+#. openerp-web
+#: code:addons/portal_rating/static/src/js/portal_rating_composer.js:0
+#: code:addons/portal_rating/static/src/xml/portal_rating_composer.xml:0
+#: model_terms:ir.ui.view,arch_db:portal_rating.rating_stars_static_popup_composer
+#, python-format
+msgid "Modify your review"
+msgstr "Đánh giá của bạn"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_form
+msgid "Parent Holder"
+msgstr "Chủ sở Hữu"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__is_internal
+msgid "Visible Internally Only"
+msgstr "Chỉ hiển thị trong nội bộ"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description_motivational:gamification.rank_doctor
+msgid "Reach the next rank and gain a very nice unicorn !"
+msgstr "Đạt được thứ hạng tiếp theo và giành được một con kỳ lân rất đẹp!"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__rated_partner_id
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Rated Operator"
+msgstr "Người đánh giá"
+
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__parent_res_name
+msgid "Parent Document Name"
+msgstr "Tên tài liệu"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__res_name
+msgid "Resource name"
+msgstr "Tên khoá học"
+
+#. module: website_slides
+#: model:ir.ui.menu,name:website_slides.website_slides_menu_root
+#: model_terms:ir.ui.view,arch_db:website_slides.res_config_settings_view_form
+msgid "eLearning"
+msgstr "E-Learning"
+
+#. module: website_slides
+#: model:ir.actions.act_window,name:website_slides.slide_channel_action_overview
+#: model_terms:ir.ui.view,arch_db:website_slides.slide_channel_view_kanban
+msgid "eLearning Overview"
+msgstr "Danh sách khóa học"
+
+#. module: website_slides
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel__website_published
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel_tag_group__website_published
+#: model:ir.model.fields,field_description:website_slides.field_slide_slide__website_published
+msgid "Visible on current website"
+msgstr "Hiển thị ở website"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+#, python-format
+msgid "Employees Only"
+msgstr "Chỉ nhân viên"
+
+#. module: website_slides
+#: model_terms:ir.ui.view,arch_db:website_slides.slide_channel_view_search
+#: model_terms:ir.ui.view,arch_db:website_slides.view_slide_channel_form
+#: model_terms:ir.ui.view,arch_db:website_slides.view_slide_slide_form
+#: model_terms:ir.ui.view,arch_db:website_slides.view_slide_slide_search
+msgid "Archived"
+msgstr "Lưu trữ"
+
+#. module: website_ora_elearning
+#: model:ir.actions.act_window,name:website_ora_elearning.slide_channel_partner_action_courses
+#: model:ir.ui.menu,name:website_ora_elearning.website_slides_menu_attendees_courses
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_channel_partner_view_form
+msgid "Attendees"
+msgstr "Người tham dự"
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/components/activity/activity.xml:0
+#: model:ir.model.fields,field_description:mail.field_mail_activity__user_id
+#, python-format
+msgid "Assigned to"
+msgstr "Người lên lịch"
+
+#. module: mail
+#: model:ir.model.fields,field_description:mail.field_ir_actions_server__activity_summary
+#: model:ir.model.fields,field_description:mail.field_ir_cron__activity_summary
+#: model:ir.model.fields,field_description:mail.field_mail_activity__summary
+msgid "Summary"
+msgstr "Tiêu đề"
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/components/composer_text_input/composer_text_input.js:0
+#, python-format
+msgid "Send a message to followers..."
+msgstr "Gửi tin tới những người tham gia"
+
+#. module: mail
+#: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
+#: model_terms:ir.ui.view,arch_db:mail.mail_wizard_invite_form
+msgid "Add contacts to notify..."
+msgstr "Thêm người nhận tin"
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/components/composer_text_input/composer_text_input.js:0
+#, python-format
+msgid "Log an internal note..."
+msgstr "Nội dung ghi chú"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__department_id
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_channel_view_search_bis
+msgid "Department"
+msgstr "Phòng/Ban"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__employee_id
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_channel_view_form_inherit
+msgid "Participation employee"
+msgstr "Nhân viên tham gia"
+
+#. module: website_slides
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel_partner__completion
+msgid "% Completed Slides"
+msgstr "Tổng số nội dung"
+
+#. module: website_slides
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel_partner__completed_slides_count
+msgid "# Completed Slides"
+msgstr "Tổng số nội dung đã hoàn thành"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_channel_partner_view_form
+msgid "Course Name"
+msgstr "Tên khóa học"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_channel_view_form_inherit
+msgid "Information lecturers"
+msgstr "Thông tin người đào tạo"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__name_lecturers
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.channel_lecturers_view_form
+msgid "Name lecturers"
+msgstr "Tên người đào tạo"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__position
+msgid "Position"
+msgstr "Vị trí làm việc"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__experience
+msgid "Experience"
+msgstr "Kinh nghiệm"
+
+#. modules: website_slides, website_ora_elearning
+#: model:ir.actions.act_window,name:website_ora_elearning.slide_channel_action_to_channel_lecturers
+#: model:ir.model.fields,field_description:website_slides.field_slide_channel_invite__channel_id
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.channel_lecturers_view_form
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__slide_channel_ids
+msgid "Slide channel"
+msgstr "Khóa học"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__introduce
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.channel_lecturers_view_form
+msgid "Introduce"
+msgstr "Giới thiệu"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.channel_lecturers_view_form
+msgid "Information"
+msgstr "Thông tin liên lạc"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.channel_lecturers_view_form
+msgid "Job Information"
+msgstr "Thông tin công việc"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__phone_lecturers
+msgid "Phone lecturers"
+msgstr "Số điện thoại"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__email_lecturers
+msgid "Email lecturers"
+msgstr "Email"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__experience_lecturers
+msgid "Experience lecturers"
+msgstr "Kinh nghiệm"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__position_lecturers
+msgid "Position lecturers"
+msgstr "Vị trí làm việc"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__count_source
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__count_source
+msgid "Count source"
+msgstr "Tổng khóa học"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_channel_lecturers__count_student
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__count_student
+msgid "Count student"
+msgstr "Tổng người tham gia"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__slide_channel__general_course_type__orientation_integration
+msgid "Orientation and integration"
+msgstr "Định hướng và hội nhập"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__general_course_type
+msgid "General course type"
+msgstr "Khóa học chung"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields.selection,name:website_ora_elearning.selection__slide_channel__general_course_type__training_industry
+msgid "Training industry"
+msgstr "Ngành đào tạo"
+
+#. module: website_ora_elearning
+#: model:ir.actions.act_window,name:website_ora_elearning.action_channel_lecturers_view
+#: model:ir.ui.menu,name:website_ora_elearning.menu_channel_lecturers
+msgid "Channel lecturers"
+msgstr "Người đào tạo"
+
+#. module: website_ora_elearning
+#: model_terms:ir.ui.view,arch_db:website_ora_elearning.slide_channel_view_search_bis
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: mass_mailing_slides
+#: model_terms:ir.ui.view,arch_db:mass_mailing_slides.slide_channel_view_form
+#: model_terms:ir.ui.view,arch_db:mass_mailing_slides.slide_channel_view_kanban
+msgid "Contact Attendees"
+msgstr "Liên lạc người tham dự"
+
+#. module: portal_rating
+#. openerp-web
+#: code:addons/portal_rating/static/src/js/portal_rating_composer.js:0
+#, python-format
+msgid "Add a review"
+msgstr "Thêm đánh giá"
+
+#. module: portal_rating
+#. openerp-web
+#: code:addons/portal_rating/static/src/xml/portal_rating_composer.xml:0
+#: model_terms:ir.ui.view,arch_db:portal_rating.rating_stars_static_popup_composer
+#, python-format
+msgid "Write a review"
+msgstr "Viết đánh giá"
+
+#. module: website_ora_elearning
+#: model:ir.model.fields,field_description:website_ora_elearning.field_slide_channel__general_course
+msgid "General course"
+msgstr "Khóa học chung"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
+#, python-format
+msgid "Action"
+msgstr "Hoạt động"
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/legacy/xml/base.xml:0
+#: code:addons/web/static/src/legacy/xml/base.xml:0
+#: model_terms:ir.ui.view,arch_db:web.view_base_document_layout
+#, python-format
+msgid "Upload your file"
+msgstr "Tập tin của bạn"

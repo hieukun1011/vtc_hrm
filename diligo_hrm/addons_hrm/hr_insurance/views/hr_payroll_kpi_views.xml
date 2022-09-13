@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_kpi_form" model="ir.ui.view">
+        <field name="name">hr.employee.kpi_form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="kpi" string="Trách nhiệm KPIs(PP)" groups="hr.group_hr_manager">
+                    <field name="kpi_ids" options="{'no_create_edit':True}">
+                        <tree string="Trách nhiệm KPIs(PP)">
+                            <field name="payroll_kpi_id"/>
+                            <field name="nv_complete"/>
+                            <field name="nv_point"/>
+                            <field name="ld_complete"/>
+                            <field name="ld_point"/>
+                            <field name="attachment_id" class="fa fa-download"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payroll_kpi_search" model="ir.ui.view">
+        <field name="name">hr.payroll.kpi.search</field>
+        <field name="model">payroll.kpi</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="state"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_payroll_kpi_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.payroll.kpi.tree</field>
+        <field name="model">payroll.kpi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="state"/>
+                <field name="department_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_payroll_kpi_form" model="ir.ui.view">
+        <field name="name">hr.payroll.kpi.form</field>
+        <field name="model">payroll.kpi</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Load KPI" name="render_kpi_employee" type="object" class="btn btn-info"/>
+                    <button string="Confirm" name="action_confirm" type="object" class="btn btn-success"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group col="4">
+                        <label for="date_start" string="Period"/>
+                        <div>
+                            <field name="date_start" class="oe_inline"/>
+                            -
+                            <field name="date_end" class="oe_inline"/>
+                        </div>
+                        <field name="department_ids" widget="many2many_tags"/>
+                        <field name="business_results" required="1" string="Kết quả kinh doanh"/>
+                        <field name="total_profit" required="1" string="Tổng lợi nhuận"/>
+                    </group>
+                    <separator string="Payslips"/>
+                    <field name="info"/>
+                    <notebook>
+                        <page name="emp" string="Nhân viên">
+                            <field name="sh_employee_kpi">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="nv_complete"/>
+                                    <field name="nv_point"/>
+                                    <field name="ld_complete"/>
+                                    <field name="ld_point"/>
+                                    <field name="attachment_id" widget="many2many_binary" class="oe_inline"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="nv_complete"/>
+                                                <field name="nv_point"/>
+                                                <field name="attachment_id" widget="many2many_binary" class="oe_inline"/>
+                                            </group>
+                                            <group>
+                                                <field name="employee_name" readonly="1"/>
+                                                <field name="ld_complete"/>
+                                                <field name="ld_point"/>
+                                            </group>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_payroll_kpi" model="ir.actions.act_window">
+        <field name="name">Bảng KPI</field>
+        <field name="res_model">payroll.kpi</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <menuitem id="menu_hr_payroll_kpi"
+          action="action_hr_payroll_kpi"
+          parent="om_hr_payroll.menu_hr_payroll_root"/>
+</odoo>

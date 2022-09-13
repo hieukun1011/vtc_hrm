@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_contract_type_form" model="ir.ui.view">
+        <field name="name">hr.contract.type.form</field>
+        <field name="model">hr.contract.type</field>
+        <field name="arch" type="xml">
+            <form string="Chính sách lương">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="block_type" required="1"/>
+                    </group>
+                    <group>
+                        <field name="other_allowance" widget="monetary_format"/>
+                        <field name="kpi_allowance" widget="monetary_format"/>
+                        <field name="hra"  attrs="{'invisible': [('block_type','=','officer')]}" widget="monetary_format"/>
+                        <field name="da"  attrs="{'invisible': [('block_type','=','officer')]}" widget="monetary_format"/>
+                        <field name="travel_allowance"  attrs="{'invisible': [('block_type','=','officer')]}" widget="monetary_format"/>
+                        <field name="mobile_allowance"  attrs="{'invisible': [('block_type','!=','officer')]}" widget="monetary_format"/>
+                        <field name="car_allowance"  attrs="{'invisible': [('block_type','!=','officer')]}" widget="monetary_format"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_contract_type_tree" model="ir.ui.view">
+        <field name="name">hr.contract.type.tree</field>
+        <field name="model">hr.contract.type</field>
+        <field name="arch" type="xml">
+            <tree string="Chính sách lương">
+                <field name="sequence" widget="handle"/>
+                <field colspan="4" name="name"/>
+                <field name="block_type"/>
+                <field name="other_allowance" widget="monetary_format"/>
+                <field name="kpi_allowance" widget="monetary_format"/>
+                <field name="hra"  attrs="{'invisible': [('block_type','=','officer')]}" widget="monetary_format"/>
+                <field name="da"  attrs="{'invisible': [('block_type','=','officer')]}" widget="monetary_format"/>
+                <field name="travel_allowance"  attrs="{'invisible': [('block_type','=','officer')]}" widget="monetary_format"/>
+                <field name="mobile_allowance"  attrs="{'invisible': [('block_type','!=','officer')]}" widget="monetary_format"/>
+                <field name="car_allowance"  attrs="{'invisible': [('block_type','!=','officer')]}" widget="monetary_format"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_contract_type_search" model="ir.ui.view">
+        <field name="name">hr.contract.type.search</field>
+        <field name="model">hr.contract.type</field>
+        <field name="arch" type="xml">
+            <search string="Search Contract Type">
+                <field name="name" string="Contract Type"/>
+                <field name="sequence" string="Sequence"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_block_type" string="Khối làm việc" domain="[]" context="{'group_by':'block_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hr_contract_type" model="ir.actions.act_window">
+        <field name="name">Chính sách lương</field>
+        <field name="res_model">hr.contract.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_group_block_type': 1}</field>
+        <field name="search_view_id" ref="view_hr_contract_type_search"/>
+    </record>
+
+    <menuitem
+            id="menu_hr_payroll_hr_contract_type_view"
+            action="action_hr_contract_type"
+            name="Chính sách lương"
+            parent="menu_hr_payroll_configuration"
+            sequence="1"
+    />
+</odoo>

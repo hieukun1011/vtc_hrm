@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_hr_user_mar" model="res.groups">
+        <field name="name">Quản lý</field>
+        <field name="category_id" ref="base.module_category_human_resources_employees"/>
+        <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        <field name="comment">The user will be able to approve document created by employees.</field>
+    </record>
+
+    <record id="hr_employee_area_rule_user_mar" model="ir.rule">
+        <field name="name">Employee Area rule manager</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="global" eval="True"/>
+        <field name="groups" eval="[(4, ref('diligo_hr.group_hr_user_mar'))]"/>
+        <field name="domain_force">[('channel_id', 'in', user.employee_id.area_manager.ids)]</field>
+    </record>
+
+    <record id="hr_channel_area_rule_user_mar" model="ir.rule">
+        <field name="name">Area rule manager</field>
+        <field name="model_id" ref="model_hr_channel"/>
+        <field name="global" eval="True"/>
+        <field name="groups" eval="[(4, ref('diligo_hr.group_hr_user_mar'))]"/>
+        <field name="domain_force">[('id', 'in', user.employee_id.area_manager.ids)]</field>
+    </record>
+
+    <record id="hr_employee_area_rule_manager" model="ir.rule">
+        <field name="name">Employee Area rule manager</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="global" eval="True"/>
+         <field name="groups" eval="[(4, ref('hr.group_hr_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+
+    <record model="ir.module.category" id="module_type_user_position">
+            <field name="name">Position user</field>
+            <field name="sequence">0</field>
+            <field name="visible" eval="0"/>
+        </record>
+
+</odoo>

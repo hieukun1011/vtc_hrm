@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="hr_employee_inherit_form_view">
+        <field name="name">hr.employee.form.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_title']" position="inside">
+                <field name="document_checklist" widget="percentpie"/>
+<!--            <field name="email" position="after">-->
+<!--                <div>-->
+<!--                    <field name="document_checklist" widget="percentpie"/>-->
+<!--                </div>-->
+<!--            </field>-->
+            </xpath>
+            <page name="hr_settings" position="after">
+                <page name="checklist" string="Hồ sơ nhân sự">
+                    <group>
+                        <group name="entry_checklist">
+                            <field name="document_checklist_ids" widget="many2many_checkboxes"/>
+                            <field name="check_list_enable" invisible="1"/>
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="hr_employee_inherit_kanban_view">
+        <field name="name">hr.employee.kanban.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+            <xpath expr="//templates" position="before">
+<!--                <field name="entry_progress"/>-->
+                <field name="maximum_rate"/>
+                <field name="check_list_enable" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//ul/li[last()]" position="after">
+                <li t-if="record.check_list_enable.raw_value==1">
+                    Entry Progress
+                    <field name="document_checklist" widget="progressbar" style="width:120px;height:90px;cursor:pointer;"
+                           options="{'max_field': 'maximum_rate'}">
+                    </field>
+                </li>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

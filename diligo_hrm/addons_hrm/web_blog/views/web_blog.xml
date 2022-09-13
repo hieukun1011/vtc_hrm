@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="blog_form_view" model="ir.ui.view">
+            <field name="name">blog.view.form</field>
+            <field name="model">blog</field>
+            <field name="arch" type="xml">
+                <form string="Blog">
+                    <header>
+                        <button string="Request" type="object" name="send_request" class="oe_highlight"
+                                attrs="{'invisible': [('state','!=','draft')]}"/>
+                        <button string="Approve" type="object" name="approve_blog" class="oe_highlight"
+                                groups="web_blog.blog_group_manager" attrs="{'invisible': [('state','!=','wait')]}"/>
+                        <button string="Close" type="object" name="close_blog" class="btn-warning"
+                                groups="web_blog.blog_group_manager" attrs="{'invisible': [('state','!=','approve')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="image_1920" widget="image" class="oe_avatar"
+                               options="{'preview_image': 'image_128'}"/>
+                        <div class="oe_title">
+                            <label for="name" string="Blog Title"/>
+                            <h1>
+                                <field name="name" default_focus="1" required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                <field name="url"/>
+                                <field name="website_published"/>
+<!--                                <field name="question" attrs="{'readonly':[('website_published','=',True)]}"/>-->
+                                <field name="meta" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            </group>
+                            <group>
+                                <field name="date_push"/>
+                            </group>
+
+                        </group>
+
+                        <notebook>
+                            <page name="content" string="Content">
+                                <field name="content" widget="html" nolabel="1"/>
+                            </page>
+                            <page name="description" string="Description">
+                                <field name="description" widget="html" nolabel="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="blog_tree_view" model="ir.ui.view">
+            <field name="name">blog.tree.view</field>
+            <field name="model">blog</field>
+            <field name="arch" type="xml">
+                <tree string="Blog" default_order="create_date desc">
+                    <field name="name"/>
+                    <field name="tag_ids" options="{'color_field': 'color'}" widget="many2many_tags"/>
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                    <field name="total_view"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="blog_website_action" model="ir.actions.act_window">
+            <field name="name">Blog</field>
+            <field name="res_model">blog</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="blog_tree_view"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a blog
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_blog"
+                  name="Blog"
+                  action="blog_website_action"
+                  groups="base.group_user"/>
+
+        <menuitem name="Blog"
+                  id="blog_menu"
+                  parent="menu_blog"
+                  sequence="1"
+                  action="blog_website_action"/>
+
+        <menuitem name="Configuration"
+                  id="blog_menu_configuration"
+                  parent="menu_blog"
+                  sequence="99"/>
+
+        <menuitem name="Blog Groups"
+                  id="blog_menu_config_groups"
+                  parent="blog_menu_configuration"
+                  sequence="2"
+                  action="blog_tag_action"/>
+    </data>
+</odoo>

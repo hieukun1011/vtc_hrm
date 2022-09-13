@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_web_blog_manager,access_web_blog manager,model_blog,blog_group_manager,1,1,1,1
+access_web_blog,access_web_blog user,model_blog,blog_group_user,1,1,1,0
+access_web_blog_tag_manager,access_web_blog tag,model_blog_tag,blog_group_manager,1,1,1,1
+access_web_blog_tag,access_web_blog tag user,model_blog_tag,blog_group_user,1,0,1,0
+
+access_blog_meta_manager,access_blog_meta_manager,model_blog_meta,blog_group_manager,1,1,1,1
+access_blog_meta,access_blog_meta,model_blog_meta,blog_group_user,1,0,1,0

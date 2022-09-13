@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data noupdate="1">
+    <!-- Reference: https://litmus.com/community/learning/24-how-to-code-a-responsive-email-from-scratch -->
+    <template id="register_mail_layout">
+        &lt;!DOCTYPE html&gt;
+        <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                <meta name="format-detection" content="telephone=no"/>
+                <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+                <style>
+                    @media screen and (max-width: 768px) {
+                        .o_mail_col_mv {
+                            display: block !important;
+                            width: auto !important;
+                        }
+                        .o_mail_table_styles {
+                            width: 100% !important;
+                        }
+                        .o_mail_col_container {
+                            margin: 0px 0px 10px 0px !important;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <t t-raw="body"/>
+            </body>
+        </html>
+    </template>
+
+    <record id="email_template_data_applicant" model="mail.template">
+        <field name="name">Thông báo ứng viên</field>
+        <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+        <field name="subject">Thông báo ứng viên</field>
+        <field name="email_to">tuyendung@diligo.vn</field>
+        <field name="partner_to">{{ object.user_id.self.id or '' }}</field>
+        <field name="body_html" type="html">
+        <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+            <tr>
+                <td valign="top">
+                    <div style="font-size: 13px; margin: 0px; padding: 0px;">
+                        Ứng viên <t t-out="object.name"/> Vừa ứng tuyển cho công việc <t t-out="object.job_id.name"/>.
+                        <br/><br/>
+                        Xem và duyệt CV ứng viên: Tại đây
+                        <br/><br/>
+                        Trân trọng,
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </field>
+    </record>
+
+    <record id="email_template_data_applicant_refuse" model="mail.template">
+        <field name="name">Từ chối</field>
+        <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+        <field name="subject">Vị trí ứng tuyển: {{ object.job_id.name }}</field>
+        <field name="email_to">{{ (not object.partner_id and object.email_from or '') }}</field>
+        <field name="partner_to">{{ object.partner_id.id or '' }}</field>
+        <field name="body_html" type="html">
+        <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+            <tr>
+                <td valign="top">
+                    <div style="font-size: 13px; margin: 0px; padding: 0px;">
+                        Thân gửi <t t-out="object.partner_id.name"/>,<br/><br/>
+                        Công ty Diligo holdings cảm ơn bạn đã quan tâm và ứng tuyển vị trí <t t-out="object.job_id.name"/>.
+                        <br/><br/>
+                        Sau quá trình xem xét hồ sơ, chúng tôi đánh giá cao những tố chất cũng như năng lực của bạn.
+                        Tuy nhiên, chúng tôi rất tiếc khi phải thông báo rằng hồ sơ của bạn vào thời điểm hiện tại chưa thực sự phù hợp với yêu cầu của vị trí.
+                        <br/><br/>
+                        Chúng tôi sẽ lưu lại thông tin của bạn trên hệ thống và liên hệ lại nếu có vị trí phù hợp hơn.
+                        Vui long tham khảo thêm các cơ hội nghề nghiệp khác của Diligo holdings trên website: tuyendung@diligo.vn
+                        <br/><br/>
+                        Chúng tôi hi vọng có cơ hội hợp tác với bạn trong tương lai!
+                        <br/><br/>
+                        Trân trọng,
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </field>
+        <field name="auto_delete" eval="True"/>
+        <field name="lang">{{ object.partner_id.lang or '' }}</field>
+    </record>
+    <record id="refuse_reason_1" model="hr.applicant.refuse.reason">
+        <field name="name">Không phù hợp với yêu cầu công việc</field>
+        <field name="template_id" ref="email_template_data_applicant_refuse"/>
+    </record>
+    <record id="refuse_reason_2" model="hr.applicant.refuse.reason">
+        <field name="name">Người nộp đơn không quan tâm nữa</field>
+        <field name="template_id" ref="hr_recruitment.email_template_data_applicant_not_interested"/>
+    </record>
+    <record id="refuse_reason_3" model="hr.applicant.refuse.reason">
+        <field name="name">Người nộp đơn nhận được đề nghị tốt hơn</field>
+        <field name="template_id" ref="hr_recruitment.email_template_data_applicant_not_interested"/>
+    </record>
+
+</data></odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="approval_product_line_view_tree" model="ir.ui.view">
+        <field name="name">approval.product.line.view.tree</field>
+        <field name="model">approval.product.line</field>
+        <field name="arch" type="xml">
+            <tree string="Products">
+                <field name="product_id"/>
+                <field name="description"/>
+                <field name="quantity"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="approval_product_line_view_form" model="ir.ui.view">
+        <field name="name">approval.product.line.view.form</field>
+        <field name="model">approval.product.line</field>
+        <field name="arch" type="xml">
+            <form string="Products">
+                <sheet>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="description"/>
+                        <field name="quantity"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

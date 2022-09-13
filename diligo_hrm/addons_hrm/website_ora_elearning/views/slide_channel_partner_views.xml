@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="website_slides.slide_channel_partner_view_search" model="ir.ui.view">
+            <field name="name">slide.channel.partner.search</field>
+            <field name="model">slide.channel.partner</field>
+            <field name="arch" type="xml">
+                <search string="Channel Member">
+                    <field name="partner_id"/>
+                    <field name="partner_email"/>
+                    <field name="channel_id"/>
+                     <separator/>
+                    <filter string="Completed" name="filter_completed" domain="[('completed', '=', True)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Channel" name="groupby_channel_id" context="{'group_by': 'channel_id'}"/>
+                        <filter string="Partner" name="groupby_partner_id" context="{'group_by': 'partner_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="website_slides.slide_channel_partner_view_tree" model="ir.ui.view">
+            <field name="name">slide.channel.partner.tree</field>
+            <field name="model">slide.channel.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Attendees">
+                    <field name="channel_id" string="Course Name"/>
+                    <field name="channel_user_id"/>
+                    <field name="internal_training" invisible="1"/>
+                    <field name="partner_id" string="Người tham gia" attrs="{'invisible':[('internal_training', '=', 'True')]}"/>
+                    <field name="employee_id" string="Nhân viên tham gia" attrs="{'invisible':[('internal_training', '=', 'False')]}"/>
+                    <field name="partner_email" string="Email"/>
+                    <field name="create_date" string="Enrolled On"/>
+                    <field name="write_date" string="Last Action On"/>
+                    <field name="completion" string="Progress" widget="progressbar"/>
+                    <field name="channel_type" optional="hide"/>
+                    <field name="channel_visibility" optional="hide"/>
+                    <field name="channel_enroll" widget="badge"
+                        decoration-success="channel_enroll == 'public'"
+                        decoration-info="channel_enroll == 'invite'"
+                        decoration-warning="channel_enroll == 'payment'"
+                        optional="hide"/>
+                    <field name="channel_website_id" groups="website.group_multi_website" optional="hide"/>
+                    <button name="unlink" title="Remove" icon="fa-times" type="object"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="slide_channel_partner_view_form" model="ir.ui.view">
+            <field name="name">slide.channel.partner.form</field>
+            <field name="model">slide.channel.partner</field>
+            <field name="arch" type="xml">
+                <form string="Attendees">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="channel_id" string="Course Name" attrs="{'invisible':[('course_on_off', '=', 'off')]}"/>
+                                <field name="channel_id2" string="Course Name" attrs="{'invisible':[('course_on_off', '=', 'on')], 'required': [('course_on_off', '=', 'off')]}"/>
+                                <field name="completion"/>
+                                <field name="internal_training" invisible="1"/>
+                                <field name="partner_id" string="Người tham gia" attrs="{'invisible':[('internal_training', '=', True)], 'required': [('internal_training', '!=', True)]}"/>
+                                <field name="employee_id" string="Nhân viên tham gia" attrs="{'invisible':[('internal_training', '=', False)], 'required': [('internal_training', '=', True)]}"/>
+                                <field name="channel_visibility"/>
+                                <field name="channel_website_id"/>
+                                <label for="start_day" string="Ngày bắt đầu"/>
+                                    <div class="w-100">
+                                        <div class="o_row">
+                                            <field name="start_day" options="{'related_end_date': 'end_date'}" on_change="1" modifiers="{}" required="1" widget="daterange"></field>
+                                            <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>
+                                            <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon" title="Arrow" attrs="{'invisible': [('start_day', '=', False), ('end_date', '=', False)]}" modifiers="{&quot;invisible&quot;: [[&quot;start_day&quot;, &quot;=&quot;, false], [&quot;end_date&quot;, &quot;=&quot;, false]]}"/>
+                                            <field name="end_date" options="{'related_start_date': 'start_day'}" on_change="1" modifiers="{}" required="1" widget="daterange"></field>
+                                        </div>
+                                    </div>
+                            </group>
+                            <group>
+                                <field name="completed"/>
+                                <field name="completed_slides_count"/>
+                                <field name="partner_email"/>
+                                <field name="channel_type"/>
+                                <field name="channel_enroll"/>
+                                <field name="course_on_off" string="Course On Off"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="slide_channel_partner_action_courses" model="ir.actions.act_window">
+            <field name="name">Attendees</field>
+            <field name="res_model">slide.channel.partner</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="search_view_id" ref="website_slides.slide_channel_partner_view_search"/>
+            <field name="context">{'search_default_groupby_partner_id': 1}</field>
+        </record>
+
+        <menuitem name="Attendees"
+            id="website_slides_menu_attendees_courses"
+            parent="website_slides.website_slides_menu_courses"
+            sequence="9"
+            action="slide_channel_partner_action_courses"/>
+    </data>
+</odoo>
