@@ -1715,12 +1715,10 @@ class Task(models.Model):
             # user_ids change: update date_assign
             if vals.get('user_ids'):
                 vals['date_assign'] = fields.Datetime.now()
-
             # Stage change: Update date_end if folded stage and date_last_stage_update
             if vals.get('stage_id'):
                 vals.update(self.update_date_end(vals['stage_id']))
                 vals['date_last_stage_update'] = fields.Datetime.now()
-
             # recurrence
             rec_fields = vals.keys() & self._get_recurrence_fields()
             if rec_fields and vals.get('recurring_task') is True:
@@ -1771,7 +1769,6 @@ class Task(models.Model):
             raise UserError(_('You cannot archive recurring tasks. Please disable the recurrence first.'))
         if 'recurrence_id' in vals and vals.get('recurrence_id') and any(not task.active for task in self):
             raise UserError(_('Archived tasks cannot be recurring. Please unarchive the task first.'))
-
         # stage change: update date_last_stage_update
         if 'stage_id' in vals:
             vals.update(self.update_date_end(vals['stage_id']))
@@ -1834,13 +1831,11 @@ class Task(models.Model):
                 task.display_project_id = task.project_id
         return result
 
-    # quangnh sửa lỗi kéo nhiệm vụ sang giai đoạn khác thì mất ngày kết thúc kế hoạch
     def update_date_end(self, stage_id):
-        # project_task_type = self.env['project.task.type'].browse(stage_id)
-        # if project_task_type.fold or project_task_type.is_closed:
-        #     return {'date_end': fields.Datetime.now()}
-        # return {'date_end': False}
-        return {}
+        project_task_type = self.env['project.task.type'].browse(stage_id)
+        if project_task_type.fold or project_task_type.is_closed:
+            return {'date_end': fields.Datetime.now()}
+        return {'date_end': False}
 
     @api.ondelete(at_uninstall=False)
     def _unlink_except_recurring(self):
