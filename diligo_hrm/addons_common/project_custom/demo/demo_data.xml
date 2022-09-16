@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+    <record model="project.task.phase" id="phase1">
+        <field name="name">Trao đổi với khách hàng</field>
+    </record>
+    <record model="project.task.phase" id="phase2">
+        <field name="name">Phân tích yêu cầu</field>
+    </record>
+    <record model="project.task.phase" id="phase3">
+        <field name="name">Báo giá</field>
+    </record>
+    <record model="project.task.phase" id="phase4">
+        <field name="name">Phân tích nghiệp vụ</field>
+    </record>
+
+
+</odoo>
