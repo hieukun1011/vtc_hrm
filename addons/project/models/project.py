@@ -1832,10 +1832,11 @@ class Task(models.Model):
         return result
 
     def update_date_end(self, stage_id):
-        project_task_type = self.env['project.task.type'].browse(stage_id)
-        if project_task_type.fold or project_task_type.is_closed:
-            return {'date_end': fields.Datetime.now()}
-        return {'date_end': False}
+        # project_task_type = self.env['project.task.type'].browse(stage_id)
+        # if project_task_type.fold or project_task_type.is_closed:
+        #     return {'date_end': fields.Datetime.now()}
+        # return {'date_end': False}
+        return {}
 
     @api.ondelete(at_uninstall=False)
     def _unlink_except_recurring(self):
