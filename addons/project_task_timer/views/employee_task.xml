@@ -20,8 +20,18 @@
         <field name="inherit_id" ref="hr.hr_kanban_view_employees" />
         <field name="arch" type="xml">
             <xpath expr="//div[@class='oe_kanban_details']/ul" position="inside">
-                <li t-if="record.task_count.raw_value"><span>Nhiệm vụ: <field name="task_count" string="Tasks"/></span></li>
+<!--                <a class="o_project_kanban_box" name="action_view_tasks" type="object">-->
+<!--                                                <div>-->
+<!--                                                    <span class="o_value"><t t-esc="record.task_count.raw_value"/></span>-->
+<!--                                                    <span class="o_label"><t t-esc="record.label_tasks.raw_value"/></span>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                 <field name="task_count" string="" class="fa fa-bars"/>-->
+                <span class="fa fa-bars" style="color:green; margin-right: 10px;" title=""/><field name="task_count"/>
+<!--                <li t-if="record.task_count.raw_value"><span>Nhiệm vụ: <field name="task_count" string="Tasks"/></span></li>-->
             </xpath>
+
+
         </field>
     </record>
 
