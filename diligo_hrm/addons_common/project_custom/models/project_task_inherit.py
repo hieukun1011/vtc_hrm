@@ -13,7 +13,8 @@ class ProjectMission(models.Model):
          'Rule date start can not larger than date end!'),
     ]
 
-    description_detail = fields.Text(string='Mission detail',)
+    # description_detail = fields.Text(string='Mission detail',)
+    # user_id = fields.Many2one('hr.employee', string='Dev')
     # dev_id = fields.Many2one('hr.employee', string='Dev')
     # tester_id = fields.Many2one('hr.employee', string='Tester')
     # task_recipient_ids = fields.Many2many('', string='Task recipient')

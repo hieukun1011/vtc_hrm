@@ -17,6 +17,14 @@
 				<xpath expr="//page[@name='extra_info']" position="attributes">
 					<attribute name="invisible">1</attribute>
                 </xpath>
+<!--				<xpath expr="//page[@name='description_page']" position="inside">-->
+<!--					<field name="description_detail" string="Mô tả"/>-->
+<!--				</xpath>-->
+<!--				<xpath expr="//field[@name='description']" position="attributes">-->
+<!--					<attribute name="invisible">1</attribute>-->
+<!--				</xpath>-->
+
+
 
 <!--				<xpath expr="//page[@name='sub_tasks_page']" position="replace">-->
 				<xpath expr="//page[@name='description_page']" position="after">
@@ -24,12 +32,13 @@
 						<field name="child_2_ids" options="{'no_open': True}" widget="one2many">
 							<tree string="Missions detail" editable="bottom">
 <!--								<field name="is_dev" optional="hide"/>-->
-								<field name="date_receive" optional="show" required="False"/>
+								<field name="date_receive" optional="show" required="False" widget="date"/>
 
 <!--								<field name="dev_id" optional="show"/>-->
-								<field name="description" optional="show" />
-								<field name="date_start" optional="show" />
-								<field name="date_end" optional="show" />
+								<field name="description" optional="show" widget="text"/>
+								<field name="user_id" string="Assignee"/>
+								<field name="date_start" optional="show" widget="date"/>
+								<field name="date_end" optional="show" widget="date"/>
 								<field name="name" invisible="1" />
 								<field name="user_ids" invisible="1"/>
 								<field name="stage_id" optional="hide" context="{'default_project_id': project_id}"/>
