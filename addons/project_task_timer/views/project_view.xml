@@ -165,10 +165,10 @@
 					<label for="date_start" string="Ngày kế hoạch"/>
                 	<div class="w-100">
                     	<div class="o_row">
-                        	<field name="date_start" options="{'related_end_date': 'date_end'}" on_change="1" modifiers="{}" required="1"></field>
+                        	<field name="date_start" options="{'related_end_date': 'date_end'}" on_change="1" modifiers="{}" required="1" widget="date"></field>
                         	<i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>
                         	<i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon" title="Arrow" attrs="{'invisible': [('date_start', '=', False), ('date_end', '=', False)]}" modifiers="{&quot;invisible&quot;: [[&quot;date_start&quot;, &quot;=&quot;, false], [&quot;date_end&quot;, &quot;=&quot;, false]]}"/>
-                        	<field name="date_end" options="{'related_start_date': 'date_start'}" on_change="1" modifiers="{}" required="1"></field>
+                        	<field name="date_end" options="{'related_start_date': 'date_start'}" on_change="1" modifiers="{}" required="1" widget="date"></field>
                     	</div>
                 	</div>
 				</xpath>
