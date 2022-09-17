@@ -20,7 +20,7 @@ class JobPosition(models.Model):
     _name = "hr.job.position"
 
     name = fields.Char("Name", required=True)
-    name_web = fields.Char("Name website", required=True)
+    # name_web = fields.Char("Name website", required=True)
     group_id = fields.Many2one('hr.group.job', string='Bộ phận', help='Chọn bộ phận nhóm vị trí', required=True)
 
 
@@ -31,7 +31,7 @@ class JobPosition(models.Model):
 class HRJob(models.Model):
     _inherit = 'hr.job'
 
-    name_web = fields.Char('Name web')
+    name = fields.Char('Name')
     position_id = fields.Many2one('hr.job.position', string='Chức vụ')
     address_location = fields.Text(string='Địa điểm làm việc')
     total_payroll = fields.Integer(string='Tổng định biên', default=1,
@@ -152,8 +152,7 @@ class HRJob(models.Model):
 
     @api.onchange('position_id')
     def _onchange_position_id(self):
-        self.name = self.position_id.name_web if self.position_id.name_web else self.position_id.name
-        self.name_web = self.position_id.name_web if self.position_id.name_web else self.position_id.name
+        self.name = self.position_id.name if self.position_id.name else self.position_id.name
 
     def _get_employee_moves(self):
         at_date = self.env.context.get('employee_at_date')
