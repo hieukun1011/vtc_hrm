@@ -54,6 +54,7 @@ class HrEmployee(models.Model):
         ('employee_email_uniq', 'unique (work_email)', 'Employees corporate email already exists!')
     ]
 
+
     @api.depends('job_id')
     def _compute_job_title(self):
         for employee in self.filtered('job_id'):

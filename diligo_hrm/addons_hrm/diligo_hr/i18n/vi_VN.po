@@ -978,7 +978,7 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__employee_id
 msgid "ID Employee"
-msgstr "Mã mới"
+msgstr "Mã nhân viên"
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__employee_code

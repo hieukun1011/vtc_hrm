@@ -62,12 +62,12 @@
                     groups="hr.group_hr_manager"
                     />
 
-            <menuitem name="Website"
-                    id="website.menu_website_configuration"
-                    parent="hr_manager_menuitem"
-                    sequence="95"
-                    groups="hr.group_hr_manager"
-                    />
+<!--            <menuitem name="Website"-->
+<!--                    id="website.menu_website_configuration"-->
+<!--                    parent="hr_manager_menuitem"-->
+<!--                    sequence="95"-->
+<!--                    groups="hr.group_hr_manager"-->
+<!--                    />-->
 
             <menuitem id="employe_document_menuitem"
                       name="Documents"

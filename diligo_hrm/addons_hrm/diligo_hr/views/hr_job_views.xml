@@ -304,30 +304,30 @@
             </field>
         </record>
 
-        <record id="website_hr_recruitment.view_hr_job_form_website_published_button" model="ir.ui.view" >
-            <field name="name">hr.job.form.inherit.published.button</field>
-            <field name="model">hr.job</field>
-            <field name="inherit_id" ref="hr_recruitment.hr_job_survey"/>
-            <field name="arch" type="xml">
-<!--                <div name="button_box" position="inside">-->
-<!--                    <field name="is_published" widget="website_redirect_button"/>-->
-<!--                </div>-->
-                <xpath expr="//field[@name='no_of_recruitment']" position="after">
-                    <field name="website_published" string="Is Published"/>
-                </xpath>
-            </field>
-        </record>
+<!--        <record id="website_hr_recruitment.view_hr_job_form_website_published_button" model="ir.ui.view" >-->
+<!--            <field name="name">hr.job.form.inherit.published.button</field>-->
+<!--            <field name="model">hr.job</field>-->
+<!--            <field name="inherit_id" ref="hr_recruitment.hr_job_survey"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--&lt;!&ndash;                <div name="button_box" position="inside">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <field name="is_published" widget="website_redirect_button"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <xpath expr="//field[@name='no_of_recruitment']" position="after">-->
+<!--                    <field name="website_published" string="Is Published"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
 
         <record id="view_hr_job_tree_inherit_sci" model="ir.ui.view">
             <field name="name">hr.job.tree</field>
             <field name="model">hr.job</field>
             <field name="inherit_id" ref="hr.view_hr_job_tree"/>
             <field name="arch" type="xml">
-                <field name="website_id" position="replace">
-                    <field name="group_job" optional="hide"/>
-                    <field name="city_id" widget="many2many_tags"/>
-                    <field name="total_payroll"/>
-                </field>
+<!--                <field name="website_id" position="replace">-->
+<!--                    <field name="group_job" optional="hide"/>-->
+<!--                    <field name="city_id" widget="many2many_tags"/>-->
+<!--                    <field name="total_payroll"/>-->
+<!--                </field>-->
                 <xpath expr="//field[@name='no_of_hired_employee']" position="after">
                     <field name="no_of_recruitment2"/>
                 </xpath>
@@ -349,9 +349,9 @@
                 <xpath expr="//field[@name='company_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='website_published']" position="attributes">
-                    <attribute name="invisible">1</attribute>
-                </xpath>
+<!--                <xpath expr="//field[@name='website_published']" position="attributes">-->
+<!--                    <attribute name="invisible">1</attribute>-->
+<!--                </xpath>-->
             </field>
         </record>
 
