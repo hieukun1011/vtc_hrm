@@ -47,11 +47,6 @@
                 <xpath expr="//field[@name='company_id']" position="attributes">
                         <attribute name="invisible">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='department_id']" position="before">
-                    <field name="channel_id" required="1" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
-                    <field name="area" string="Khu vực"/>
-                    <field name="area_manager" string="Khu vực quản lý" widget="many2many_tags"/>
-                </xpath>
                 <xpath expr="//field[@name='department_id']" position="replace">
                     <field name="department_id" required="1" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
                     <field name="position"/>
@@ -139,9 +134,6 @@
                     <filter string="Ngày vào làm" name="group_joining_date"
                             context="{'group_by':'joining_date:month'}"/>
                 </xpath>
-                <xpath expr="//field[@name='department_id']" position="after">
-                    <field name="channel_id" icon="fa-star" enable_counters="1"/>
-				</xpath>
             </field>
         </record>
 
