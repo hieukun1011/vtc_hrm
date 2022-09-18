@@ -23,16 +23,10 @@
                                    modifiers="{'required':true}"/>
                         </h1>
                         <div>
-                            <div style="width: 50%;float: right;">
-                                <label for="employee_id" modifiers="{}"/>
-                                <h3 modifiers="{}">
-                                    <field name="employee_id" modifiers="{}" style="width:50%" readonly="1" force_save="1"/>
-                                </h3>
-                            </div>
                              <div>
-                                <label for="employee_code" modifiers="{}"/>
+                                <label for="employee_id" modifiers="{}"/>
                                 <h3>
-                                    <field name="employee_code" modifiers="{}" style="width:50%" readonly="1" force_save="1"/>
+                                    <field name="employee_id" modifiers="{}" style="width:50%" readonly="1" force_save="1"/>
                                 </h3>
                             </div>
                         </div>
