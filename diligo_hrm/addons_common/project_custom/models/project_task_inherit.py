@@ -24,12 +24,5 @@ class ProjectMission(models.Model):
     description1 = fields.Text('Description')
 
 
-    # ràng buộc ngày hạn chót phải không được nhỏ hơn ngày kết thúc kế hoạch
-    @api.constrains('date_end', 'date_deadline')
-    def _constrains_date_end_and_date_dealine(self):
-        for rec in self:
-            if rec.date_end and rec.date_deadline:
-                if rec.date_deadline < rec.date_end.date():
-                    raise ValidationError("Date deadline is not less than end date")
 
 
