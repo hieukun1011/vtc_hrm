@@ -22,11 +22,17 @@ class JobPosition(models.Model):
     name = fields.Char("Name", required=True)
     # name_web = fields.Char("Name website", required=True)
     group_id = fields.Many2one('hr.group.job', string='Bộ phận', help='Chọn bộ phận nhóm vị trí', required=True)
-
+    job_ids = fields.One2many('hr.job', 'position_id', string='Job')
 
     _sql_constraints = [
         ('name_uniq', 'unique (name,group_id)', "Tên của chức vụ đã tồn tại trong bộ phận!"),
     ]
+
+    @api.constrains('name')
+    def onchange_name(self):
+        for record in self:
+            for rec in record.job_ids:
+                rec.name = record.name
 
 class HRJob(models.Model):
     _inherit = 'hr.job'
