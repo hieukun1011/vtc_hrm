@@ -14,30 +14,30 @@
 # If not, see <https://store.webkul.com/license.html/>
 #################################################################################
 {
-  "name"                 :  "Project custom",
-  "summary"              :  """Project custom""",
-  "category"             :  "Project",
-  "version"              :  "",
-  "sequence"             :  1,
-  "author"               :  "Quangnh",
-  "license"              :  "",
-  "website"              :  "",
-  "description"          :  """""",
-  "live_test_url"        :  "",
-  "depends"              :  ['project', 'project_task_timer'], #project_task_timer
-  "data"                 :  [
-      "security/ir.model.access.csv",
-      'views/project_task_inherit.xml',
-      # 'demo/demo_data.xml',
-                            ],
-  'demo': [],
-  "assets"               : {
+    "name": "Project custom",
+    "summary": """Project custom""",
+    "category": "Project",
+    "version": "",
+    "sequence": 1,
+    "author": "Quangnh",
+    "license": "",
+    "website": "",
+    "description": """""",
+    "live_test_url": "",
+    "depends": ['project', 'project_task_timer'],  # project_task_timer
+    "data": [
+        "security/ir.model.access.csv",
+        'views/project_task_inherit.xml',
+        # 'demo/demo_data.xml',
+    ],
+    'demo': [],
+    "assets": {
 
-                            },
-  "images"               :  [],
-  "application"          :  False,
-  "installable"          :  True,
-  "auto_install"         :  False,
-  "price"                :  49,
+    },
+    "images": [],
+    "application": False,
+    "installable": True,
+    "auto_install": False,
+    "price": 49,
 
 }

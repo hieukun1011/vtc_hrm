@@ -7,116 +7,36 @@
 			<field name="name">project.task.form.inherit</field>
 			<field name="model">project.task</field>
 			<field name="inherit_id" ref="project.view_task_form2"/>
-<!--			<field name="context">{'default_is_dev': False}</field>-->
 			<field name="arch" type="xml">
-<!--				<xpath expr="//field[@name='recurring_task']" position="after">-->
-<!--					<field name="is_dev"/>-->
-<!--					<field name="date_receive"/>-->
-<!--				</xpath>-->
 
 				<xpath expr="//page[@name='extra_info']" position="attributes">
 					<attribute name="invisible">1</attribute>
                 </xpath>
-<!--				<xpath expr="//page[@name='description_page']" position="inside">-->
-<!--					<field name="description_detail" string="Mô tả"/>-->
-<!--				</xpath>-->
-<!--				<xpath expr="//field[@name='description']" position="attributes">-->
-<!--					<attribute name="invisible">1</attribute>-->
-<!--				</xpath>-->
-
-
-
-<!--				<xpath expr="//page[@name='sub_tasks_page']" position="replace">-->
 				<xpath expr="//page[@name='description_page']" position="after">
 					<page name="missions_detail_dev_vtc" string="Missions detail" groups="base.group_user">
 						<field name="child_2_ids" options="{'no_open': True}" widget="one2many">
 							<tree string="Missions detail" editable="bottom">
-<!--								<field name="is_dev" optional="hide"/>-->
 								<field name="date_receive" optional="show" required="False" widget="date"/>
-
-<!--								<field name="dev_id" optional="show"/>-->
 								<field name="description" optional="show" widget="text"/>
+								<field name="name" string="Tên nhiệm vụ"/>
 								<field name="user_id" string="Assignee"/>
 								<field name="date_start" optional="show" widget="date"/>
 								<field name="date_end" optional="show" widget="date"/>
 								<field name="name" invisible="1" />
 								<field name="user_ids" invisible="1"/>
 								<field name="stage_id" optional="hide" context="{'default_project_id': project_id}"/>
-
-
 								<field name="project_id" invisible="1"/>
 								<field name="is_closed" invisible="1"/>
-<!--								<field name="sequence" widget="handle"/>-->
-<!--								<field name="name"/>-->
 								<field name="display_project_id" string="Project" optional="hide"/>
 								<field name="partner_id" optional="hide"/>
-<!--								<field name="user_ids" widget="many2many_avatar_user" optional="show" domain="[('share', '=', False), ('active', '=', True)]"/>-->
 								<field name="company_id" groups="base.group_multi_company" optional="hide"/>
 								<field name="activity_ids" widget="list_activity" optional="hide"/>
 								<field name="date_deadline" attrs="{'invisible': [('is_closed', '=', True)]}" optional="show"/>
 								<field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="hide"/>
 								<field name="kanban_state" widget="state_selection" optional="hide"/>
-<!--								<field name="stage_id" optional="show" context="{'default_project_id': project_id}"/>-->
-<!--								<button name="action_open_task" type="object" title="View Task" string="View Task" class="btn btn-link pull-right"/>-->
 							</tree>
 						</field>
 					</page>
-
-<!--					tab chi tiết nhiệm vụ-->
-<!--					<page name="missions_detail_dev_vtc" string="Missions detail" groups="base.group_user">-->
-<!--						<field name="child_dev_ids" options="{'no_open': True}" widget="one2many" context="{'default_is_dev': True}">-->
-<!--							<tree string="Missions detail" editable="bottom">-->
-<!--&lt;!&ndash;								<field name="is_dev" optional="hide"/>&ndash;&gt;-->
-<!--								<field name="date_receive" optional="show" required="False"/>-->
-<!--								-->
-<!--&lt;!&ndash;								<field name="dev_id" optional="show"/>&ndash;&gt;-->
-<!--								<field name="description" optional="show" />-->
-<!--								<field name="date_start" optional="show" />-->
-<!--								<field name="date_end" optional="show" />-->
-<!--								<field name="name" invisible="1" />-->
-<!--								<field name="user_ids" invisible="1"/>-->
-<!--								<field name="stage_id" optional="hide" context="{'default_project_id': project_id}"/>-->
-
-
-<!--								<field name="project_id" invisible="1"/>-->
-<!--								<field name="is_closed" invisible="1"/>-->
-<!--&lt;!&ndash;								<field name="sequence" widget="handle"/>&ndash;&gt;-->
-<!--&lt;!&ndash;								<field name="name"/>&ndash;&gt;-->
-<!--								<field name="display_project_id" string="Project" optional="hide"/>-->
-<!--								<field name="partner_id" optional="hide"/>-->
-<!--&lt;!&ndash;								<field name="user_ids" widget="many2many_avatar_user" optional="show" domain="[('share', '=', False), ('active', '=', True)]"/>&ndash;&gt;-->
-<!--								<field name="company_id" groups="base.group_multi_company" optional="hide"/>-->
-<!--								<field name="activity_ids" widget="list_activity" optional="hide"/>-->
-<!--								<field name="date_deadline" attrs="{'invisible': [('is_closed', '=', True)]}" optional="show"/>-->
-<!--								<field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="hide"/>-->
-<!--								<field name="kanban_state" widget="state_selection" optional="hide"/>-->
-<!--&lt;!&ndash;								<field name="stage_id" optional="show" context="{'default_project_id': project_id}"/>&ndash;&gt;-->
-<!--&lt;!&ndash;								<button name="action_open_task" type="object" title="View Task" string="View Task" class="btn btn-link pull-right"/>&ndash;&gt;-->
-<!--							</tree>-->
-<!--						</field>-->
-<!--					</page>-->
-
-<!--					tab chi tiết kiểm thử-->
-<!--					<page name="test_detail_vtc" string="Test detail" groups="base.group_user">-->
-<!--						<field name="child_tester_ids" options="{'no_open': True, 'no_create': True}" context="{'default_is_dev': False}">-->
-<!--							<tree string="Test detail">-->
-<!--								<field name="is_dev" optional="hide"/>-->
-<!--								<field name="date_receive" optional="show" required="False"/>-->
-<!--								<field name="name" optional="hide"/>-->
-<!--								<field name="dev_id" optional="show"/>-->
-<!--								<field name="description" optional="show" />-->
-<!--								<field name="date_start" optional="show" />-->
-<!--								<field name="date_end" optional="show" />-->
-<!--								<field name="date_deadline" attrs="{'invisible': [('is_closed', '=', True)]}" optional="show"/>-->
-<!--								<field name="tester_id" />-->
-<!--								<field name="mission_status"  />-->
-<!--								<field name="note_bug" />-->
-
-<!--								<field name="is_closed" invisible="1"/>-->
-<!--							</tree>-->
-<!--						</field>-->
-<!--					</page>-->
-
 				</xpath>
 
 			</field>
