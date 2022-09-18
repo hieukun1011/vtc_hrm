@@ -52,9 +52,10 @@
                     <field name="position"/>
                     <field name="group_job"/>
                 </xpath>
-<!--                <xpath expr="//field[@name='job_id']" position="after">-->
-<!--                    <field name="job_id" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>-->
-<!--                </xpath>-->
+                <xpath expr="//field[@name='job_id']" position="replace">
+                    <button name="reset_job" string="Reset" type="object"/>
+                    <field name="job_id" options="{'no_create': True, 'no_edit': True, 'no_open': True}" widget="many2one"/>
+                </xpath>
                 <xpath expr="//field[@name='identification_id']" position="replace">
                     <field name="identification_id"/>
                     <field name="issue_date"/>

@@ -54,6 +54,11 @@ class HrEmployee(models.Model):
         ('employee_email_uniq', 'unique (work_email)', 'Employees corporate email already exists!')
     ]
 
+    def reset_job(self):
+        employee = self.env['hr.employee'].search([])
+        for e in employee:
+            e.job_id = False
+
     @api.depends('job_id')
     def _compute_job_title(self):
         for employee in self.filtered('job_id'):
