@@ -24,7 +24,7 @@
   "website"              :  "",
   "description"          :  """""",
   "live_test_url"        :  "",
-  "depends"              :  ['project', 'project_task_timer', 'diligo_hr'], #project_task_timer
+  "depends"              :  ['project', 'project_task_timer', 'diligo_hr',"hr"], #project_task_timer
   "data"                 :  [
       "security/ir.model.access.csv",
       'views/project_task_inherit.xml',

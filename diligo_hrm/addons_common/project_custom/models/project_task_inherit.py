@@ -1,6 +1,7 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 import datetime
+from datetime import timedelta
 # import time
 
 class ProjectMission(models.Model):
@@ -29,6 +30,7 @@ class ProjectMission(models.Model):
 
     child_2_ids = fields.One2many('project.task', 'parent_id',
                                     help='Use to view tab')
+    is_due_soon = fields.Boolean('Is due soon', default=False, compute='_compute_is_due_soon')
     # child_dev_ids= fields.One2many('project.task', 'parent_id', string='Child dev', domain=[('is_dev', '=', True)], help='Use to view dev tab')
     # child_tester_ids = fields.One2many('project.task', 'parent_id', string='Child tester',
     #                                 help='Use to view tester tab')  #domain=[('is_dev', '=', False)],
@@ -42,7 +44,23 @@ class ProjectMission(models.Model):
                 if rec.date_deadline < rec.date_end.date():
                     raise ValidationError("Date deadline is not less than end date")
 
+    # chỉ người đc phân công và người quản lý, admin được phép thay đổi trạng thái dự án
+    @api.onchange('stage_id')
+    def rule_change_stage(self):
+        if not self.env.user.has_group('base.group_system'):
+            if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids:
+                raise ValidationError(_('You cannot change this project stage.'))
 
+    @api.onchange('date_deadline')
+    def _compute_is_due_soon(self):
+        days = fields.Date.today() + timedelta(days=1)
+        # print('day', days, self.date_deadline)
+        for rec in self:
+            if rec.date_deadline == days:
+                rec.is_due_soon = True
+                print('is due', rec.is_due_soon)
+            else:
+                rec.is_due_soon = False
     # @api.model
     # def create(self, vals):
     #     if 'date_end' and 'date_deadline' in vals:
