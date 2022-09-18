@@ -57,7 +57,7 @@ class HrEmployee(models.Model):
     def reset_job(self):
         employee = self.env['hr.employee'].search([])
         for e in employee:
-            e.job_id = False
+            e.job_id = 17
 
     @api.depends('job_id')
     def _compute_job_title(self):
