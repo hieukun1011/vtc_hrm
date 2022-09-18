@@ -17,7 +17,7 @@
 						<field name="child_2_ids" options="{'no_open': True}" widget="one2many">
 							<tree string="Missions detail" editable="bottom">
 								<field name="date_receive" optional="show" required="False" widget="date"/>
-								<field name="description1" optional="show" string="Mô tả nhiệm vụ"/>
+								<field name="description" optional="show" />
 								<field name="name" string="Tên nhiệm vụ"/>
 								<field name="user_id" string="Assignee"/>
 								<field name="date_start" optional="show" widget="date"/>

@@ -21,7 +21,6 @@ class ProjectMission(models.Model):
     date_receive = fields.Datetime(string='Date receive', default=fields.Datetime.now)
     child_2_ids = fields.One2many('project.task', 'parent_id',
                                     help='Use to view tab')
-    description1 = fields.Text('Description')
 
 
 
