@@ -42,7 +42,6 @@ class ProjectTaskTimer(models.Model):
         help="Technical field indicating whether the current user is working. ")
     duration = fields.Float(
         'Real Duration', compute='_compute_duration', store=True)
-    description = fields.Text('Description')
 
     def _compute_duration(self):
         self
