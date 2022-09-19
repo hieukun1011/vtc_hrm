@@ -34,11 +34,11 @@
   'demo': [],
   "assets"               : {
 
-                            },
-  "images"               :  [],
-  "application"          :  False,
-  "installable"          :  True,
-  "auto_install"         :  False,
-  "price"                :  49,
+    },
+    "images": [],
+    "application": False,
+    "installable": True,
+    "auto_install": False,
+    "price": 49,
 
 }

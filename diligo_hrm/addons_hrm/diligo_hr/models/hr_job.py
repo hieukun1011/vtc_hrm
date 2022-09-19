@@ -313,8 +313,9 @@ class RecruitmentPeriod(models.Model):
 
     @api.constrains('start_date', 'end_date')
     def check_end_date_and_start_date(self):
-        if self.end_date < self.start_date:
-            raise UserError('Ngày kết thúc không thể bé hơn ngày bắt đầu.')
+        for record in self:
+            if record.end_date < record.start_date:
+                raise UserError('Ngày kết thúc không thể bé hơn ngày bắt đầu.')
 
     @api.depends('applicants', 'applicants.emp_id')
     def _get_nums(self):

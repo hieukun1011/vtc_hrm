@@ -144,15 +144,12 @@ class SCIMaintenanceRequest(models.Model):
     department = fields.Char(string="Phòng ban", states={'new': [('readonly', False)]}, readonly=True)
     description = fields.Html('Mô tả', states={'new': [('readonly', False)]}, readonly=True)
     type = fields.Selection([('pc', 'PC'),
-                             ('dms', 'DMS'),
-                             ('oracle', 'Oracle'),
-                             ('sever', 'Sever'),
-                             ('hrm', 'HRM'),
-                             ('email', 'Email'),
-                             ('odoo', 'Support Odoo'),
-                             ('maintenance', 'Maintenance'),
+                             ('erp', 'ERP'),
+                             ('onetouch', 'One Touch'),
                              ('informatics_equipment', 'Informatics equipment'),
-                             ('network_infrastructure', 'Network Infrastructure')], default='oracle',
+                             ('external_access', 'External access'),
+                             ('website', 'Website'),
+                             ('security', 'Security'),], default='oracle',
                             string='Type maintenance')
     request_date = fields.Datetime('Ngày yêu cầu', default=lambda self: fields.Datetime.now(), tracking=True,
                                    help="Date requested for the maintenance to happen")
@@ -395,18 +392,14 @@ class TypeMaintenanceRequest(models.Model):
     _name = 'type.maintenance.request'
 
     name = fields.Char('name', required=True)
-    area = fields.Many2many('area.type.maintenance.request', string='area')
-    type = fields.Selection([('maintenance', 'Maintenance'),
-                             ('pc', 'PC'),
-                             ('dms', 'DMS'),
-                             ('oracle', 'Oracle'),
-                             ('sever', 'Server'),
-                             ('hrm', 'HRM'),
-                             ('email', 'Email'),
-                             ('odoo', 'Support Odoo'),
+    area = fields.One2many('area.type.maintenance.request', 'type_maintenance_request', string='area')
+    type = fields.Selection([('pc', 'PC'),
+                             ('erp', 'ERP'),
+                             ('onetouch', 'One Touch'),
                              ('informatics_equipment', 'Informatics equipment'),
-                             ('file_sever', 'File Server'),
-                             ('network_infrastructure', 'Network Infrastructure')], default='network_infrastructure',
+                             ('external_access', 'External access'),
+                             ('website', 'Website'),
+                             ('security', 'Security'), ], default='oracle',
                             string='Type maintenance')
 
 
@@ -419,7 +412,7 @@ class AreaTypeMaintenanceRequest(models.Model):
         return ''.join(random.choice(chars) for _ in range(size))
 
     code = fields.Char('Code', default=get_code, readonly=True)
-    type_maintenance_request = fields.Many2many('type.maintenance.request', string='Type maintenance request')
+    type_maintenance_request = fields.Many2one('type.maintenance.request', string='Type maintenance request')
     name = fields.Char('Name', required=True)
     the_average_time = fields.Integer('Average time')
     priority = fields.Selection(

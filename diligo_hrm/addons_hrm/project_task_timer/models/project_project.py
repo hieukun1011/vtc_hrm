@@ -86,9 +86,10 @@ class Task(models.Model):
 
     @api.constrains('date_start', 'date_deadline')
     def check_end_date_and_start_date(self):
-        if self.date_deadline and self.date_start:
-            if self.date_deadline < self.date_start.date():
-                raise UserError('Ngày hạn chót không thể bé hơn ngày bắt đầu.')
+        for record in self:
+            if record.date_deadline and record.date_start:
+                if record.date_deadline < record.date_start.date():
+                    raise UserError('Ngày hạn chót không thể bé hơn ngày bắt đầu.')
 
 
 class ProjectProject(models.Model):
