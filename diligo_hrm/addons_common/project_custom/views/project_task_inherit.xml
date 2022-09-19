@@ -42,6 +42,27 @@
 			</field>
 		</record>
 
+<!--		sửa view kanban báo đồng hồ đỏ khi sắp tới hạn deadline-->
+		<record id="view_task_kanban_inherit_red_clock" model="ir.ui.view">
+			<field name="name">project.task.kanban.inherit.red.clock</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_kanban"/>
+			<field name="arch" type="xml">
+<!--				<xpath expr="//div[@class='oe_kanban_bottom_left']/field[name='activity_ids']" position="attributes">-->
+<!--					<attribute name="invisible">1</attribute>-->
+<!--				</xpath>-->
+				<xpath expr="//t//div//div//div[3]//field[@name='activity_ids']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//t//div//div//div[3]//field[@name='activity_ids']" position="after">
+<!--					<i class="fa fa-clock-o" attrs="{'invisible': [('deadline_count', '=', 0)]}" style="color: Red; margin-left: 2px;" title="Task sắp hết hạn"></i>-->
+<!--					<field name="activity_ids" class="fa fa-clock-o" style="color:red;"/>-->
+					<field name="is_due_soon" invisible="1"/>
+					<i class="fa fa-clock-o" attrs="{'invisible': [('is_due_soon', '=', False)]}" style="color:red;"/>
+				</xpath>
+			</field>
+		</record>
+
 		<record id="hr_timesheet_invisible" model="ir.ui.view">
 			<field name="name">timesheet.form.inherit</field>
 			<field name="model">project.task</field>
