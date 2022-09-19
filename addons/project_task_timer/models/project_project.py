@@ -157,7 +157,7 @@ class ProjectProject(models.Model):
 
 
     def _compute_deadline_count(self):
-        days = fields.Date.today() + timedelta(days=3)
+        days = fields.Date.today() + timedelta(days=2)
         task_data = self.env['project.task'].read_group(
             [('project_id', 'in', self.ids),
              '|',

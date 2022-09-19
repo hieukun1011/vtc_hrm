@@ -57,7 +57,7 @@
 				<xpath expr="//t//div//div//div[3]//field[@name='activity_ids']" position="after">
 <!--					<i class="fa fa-clock-o" attrs="{'invisible': [('deadline_count', '=', 0)]}" style="color: Red; margin-left: 2px;" title="Task sắp hết hạn"></i>-->
 <!--					<field name="activity_ids" class="fa fa-clock-o" style="color:red;"/>-->
-					<field name="is_due_soon" invisible="0"/>
+					<field name="is_due_soon" invisible="1"/>
 					<i class="fa fa-clock-o" attrs="{'invisible': [('is_due_soon', '=', False)]}" style="color:red;"/>
 				</xpath>
 			</field>
