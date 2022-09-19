@@ -48,7 +48,7 @@ class ProjectMission(models.Model):
     @api.onchange('stage_id')
     def rule_change_stage(self):
         if not self.env.user.has_group('base.group_system'):
-            if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids:
+            if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids and self.env.uid != self.user_id:
                 raise ValidationError(_('You cannot change this project stage.'))
 
     @api.onchange('date_deadline')
