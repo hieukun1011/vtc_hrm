@@ -29,6 +29,7 @@
       "security/ir.model.access.csv",
       'views/project_task_inherit.xml',
       'views/hr_employee_kanban_view_inherit.xml',
+      'wizard/project_task_send_mail.xml',
       # 'demo/demo_data.xml',
                             ],
   'demo': [],

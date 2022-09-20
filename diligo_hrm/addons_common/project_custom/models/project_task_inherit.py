@@ -24,7 +24,7 @@ class ProjectMission(models.Model):
     # is_dev= fields.Boolean(string='Is dev or not', default=False)
 
     date_start = fields.Datetime(string='Start Date')
-    date_deadline = fields.Date(string='Deadline', index=True, copy=False, tracking=True, task_dependency_tracking=True,
+    date_deadline = fields.Date(string='Deadline', index=True, copy=False, tracking=True, task_dependency_tracking=True, default=fields.Date.today,
                                 help='Date deadline must larger than date end')
     date_receive = fields.Datetime(string='Date receive', default=fields.Datetime.now)
 
@@ -72,11 +72,19 @@ class ProjectMission(models.Model):
     def write(self, vals):
         model_id = self.env['ir.model'].sudo().search([('model', '=', 'project.task')]).id
         res_id = self.id
-        users = self.user_ids.ids or vals['user_ids'][0][2]
-        managers = self.manager_ids.ids or vals['manager_ids'][0][2]
-        deadline = self.date_deadline or vals['date_deadline']
-
-        if'name' in vals:
+        if 'user_ids' in vals:
+            users = vals['user_ids'][0][2]
+        else:
+            users = self.user_ids.ids
+        if 'manager_ids' in vals:
+            managers = vals['manager_ids'][0][2]
+        else:
+            managers = self.manager_ids.ids
+        if 'date_deadline' in vals:
+            deadline = vals['date_deadline']
+        else:
+            deadline = self.date_deadline
+        if 'name' in vals:
             summary_user = 'You are a assignee in project {}'.format(vals['name'])
             summary_manager = 'You are a manager in project {}'.format(vals['name'])
         else:
@@ -145,7 +153,26 @@ class ProjectMission(models.Model):
                         'activity_type_id': 4,
                         'user_id': manager,
                         'date_deadline': deadline,
-                        'summary': summary_user,
+                        'summary': summary_manager,
                     })
 
         return super(ProjectMission, self).write(vals)
+
+    def send_mail_to_users(self):
+        users = self.user_ids.ids + self.manager_ids.ids
+        # print('users    ', type(users), users)
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Send mail'),
+            'res_model': 'project.task.send.mail',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {'default_user_ids': users, 'active_test': False},
+            'views': [[False, 'form']]
+        }
+
+class ResUsersInherit(models.Model):
+    _name = "res.users"
+
+    _inherit = ['res.users', 'mail.thread']
+

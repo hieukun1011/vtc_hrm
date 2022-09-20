@@ -5,4 +5,5 @@ access_project_task_type_admin,project_task_type,project.model_project_task_type
 access_project_task_user,project_task,project.model_project_task,base.group_user,1,1,0,0
 access_project_task_admin,project_task,project.model_project_task,base.group_system,1,1,1,1
 
+access_project_task_send_mail,project_task_send_mail,model_project_task_send_mail,base.group_system,1,1,1,1
 
