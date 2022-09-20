@@ -39,7 +39,7 @@ export class AppsMenu extends Dropdown {
                 id: this.env.services.company.currentCompany.id,
             });
     	} else {
-    		this.backgroundImageUrl = '/muk_web_theme/static/img/background.png';
+    		this.backgroundImageUrl = '/muk_web_theme/static/img/background.jpg';
     	}
     	this.env.bus.on("ACTION_MANAGER:UI-UPDATED", this, ev => this.close());
     }
