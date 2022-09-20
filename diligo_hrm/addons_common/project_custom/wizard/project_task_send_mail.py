@@ -17,30 +17,34 @@ class ProjectTaskSendMail(models.TransientModel):
     @api.depends('user_ids', 'send_mail')
     def _compute_user_without_email(self):
         for wizard in self:
-            users = wizard.user_ids.filtered(lambda x: not x.partner_id.email) # not x.user_ids.email and   and not x.manager_ids.email
-            if users and wizard.send_mail:
+            res_users = self.env['res.users'].browse(self.user_ids.ids)
+            res_users_no_mail = res_users.filtered(lambda x: not x.email)
+            if wizard.send_mail and res_users_no_mail:
+                # print('user not email', res_users_no_mail)
                 wizard.user_without_email = "%s\n%s" % (
                     _("The email will not be sent to the following user(s) as they don't have email address."),
-                    "\n".join([i.name for i in users])
+                    "\n".join([i.login for i in res_users_no_mail])
                 )
             else:
                 wizard.user_without_email = False
 
     def action_project_task_send_mail(self):
+        # print('self.user_ids', self.user_ids)
         # print('res users', self.user_ids.user_ids)
+        # print('ids', self.user_ids.ids)
 
-        # if self.send_mail:
-        #     if not self.template_id:
-        #         raise UserError(_("Email template must be selected to send a mail"))
-        #     # if not self.user_ids.user_ids.filtered(lambda x: x.email):
-        #     #     raise UserError(_("Email of the user is not set, email won't be sent."))
-        #     if not self.user_ids.user_ids:
-        #         raise UserError(_("User has not account, email won't be sent."))
+        res_users = self.env['res.users'].browse(self.user_ids.ids)
+        # print(res_users)
+        res_users_has_mail = res_users.filtered(lambda x: x.email)
+        # print('have mail', res_users_has_mail)
+        if self.send_mail:
+            if not self.template_id:
+                raise UserError(_("Email template must be selected to send a mail"))
+            if not res_users_has_mail:
+                raise UserError(_("Email of the user is not set, email won't be sent."))
 
         if self.send_mail:
-            users = self.user_ids.user_ids.filtered(lambda x: x.email)
-            # print('mail', users)
-            users.with_context(active_test=True).message_post_with_template(self.template_id.id, **{
+            res_users_has_mail.with_context(active_test=True).message_post_with_template(self.template_id.id, **{
                 'auto_delete_message': True,
                 'subtype_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_note'),
                 'email_layout_xmlid': 'mail.mail_notification_light'
