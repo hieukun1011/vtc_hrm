@@ -24,7 +24,7 @@ class ProjectMission(models.Model):
     # is_dev= fields.Boolean(string='Is dev or not', default=False)
 
     date_start = fields.Datetime(string='Start Date')
-    date_deadline = fields.Date(string='Deadline', index=True, copy=False, tracking=True, task_dependency_tracking=True,
+    date_deadline = fields.Date(string='Deadline', index=True, copy=False, tracking=True, task_dependency_tracking=True, default=fields.Date.today,
                                 help='Date deadline must larger than date end')
     date_receive = fields.Datetime(string='Date receive', default=fields.Datetime.now)
 
@@ -59,6 +59,7 @@ class ProjectMission(models.Model):
                 rec.is_due_soon = True
             else:
                 rec.is_due_soon = False
+
     # @api.model
     # def create(self, vals):
     #     if 'date_end' and 'date_deadline' in vals:
@@ -68,21 +69,110 @@ class ProjectMission(models.Model):
     #
     #     return super(ProjectMission, self).create(vals)
     #
-    # def write(self, vals):
-    #     print('self.project_mission_ids.ids', self.project_mission_ids.ids)
-    #     if 'project_mission_ids' in vals:
-    #         print(vals['project_mission_ids'])
-    #         self.env['project.test.detail'].create({
-    #             # 'mission_id': vals['project_mission_ids'],
-    #                                                 'project_task_id': self.id
-    #                                                 })
-    #         self.env['res.users'].create({
-    #             'name': 'Marc Demo',
-    #             'email': 'mark.brown23@example.com',
-    #             'image_1920': False,
-    #             'create_date': '2015-11-12 00:00:00',
-    #             'login': 'demo_1',
-    #             'password': 'demo_1'
-    #         })
-    #
-    #     return super(ProjectMission, self).write(vals)
+    def write(self, vals):
+        model_id = self.env['ir.model'].sudo().search([('model', '=', 'project.task')]).id
+        res_id = self.id
+        if 'user_ids' in vals:
+            users = vals['user_ids'][0][2]
+        else:
+            users = self.user_ids.ids
+        if 'manager_ids' in vals:
+            managers = vals['manager_ids'][0][2]
+        else:
+            managers = self.manager_ids.ids
+        if 'date_deadline' in vals:
+            deadline = vals['date_deadline']
+        else:
+            deadline = self.date_deadline
+        if 'name' in vals:
+            summary_user = 'You are a assignee in project {}'.format(vals['name'])
+            summary_manager = 'You are a manager in project {}'.format(vals['name'])
+        else:
+            summary_user = 'You are a assignee in project {}'.format(self.name)
+            summary_manager = 'You are a manager in project {}'.format(self.name)
+
+        mails = self.env['mail.activity'].search([('res_model_id', '=', model_id), ('res_id', '=', res_id)])
+        # tạo mail nếu chưa có mail
+        if not mails:
+            # tạo mail cho users
+            for user in users:
+                self.env['mail.activity'].create({
+                    'res_model_id': model_id,
+                    'res_id': res_id,
+                    'activity_type_id': 4,
+                    'user_id': user,
+                    'date_deadline': deadline,
+                    'summary': summary_user,
+                })
+            # tạo mail cho managers
+            for manager in managers:
+                self.env['mail.activity'].create({
+                    'res_model_id': model_id,
+                    'res_id': res_id,
+                    'activity_type_id': 4,
+                    'user_id': manager,
+                    'date_deadline': deadline,
+                    'summary': summary_manager,
+                })
+
+        # nếu đã có mail rồi thì sửa mail
+        else:
+            if 'date_deadline' in vals:
+                # print('date deadline', vals['date_deadline'])
+                deadline = vals['date_deadline']
+                mails.write({
+                    'date_deadline': deadline
+                })
+
+            if 'user_ids' in vals:
+                all_users = vals['user_ids'][0][2]
+                # tìm kiếm users chưa được tạo mail
+                # have_mails = mails.filtered(lambda all_users: 'user_id' in all_users)
+                has_mails = mails.user_id
+                users_no_mail = [x for x in all_users if x not in set(has_mails.ids)]
+                # print('user no mail', users_no_mail)
+                for user in users_no_mail:
+                    self.env['mail.activity'].create({
+                        'res_model_id': model_id,
+                        'res_id': res_id,
+                        'activity_type_id': 4,
+                        'user_id': user,
+                        'date_deadline': deadline,
+                        'summary': summary_user,
+                    })
+
+            if 'manager_ids' in vals:
+                all_managers = vals['manager_ids'][0][2]
+                has_mails = mails.user_id
+                managers_no_mail = [x for x in all_managers if x not in set(has_mails.ids)]
+                # print('user no mail', managers_no_mail)
+                for manager in all_managers:
+                    self.env['mail.activity'].create({
+                        'res_model_id': model_id,
+                        'res_id': res_id,
+                        'activity_type_id': 4,
+                        'user_id': manager,
+                        'date_deadline': deadline,
+                        'summary': summary_manager,
+                    })
+
+        return super(ProjectMission, self).write(vals)
+
+    def send_mail_to_users(self):
+        users = self.user_ids.ids + self.manager_ids.ids
+        # print('users    ', type(users), users)
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Send mail'),
+            'res_model': 'project.task.send.mail',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {'default_user_ids': users, 'active_test': False},
+            'views': [[False, 'form']]
+        }
+
+class ResUsersInherit(models.Model):
+    _name = "res.users"
+
+    _inherit = ['res.users', 'mail.thread']
+

@@ -2,7 +2,11 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_project_task_type_user,project_task_type,project.model_project_task_type,base.group_user,1,0,0,0
 access_project_task_type_admin,project_task_type,project.model_project_task_type,base.group_system,1,1,1,1
 
-access_project_task_user,project_task,project.model_project_task,base.group_user,1,1,0,0
+access_project_task_user,project_task,project.model_project_task,base.group_user,1,1,1,0
 access_project_task_admin,project_task,project.model_project_task,base.group_system,1,1,1,1
 
+access_model_project_project_user,model_project_project,project.model_project_project,base.group_user,1,1,1,0
+access_model_project_project_admin,model_project_project,project.model_project_project,base.group_system,1,1,1,1
+
+access_project_task_send_mail,project_task_send_mail,model_project_task_send_mail,base.group_system,1,1,1,1
 

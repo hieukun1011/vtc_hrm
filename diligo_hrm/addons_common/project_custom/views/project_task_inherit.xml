@@ -8,7 +8,9 @@
 			<field name="model">project.task</field>
 			<field name="inherit_id" ref="project.view_task_form2"/>
 			<field name="arch" type="xml">
-
+				<xpath expr="//header" position="inside">
+                   <button string="Send mail" name="send_mail_to_users" type="object"/>
+				</xpath>
 				<xpath expr="//page[@name='extra_info']" position="attributes">
 					<attribute name="invisible">1</attribute>
                 </xpath>
@@ -49,6 +51,16 @@
 			<field name="model">project.task</field>
 			<field name="inherit_id" ref="project.view_task_kanban"/>
 			<field name="arch" type="xml">
+				<xpath expr="//strong[@class='o_kanban_record_title']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//strong[@class='o_kanban_record_title']" position="after">
+					<span style="font-weight:bold; font-size:16px;">
+						<field name="name" />
+<!--                                            <s t-if="!record.active.raw_value"><field name="name" widget="name_with_subtask_count"/></s>-->
+<!--                                            <t t-else=""><field name="name" widget="name_with_subtask_count"/></t>-->
+					</span>
+				</xpath>
 <!--				<xpath expr="//div[@class='oe_kanban_bottom_left']/field[name='activity_ids']" position="attributes">-->
 <!--					<attribute name="invisible">1</attribute>-->
 <!--				</xpath>-->
@@ -74,5 +86,6 @@
                 </xpath>
 			</field>
 		</record>
+
     </data>
 </odoo>
