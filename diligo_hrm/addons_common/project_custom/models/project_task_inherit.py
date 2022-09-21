@@ -170,9 +170,9 @@ class ProjectMission(models.Model):
             'context': {'default_user_ids': users, 'active_test': False},
             'views': [[False, 'form']]
         }
-
-class ResUsersInherit(models.Model):
-    _name = "res.users"
-
-    _inherit = ['res.users', 'mail.thread']
+#
+# class ResUsersInherit(models.Model):
+#     _name = "res.users"
+#
+#     _inherit = ['res.users', 'mail.thread']
 
