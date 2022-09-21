@@ -7,7 +7,7 @@
             <field name="type">tree</field>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <tree string="Question">
+                <tree string="Question" create="0">
                     <field name="name"/>
                     <field name="mark"/>
                     <field name="que_type"/>
