@@ -6,7 +6,7 @@
         <record id="email_template_data_maintenance_new" model="mail.template">
             <field name="name">IT helpdesk: Yêu cầu hỗ trợ mới</field>
             <field name="model_id" ref="diligo_maintenance.model_sci_maintenance_request"/>
-            <field name="subject">Diligo support: {{ object.name }}</field>
+            <field name="subject">VTC NETVIET support: {{ object.name }}</field>
              <field name="email_to">{{ object.emp_id.work_email }}</field>
              <field name="email_cc"></field>
              <field name="email_bcc"></field>
@@ -31,7 +31,7 @@
                                 <div style="color: grey;">
                                     ---------------------------
                                     <br/>
-                                    <strong>Diligo Holdings</strong>
+                                    <strong>VTC NETVIET</strong>
                                     <br/>
                                     <strong>Ban công nghệ và kiểm soát</strong>
                                 </div>
@@ -45,7 +45,7 @@
          <record id="email_template_data_maintenance_refuse" model="mail.template">
             <field name="name">IT helpdesk: Từ chối yêu cầu hỗ trợ</field>
             <field name="model_id" ref="diligo_maintenance.model_sci_maintenance_request"/>
-            <field name="subject">Diligo support: {{ object.name }}</field>
+            <field name="subject">VTC NETVIET support: {{ object.name }}</field>
              <field name="email_to">{{ object.email }}</field>
              <field name="email_cc">{{ object.default_cc }}</field>
              <field name="email_bcc">{{ object.default_bcc }}</field>
@@ -67,18 +67,18 @@
                                     <t t-if="object.emp_id">
                                         ---------------
                                         <br/>
-                                        <strong t-out="object.emp_id.name or ''">Nguyễn Hữu Chí</strong>
+                                        <strong t-out="object.emp_id.name or ''"></strong>
                                         <br/>
                                         Email:
-                                        <t t-out="object.emp_id.work_email or ''">tekipphatrienungdung@diligo.vn</t>
+                                        <t t-out="object.emp_id.work_email or ''"></t>
                                         <br/>
                                         Phone:
-                                        <t t-out="object.emp_id.mobile_phone or ''">08.6655.0704</t>
+                                        <t t-out="object.emp_id.mobile_phone or ''"></t>
                                     </t>
                                     <t t-else="">
                                         ---------------
                                         <br/>
-                                        <t>Diligo Holdings</t>
+                                        <t>VTC NETVIET</t>
                                         <br/>
                                         Ban công nghệ và kiểm soát
                                     </t>
@@ -93,7 +93,7 @@
         <record id="email_template_data_maintenance_receive" model="mail.template">
             <field name="name">IT helpdesk: Tiếp nhận yêu cầu hỗ trợ</field>
             <field name="model_id" ref="diligo_maintenance.model_sci_maintenance_request"/>
-            <field name="subject">Diligo support: {{ object.name }}</field>
+            <field name="subject">VTC NETVIET support: {{ object.name }}</field>
             <field name="email_to">{{ object.email }}</field>
             <field name="email_cc"></field>
              <field name="email_bcc"></field>
@@ -115,18 +115,18 @@
                                     <t t-if="object.emp_id">
                                         ---------------
                                         <br/>
-                                        <strong t-out="object.emp_id.name or ''">Nguyễn Hữu Chí</strong>
+                                        <strong t-out="object.emp_id.name or ''"></strong>
                                         <br/>
                                         Email:
-                                        <t t-out="object.emp_id.work_email or ''">tekipphatrienungdung@diligo.vn</t>
+                                        <t t-out="object.emp_id.work_email or ''"></t>
                                         <br/>
                                         Phone:
-                                        <t t-out="object.emp_id.mobile_phone or ''">08.6655.0704</t>
+                                        <t t-out="object.emp_id.mobile_phone or ''"></t>
                                     </t>
                                     <t t-else="">
                                         ---------------
                                         <br/>
-                                        <t>Diligo Holdings</t>
+                                        <t>VTC NETVIET</t>
                                         <br/>
                                         Ban công nghệ và kiểm soát
                                     </t>
@@ -141,7 +141,7 @@
         <record id="email_template_data_maintenance_complete" model="mail.template">
             <field name="name">IT helpdesk: Gửi đánh giá phản hồi</field>
             <field name="model_id" ref="diligo_maintenance.model_sci_maintenance_request"/>
-            <field name="subject">Diligo support: {{ object.name }}</field>
+            <field name="subject">VTC NETVIET support: {{ object.name }}</field>
             <field name="email_to">{{ object.email }}</field>
             <field name="email_cc">{{ object.default_cc }}</field>
              <field name="email_bcc">{{ object.default_bcc }}</field>
@@ -162,18 +162,18 @@
                                     <t t-if="object.emp_id">
                                         ---------------
                                         <br/>
-                                        <strong t-out="object.emp_id.name or ''">Nguyễn Hữu Chí</strong>
+                                        <strong t-out="object.emp_id.name or ''"></strong>
                                         <br/>
                                         Email:
-                                        <t t-out="object.emp_id.work_email or ''">tekipphatrienungdung@diligo.vn</t>
+                                        <t t-out="object.emp_id.work_email or ''"></t>
                                         <br/>
                                         Phone:
-                                        <t t-out="object.emp_id.mobile_phone or ''">08.6655.0704</t>
+                                        <t t-out="object.emp_id.mobile_phone or ''"></t>
                                     </t>
                                     <t t-else="">
                                         ---------------
                                         <br/>
-                                        <t>Diligo Holdings</t>
+                                        <t>VTC NETVIET</t>
                                         <br/>
                                         Ban công nghệ và kiểm soát
                                     </t>
