@@ -48,8 +48,8 @@ class ProjectMission(models.Model):
     @api.onchange('stage_id')
     def rule_change_stage(self):
         if not self.env.user.has_group('base.group_system'):
-            if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids and self.env.uid != self.user_id.id:
-                raise ValidationError(_('Bạn không được quyền thay đổi trạng thái công việc của %s') %self.user_id.name)
+            if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids:  # and self.env.uid != self.user_id.id:
+                raise ValidationError(_('Bạn không được quyền thay đổi trạng thái công việc này.'))
 
     @api.depends('date_deadline')
     def _compute_is_due_soon(self):
