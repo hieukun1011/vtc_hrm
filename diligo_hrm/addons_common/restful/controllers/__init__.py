@@ -4,7 +4,6 @@ from . import approvals
 from . import attendance
 from . import blog
 from . import device
-from . import elearning
 from . import employee
 from . import helpdesk
 from . import kpis
