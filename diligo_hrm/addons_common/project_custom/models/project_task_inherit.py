@@ -30,7 +30,7 @@ class ProjectMission(models.Model):
 
     child_2_ids = fields.One2many('project.task', 'parent_id',
                                     help='Use to view tab')
-    is_due_soon = fields.Boolean('Is due soon', default=False, compute='_compute_is_due_soon')
+    is_due_soon = fields.Boolean('Is due soon', default=False, compute='_compute_is_due_soon',)
     # child_dev_ids= fields.One2many('project.task', 'parent_id', string='Child dev', domain=[('is_dev', '=', True)], help='Use to view dev tab')
     # child_tester_ids = fields.One2many('project.task', 'parent_id', string='Child tester',
     #                                 help='Use to view tester tab')  #domain=[('is_dev', '=', False)],
@@ -51,7 +51,7 @@ class ProjectMission(models.Model):
             if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids and self.env.uid != self.user_id.id:
                 raise ValidationError(_('Bạn không được quyền thay đổi trạng thái công việc của %s') %self.user_id.name)
 
-    @api.onchange('date_deadline')
+    @api.depends('date_deadline')
     def _compute_is_due_soon(self):
         days = fields.Date.today() + timedelta(days=1)
         for rec in self:
@@ -170,7 +170,7 @@ class ProjectMission(models.Model):
             'context': {'default_user_ids': users, 'active_test': False},
             'views': [[False, 'form']]
         }
-#
+
 # class ResUsersInherit(models.Model):
 #     _name = "res.users"
 #
