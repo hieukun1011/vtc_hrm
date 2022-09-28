@@ -61,12 +61,6 @@
     </record>
 
 
-    <menuitem
-        id="approvals.approvals_menu_product"
-        parent="approvals.approvals_menu_root"
-        name="Products"
-        action="approval_product_action"
-        sequence="30"/>
 
 
 
