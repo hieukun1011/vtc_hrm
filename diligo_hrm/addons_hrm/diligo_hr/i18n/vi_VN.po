@@ -1,13 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* diligo_hr
+# 	* hr_employee_updation
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-17 04:34+0000\n"
-"PO-Revision-Date: 2022-05-17 04:34+0000\n"
+"POT-Creation-Date: 2022-09-28 02:08+0000\n"
+"PO-Revision-Date: 2022-09-28 02:08+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,215 +16,9 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<b style=\"color: #ff5b00;\">Hồ sơ của bạn</b>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<b style=\"color: #ff5b00;\">Thông tin liên hệ của bạn</b>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<b style=\"font-family: serif;\">Nộp Đơn Ứng Tuyển</b>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid ""
-"<br/>\n"
-"                                <span style=\"font-size: 12px;padding-left:50px;\" class=\"support-type\">\n"
-"                                    Hỗ trợ định dạng .doc, .docx, .pdf, .xls, *.xlsx và không quá 2MB\n"
-"                                </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<br/>\n"
-"                                <strong>LIPZO:</strong>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<br/>\n"
-"                                <strong>NIVA:</strong>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<br/>\n"
-"                                <strong>Twitter:</strong>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid ""
-"<font style=\"color: black\"><i class=\"fa fa-search\" style=\"margin-right:10px;\"/>Tìm kiếm\n"
-"                            </font>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid ""
-"<i class=\"fa fa-calendar-check-o fa-fw\"/>\n"
-"                                                <span>Hạn nhận hồ sơ:</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid ""
-"<i class=\"fa fa-dollar fa-fw\"/>\n"
-"                                            Lương:"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid ""
-"<i class=\"fa fa-dollar fa-fw\"/>\n"
-"                                        Lương:"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid ""
-"<span class=\"s_website_form_label_content \">Số điện thoại\n"
-"                                    <span style=\"color: red;\">*</span>\n"
-"                                </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<span class=\"s_website_form_label_content\">Department</span>"
-msgstr "<span class=\"s_website_form_label_content\">Phòng ban</span>"
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid ""
-"<span class=\"s_website_form_label_content\">Email\n"
-"                                    <span style=\"color: red;\">*</span>\n"
-"                                </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid ""
-"<span class=\"s_website_form_label_content\">Họ và tên\n"
-"                                    <span style=\"color: red;\">*</span>\n"
-"                                </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<span class=\"s_website_form_label_content\">Job</span>"
-msgstr "<span class=\"s_website_form_label_content\">Công việc</span>"
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid ""
-"<span class=\"special-check\" style=\"font-size: 13px;padding-left:95px;\">\n"
-"                                        Vui lòng kiểm tra kỹ email của bạn để nhận được cơ hội việc làm và tin tức mới nhất\n"
-"                                        từ Diligo\n"
-"                                    </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span style=\"color:#0000cc;\"/>\n"
-"                                <br/>\n"
-"                                <strong>Instagram:</strong>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span style=\"color:#0000cc;\">\n"
-"\n"
-"                                </span>\n"
-"                                <br/>\n"
-"                                <strong>Zalo:</strong>\n"
-"                                <span style=\"color:#0000cc;\"/>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span style=\"color:#0000cc;\">\n"
-"                                        https://www.youtube.com/channel/UCCKp8CmupA2staY8GlLZkFg/\n"
-"                                    </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid "<span style=\"color:#0000cc;\">https://twitter.com/DiligoHoldings</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span "
-"style=\"color:#0000cc;\">https://www.facebook.com/DILIGOHoldings/</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span "
-"style=\"color:#0000cc;\">https://www.facebook.com/LipzoCuoitoadieuky/</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid "<span style=\"color:#0000cc;\">https://www.facebook.com/nivavn/</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span "
-"style=\"color:#0000cc;\">https://www.instagram.com/diligoholdings/</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid "<span style=\"color:#0000cc;\">https://zalo.me/863900496189677353</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<span style=\"font-family:Tahoma,Geneva,sans-serif;\">\n"
-"                            <span style=\"font-size:18px;\">\n"
-"                                <span style=\"line-height:1;\">\n"
-"                                    <strong>Công ty Cổ phần Diligo Holdings</strong>\n"
-"                                </span>\n"
-"                            </span>\n"
-"                        </span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<span style=\"padding-left:18px\">Chức danh:</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "<span>-</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "<span>Job tags:</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<span>Người liên hệ:</span>"
+#. module: hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_updation.hr_contract_notice_period
+msgid "<span> days</span>"
 msgstr ""
 
 #. module: diligo_hr
@@ -232,80 +27,18 @@ msgid "<span>Năm</span>"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "<span>Nơi Làm Việc:</span>"
-msgstr ""
-
-#. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
 msgid "<span>Từ</span>"
 msgstr ""
 
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "<span>USD</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "<span>VNĐ</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "<span>năm</span>"
+#. module: hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_updation.journal_config_settings_view_form
+msgid "<span>days</span>"
 msgstr ""
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
 msgid "<span>Đến</span>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid ""
-"<strong>Văn phòng miền Bắc:</strong>\n"
-"                                Tầng 2, Toà nhà N03T5, Khu Đoàn ngoại giao, Phường Xuân Tảo, Quận Bắc Từ Liêm, Thành phố\n"
-"                                Hà Nội, Việt Nam.\n"
-"                                <br/>\n"
-"                                <strong>Điện thoại:</strong>\n"
-"                                (+84) 24 3795 5333 / 336\n"
-"                                <strong>*Fax:</strong>\n"
-"                                (+84) 24 3795 6982\n"
-"                                <br/>\n"
-"                                <strong>Điện thoại Export:</strong>\n"
-"                                (+84) 24 3795 5333 / 210\n"
-"                                <br/>\n"
-"                                <strong>Văn phòng miền Nam:</strong>Số 25 Nguyễn Lương Bằng, Tân Phú, Quận 7, Tp. Hồ Chí\n"
-"                                Minh\n"
-"                                <br/>\n"
-"                                <strong>Điện thoại:</strong>\n"
-"                                (+84) 28 5411 6336\n"
-"                                <strong>*Fax:</strong>\n"
-"                                (+84) 28 5411 1566\n"
-"                                <br/>\n"
-"                                <strong>Nhà máy Diligo Holdings:</strong>\n"
-"                                <br/>\n"
-"                                <strong>Nhà máy 1:</strong>Thôn Lộc Hà, Xã Mai Lâm, Huyện Đông Anh, Hà Nội\n"
-"                                <br/>\n"
-"                                <strong>Nhà máy 2</strong>:Lô CN-27.1, KCN Thuận Thành II, An Bình, Thuận Thành, Bắc\n"
-"                                Ninh\n"
-"                                <br/>\n"
-"                                <strong>Điện thoại:</strong>\n"
-"                                (+84) 24 3795 5333\n"
-"                                <br/>\n"
-"                                <strong>Email:</strong>bm2@lipzo.com\n"
-"                                <strong>*Tuyển dụng:</strong>\n"
-"                                tuyendung@diligo.vn\n"
-"                                <br/>\n"
-"                                <strong>Facebook:</strong>\n"
-"                                <br/>\n"
-"                                <strong>DILIGO HOLDINGS:</strong>"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid "<strong>YouTube:</strong>"
 msgstr ""
 
 #. module: diligo_hr
@@ -335,6 +68,25 @@ msgid ""
 msgstr ""
 
 #. module: diligo_hr
+#: model:mail.template,body_html:diligo_hr.email_template_data_applicant
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"            <tr>\n"
+"                <td valign=\"top\">\n"
+"                    <div style=\"font-size: 13px; margin: 0px; padding: 0px;\">\n"
+"                        Ứng viên <t t-out=\"object.name\"/> Vừa ứng tuyển cho công việc <t t-out=\"object.job_id.name\"/>.\n"
+"                        <br/><br/>\n"
+"                        Xem và duyệt CV ứng viên: Tại đây\n"
+"                        <br/><br/>\n"
+"                        Trân trọng,\n"
+"                    </div>\n"
+"                </td>\n"
+"            </tr>\n"
+"        </table>\n"
+"        "
+msgstr ""
+
+#. module: diligo_hr
 #: model:mail.template,body_html:diligo_hr.email_template_aplicant_state
 msgid ""
 "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"650\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
@@ -344,7 +96,7 @@ msgid ""
 "                                <br/>\n"
 "                                Thân gửi bạn\n"
 "                                <b>\n"
-"                                    <t t-out=\"object.applicant_id.name or ''\"/>\n"
+"                                    <t t-out=\"object.applicant_id.name or ''\">,</t>\n"
 "                                </b>\n"
 "                                <br/>\n"
 "                                Lời đầu tiên, thay mặt Công ty Diligo Holdings, Ban Nhân sự xin gửi đến bạn lời chào trân trọng nhất.\n"
@@ -365,7 +117,7 @@ msgid ""
 "                                <br/>\n"
 "                                3. Giấy tờ cần chuẩn bị: 1 bản CV photo.\n"
 "                                <br/>\n"
-"                                4. Thông tin liên lạc:  Ms. Trang - 0913359028\n"
+"                                4. Thông tin liên lạc:  Ms. Ngân - 0869102858\n"
 "                                <br/>\n"
 "                                Website:\n"
 "                                <b>\n"
@@ -419,6 +171,11 @@ msgid "Action Needed"
 msgstr "Hành động cần thiết"
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__active
+msgid "Active"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__activity_ids
 msgid "Activities"
 msgstr "Các hoạt động"
@@ -459,8 +216,9 @@ msgid "Address home"
 msgstr "Địa chỉ nhà"
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.information_lookup
-msgid "Anh chị vui lòng nhập cả hai thông tin sau"
+#: model:ir.model.fields.selection,name:diligo_hr.selection__report_job__type__all
+#: model:ir.model.fields.selection,name:diligo_hr.selection__report_recruitment__type__all
+msgid "All"
 msgstr ""
 
 #. module: diligo_hr
@@ -485,6 +243,11 @@ msgid "Applicants State"
 msgstr "Nhắc lịch phỏng vấn"
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__job_id
+msgid "Applied Job"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model,name:diligo_hr.model_hr_distributors
 msgid "Apply Distributors"
 msgstr ""
@@ -495,24 +258,35 @@ msgid "Appreciation"
 msgstr "Đánh giá"
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__area
+msgid "Area"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__area_manager
+msgid "Area manager"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__id_attachment_id
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__passport_attachment_id
+msgid "Attachment"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__message_attachment_count
 msgid "Attachment Count"
 msgstr "Số lượng tập tin đính kèm"
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.hr_applicant_state_view_form
-msgid "Attachments"
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_account_agri
+msgid "Bank account"
 msgstr ""
 
 #. module: diligo_hr
-#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank
-msgid "Bank"
-msgstr "Ngân hàng"
-
-#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_account
-msgid "Bank account"
-msgstr "Tài khoản ngân hàng"
+msgid "Bank account "
+msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_number
@@ -520,9 +294,37 @@ msgid "Bank account number"
 msgstr "Số tài khoản ngân hàng"
 
 #. module: diligo_hr
-#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_branch
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_branch_agri
 msgid "Bank branch"
-msgstr "Chi nhánh"
+msgstr ""
+
+#. module: diligo_hr
+#: model_terms:ir.ui.view,arch_db:diligo_hr.report_job_template
+msgid "BÁO CÁO CHI TIẾT THEO VỊ TRÍ TUYỂN DỤNG QUA WEB"
+msgstr ""
+
+#. module: diligo_hr
+#: model_terms:ir.ui.view,arch_db:diligo_hr.report_recruitment_template
+msgid "BÁO CÁO TUYỂN DỤNG"
+msgstr ""
+
+#. module: diligo_hr
+#: model_terms:ir.ui.view,arch_db:diligo_hr.report_job_template
+#: model_terms:ir.ui.view,arch_db:diligo_hr.report_recruitment_template
+msgid "Báo cáo"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.actions.act_window,name:diligo_hr.report_job_act
+#: model:ir.ui.menu,name:diligo_hr.report_job
+msgid "Báo cáo chi tiết vị trí tuyển dụng qua web"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.actions.act_window,name:diligo_hr.report_recruitment_act
+#: model:ir.ui.menu,name:diligo_hr.report_recruitment
+msgid "Báo cáo tuyển dụng"
+msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields.selection,name:diligo_hr.selection__hr_applicant__priority__2
@@ -541,7 +343,6 @@ msgstr ""
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Bằng cấp"
 msgstr ""
 
@@ -566,13 +367,17 @@ msgid "Cancel"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_branch
+msgid "Chi nhánh"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.actions.act_window,name:diligo_hr.act_department_from_department
 msgid "Child Departments"
 msgstr "Phòng ban cấp dưới"
 
 #. module: diligo_hr
 #: model:ir.model.fields.selection,name:diligo_hr.selection__hr_job__experience__0
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Chưa có kinh nghiệm"
 msgstr ""
 
@@ -586,11 +391,6 @@ msgstr ""
 #: model:ir.model.fields,help:diligo_hr.field_hr_job__group_job
 #: model:ir.model.fields,help:diligo_hr.field_hr_job_position__group_id
 msgid "Chọn bộ phận nhóm vị trí"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "Chọn từ máy tính"
 msgstr ""
 
 #. module: diligo_hr
@@ -626,6 +426,21 @@ msgstr "Mã màu"
 msgid "Company Logo"
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.model,name:hr_employee_updation.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập cấu hình"
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__member_contact
+msgid "Contact No"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model,name:hr_employee_updation.model_hr_contract
+msgid "Contract"
+msgstr "Hợp đồng"
+
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__res_country_district
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__res_country_district
@@ -644,7 +459,7 @@ msgstr "Tỉnh/TP"
 msgid "Country ward"
 msgstr "Phường/Xã"
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__create_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__create_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__create_uid
@@ -654,10 +469,14 @@ msgstr "Phường/Xã"
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__create_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__create_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__create_uid
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__create_uid
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__create_uid
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__create_uid
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__create_uid
 msgid "Created by"
 msgstr "Được tạo bởi"
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__create_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__create_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__create_date
@@ -667,22 +486,16 @@ msgstr "Được tạo bởi"
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__create_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__create_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__create_date
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__create_date
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__create_date
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__create_date
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__create_date
 msgid "Created on"
 msgstr "Thời điểm tạo"
 
 #. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__access_url
 msgid "Customer Portal URL"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "CÁC CÔNG VIỆC TƯƠNG TỰ"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "Các công việc nổi bật"
 msgstr ""
 
 #. module: diligo_hr
@@ -705,6 +518,23 @@ msgstr ""
 msgid "Cạnh tranh"
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__birth_date
+msgid "DOB"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__date_start
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__date_start
+msgid "Date From"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__date_end
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__date_end
+msgid "Date To"
+msgstr ""
+
 #. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_employee__resign_date
 msgid "Date of the resignation"
@@ -713,17 +543,24 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model,name:diligo_hr.model_hr_department
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__department
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__department_id
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__department_id
+#: model:ir.model.fields.selection,name:diligo_hr.selection__report_job__type__department
+#: model:ir.model.fields.selection,name:diligo_hr.selection__report_recruitment__type__department
 msgid "Department"
 msgstr "Phòng/Ban"
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.results_information_lookup
-msgid ""
-"Diligo sẽ liên lạc với bạn nếu hồ sơ của bạn đáp ứng các yêu cầu của vị trí "
-"tuyển dụng."
-msgstr ""
+#: model:ir.model,name:diligo_hr.model_hr_departure_wizard
+msgid "Departure Wizard"
+msgstr "Hướng dẫn tính năng nghỉ việc"
 
-#. module: diligo_hr
+#. module: hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_updation.hr_employee_inherit_form_view
+msgid "Dependence Details"
+msgstr "Chi tiết người phụ thuộc"
+
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__display_name
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__display_name
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__display_name
@@ -733,6 +570,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__display_name
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__display_name
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__display_name
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__display_name
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__display_name
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__display_name
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__display_name
 msgid "Display Name"
 msgstr "Tên hiển thị"
 
@@ -769,9 +610,10 @@ msgstr ""
 msgid "Emergency address"
 msgstr "Địa chỉ khẩn cấp"
 
-#. module: diligo_hr
-#: model:ir.model,name:diligo_hr.model_hr_employee
+#. modules: diligo_hr, hr_employee_updation
+#: model:ir.model,name:hr_employee_updation.model_hr_employee
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee_status_history__employee_id
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__employee_id
 msgid "Employee"
 msgstr "Nhân viên"
 
@@ -789,6 +631,11 @@ msgstr "Nhân viên tại thời điểm"
 #: model:ir.model.constraint,message:diligo_hr.constraint_hr_employee_employee_id_uniq
 msgid "Employee code already exists!"
 msgstr "Mã nhân viên đã tồn tại!"
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__joining_date
+msgid "Employee joining date computed from the contract start date"
+msgstr ""
 
 #. module: diligo_hr
 #: model:ir.actions.act_window,name:diligo_hr.action_get_created_employee
@@ -842,6 +689,22 @@ msgstr "Dự kiến tuyển dụng"
 msgid "Experience"
 msgstr "Kinh nghiệm"
 
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__id_expiry_date
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__passport_expiry_date
+msgid "Expiry Date"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__id_expiry_date
+msgid "Expiry date of Identification ID"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__passport_expiry_date
+msgid "Expiry date of Passport ID"
+msgstr ""
+
 #. module: diligo_hr
 #. openerp-web
 #: code:addons/diligo_hr/static/src/xml/view.xml:0
@@ -852,6 +715,16 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant__social_facebook
 msgid "Facebook"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__fam_ids
+msgid "Family"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__fam_ids
+msgid "Family Information"
 msgstr ""
 
 #. module: diligo_hr
@@ -878,6 +751,11 @@ msgstr "Người theo dõi (Đối tác)"
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Font biểu tượng ví dụ: fa-tasks"
+
+#. module: diligo_hr
+#: model:ir.model.fields.selection,name:diligo_hr.selection__hr_job__time_work__fulltime
+msgid "Fulltime"
+msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__description
@@ -930,6 +808,23 @@ msgstr ""
 msgid "Gửi thư mời phỏng vấn"
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.actions.server,name:hr_employee_updation.employee_data_reminder_ir_actions_server
+#: model:ir.cron,cron_name:hr_employee_updation.employee_data_reminder
+#: model:ir.cron,name:hr_employee_updation.employee_data_reminder
+msgid "HR Employee Data Expiration"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model,name:hr_employee_updation.model_hr_employee_family
+msgid "HR Employee Family"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.ui.menu,name:hr_employee_updation.menu_hr_management
+msgid "HR Management"
+msgstr ""
+
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__has_message
 msgid "Has Message"
@@ -947,22 +842,11 @@ msgid "History"
 msgstr "Lịch sử"
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "Hạn chót nộp hồ sơ"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "Hạn nộp hồ sơ: từ"
-msgstr ""
-
-#. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_recruitment_period_popup
 msgid "Hủy bỏ"
 msgstr ""
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__id
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__id
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__id
@@ -972,6 +856,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__id
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__id
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__id
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__id
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__id
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__id
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__id
 msgid "ID"
 msgstr ""
 
@@ -985,6 +873,12 @@ msgstr "Mã nhân viên"
 msgid "ID Employee Old"
 msgstr "Mã cũ"
 
+#. module: hr_employee_updation
+#: code:addons/hr_employee_updation/models/hr_employee.py:0
+#, python-format
+msgid "ID-%s Expired On %s"
+msgstr ""
+
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__activity_exception_icon
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__icon
@@ -995,6 +889,11 @@ msgstr "Biểu tượng"
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__activity_exception_icon
 msgid "Icon to indicate an exception activity."
 msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_updation.hr_employee_inherit_form_view
+msgid "Identification ID"
+msgstr "CCCD/ Tài khoản ngân hàng"
 
 #. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__message_needaction
@@ -1007,6 +906,13 @@ msgstr "Nếu chọn, các tin nhắn mới yêu cầu sự có mặt của bạ
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Nếu đánh dấu thì một số thông điệp có lỗi."
+
+#. module: diligo_hr
+#: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__active
+msgid ""
+"If the active field is set to false, it will allow you to hide the case "
+"without removing it."
+msgstr ""
 
 #. module: diligo_hr
 #: code:addons/diligo_hr/models/hr_employee.py:0
@@ -1035,6 +941,11 @@ msgid "Is Published"
 msgstr "Được đăng"
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__is_official
+msgid "Is official"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__issue_date
 msgid "Issue date"
 msgstr "Ngày cấp"
@@ -1050,6 +961,11 @@ msgid "It shows the duration and history of each stages"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__job_ids
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__job_id
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__job_id
+#: model:ir.model.fields.selection,name:diligo_hr.selection__report_job__type__job
+#: model:ir.model.fields.selection,name:diligo_hr.selection__report_recruitment__type__job
 #: model_terms:ir.ui.view,arch_db:diligo_hr.view_hr_recruitment_period_filter
 msgid "Job"
 msgstr "Chức vụ"
@@ -1086,19 +1002,30 @@ msgstr "Yêu cầu công việc"
 msgid "Job tags"
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__joining_date
+msgid "Joining Date"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields.selection,name:diligo_hr.selection__hr_channel__area__inventory
+msgid "Kho vận"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__area
+#: model_terms:ir.ui.view,arch_db:diligo_hr.hr_channel_tree
+#: model_terms:ir.ui.view,arch_db:diligo_hr.view_hr_channel_form
+msgid "Khu vực"
+msgstr ""
+
 #. module: diligo_hr
 #: model:hr.applicant.refuse.reason,name:diligo_hr.refuse_reason_1
 msgid "Không phù hợp với yêu cầu công việc"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid "Không tìm thấy kết quả phù hợp"
-msgstr ""
-
-#. module: diligo_hr
 #: model:ir.model.fields.selection,name:diligo_hr.selection__hr_job__experience__2
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Không yêu cầu kinh nghiệm"
 msgstr ""
 
@@ -1109,7 +1036,6 @@ msgstr ""
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Kinh nghiệm"
 msgstr ""
 
@@ -1125,7 +1051,7 @@ msgstr ""
 msgid "Kết quả"
 msgstr ""
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state____last_update
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel____last_update
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors____last_update
@@ -1135,10 +1061,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position____last_update
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare____last_update
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period____last_update
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job____last_update
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment____last_update
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family____last_update
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation____last_update
 msgid "Last Modified on"
 msgstr "Sửa lần cuối vào"
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__write_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__write_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__write_uid
@@ -1148,10 +1078,14 @@ msgstr "Sửa lần cuối vào"
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__write_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__write_uid
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__write_uid
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__write_uid
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__write_uid
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__write_uid
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__write_uid
 msgid "Last Updated by"
 msgstr "Cập nhật lần cuối bởi"
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__write_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__write_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__write_date
@@ -1161,13 +1095,12 @@ msgstr "Cập nhật lần cuối bởi"
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__write_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__write_date
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__write_date
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__write_date
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__write_date
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__write_date
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__write_date
 msgid "Last Updated on"
 msgstr "Cập nhật lần cuối vào"
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.contactus
-msgid "Liên hệ với chúng tôi"
-msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__location
@@ -1185,15 +1118,12 @@ msgid "Ly hôn"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "Lương cạnh tranh"
+#: model_terms:ir.ui.view,arch_db:diligo_hr.hr_applicant_state_view_search_bis
+msgid "Lưu trữ"
 msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields.selection,name:diligo_hr.selection__hr_job__salary_type__ltt
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Lương thỏa thuận"
 msgstr ""
 
@@ -1233,6 +1163,11 @@ msgid "Marketing"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__member_ids
+msgid "Member"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__message_has_error
 msgid "Message Delivery error"
 msgstr "Thông báo gửi đi gặp lỗi"
@@ -1241,6 +1176,11 @@ msgstr "Thông báo gửi đi gặp lỗi"
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__message_ids
 msgid "Messages"
 msgstr "Thông báo"
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__personal_mobile
+msgid "Mobile"
+msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__my_activity_date_deadline
@@ -1254,6 +1194,7 @@ msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_channel__code
+#: model_terms:ir.ui.view,arch_db:diligo_hr.hr_channel_tree
 #: model_terms:ir.ui.view,arch_db:diligo_hr.view_hr_channel_form
 msgid "Mã kênh"
 msgstr ""
@@ -1265,13 +1206,11 @@ msgstr ""
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Mô tả công việc"
 msgstr ""
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Mức lương"
 msgstr ""
 
@@ -1315,10 +1254,12 @@ msgstr ""
 msgid "NS nhận việc trong tuần"
 msgstr ""
 
-#. module: diligo_hr
+#. modules: diligo_hr, hr_employee_updation
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__name
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_job__name
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_position__name
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job_welfare__name
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__member_name
 msgid "Name"
 msgstr "Tên"
 
@@ -1378,8 +1319,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job__job_industry
 #: model:ir.ui.menu,name:diligo_hr.menu_hr_industry_job
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Ngành nghề"
 msgstr ""
 
@@ -1427,6 +1366,16 @@ msgid "Ngày vào làm"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank_agri
+msgid "Ngân hàng Agribank"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__bank
+msgid "Ngân hàng quân đội MB Bank"
+msgstr ""
+
+#. module: diligo_hr
 #: model:hr.applicant.refuse.reason,name:diligo_hr.refuse_reason_2
 msgid "Người nộp đơn không quan tâm nữa"
 msgstr ""
@@ -1439,6 +1388,11 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__partner_ids
 msgid "Người phỏng vấn"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields.selection,name:diligo_hr.selection__hr_channel__area__factory
+msgid "Nhà máy"
 msgstr ""
 
 #. module: diligo_hr
@@ -1484,6 +1438,17 @@ msgstr ""
 msgid "Nhắc lịch phỏng vấn"
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_res_config_settings__no_of_days
+msgid "No Of Days"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_contract__notice_days
+#: model:ir.model.fields,field_description:hr_employee_updation.field_res_config_settings__notice_period
+msgid "Notice Period"
+msgstr ""
+
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__message_needaction_counter
 msgid "Number of Actions"
@@ -1527,8 +1492,6 @@ msgstr "Số tin chưa đọc"
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Nơi làm việc"
 msgstr ""
 
@@ -1538,18 +1501,34 @@ msgid "Nơi làm việc gần nhất"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "Nộp đơn"
-msgstr ""
-
-#. module: diligo_hr
 #: model:ir.model.fields.selection,name:diligo_hr.selection__hr_applicant__gender__other
 msgid "Other"
 msgstr "Khác"
 
 #. module: diligo_hr
+#: model:ir.model.fields.selection,name:diligo_hr.selection__hr_job__time_work__part_time
+msgid "Part time"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_distributors__partner_id
 msgid "Partner"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model_terms:ir.ui.view,arch_db:hr_employee_updation.hr_employee_inherit_form_view
+msgid "Passport ID"
+msgstr "Hộ chiếu"
+
+#. module: hr_employee_updation
+#: code:addons/hr_employee_updation/models/hr_employee.py:0
+#, python-format
+msgid "Passport-%s Expired On %s"
+msgstr ""
+
+#. module: diligo_hr
+#: model_terms:ir.ui.view,arch_db:diligo_hr.report_job_template
+msgid "Period"
 msgstr ""
 
 #. module: diligo_hr
@@ -1558,6 +1537,11 @@ msgid "Person responsible of validating the employee's contracts."
 msgstr ""
 "Người mà chịu trách nhiệm xác nhận hợp đồng cho nhân viên trúng tuyển vào vị"
 " trí này."
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__personal_mobile
+msgid "Personal mobile number of the employee"
+msgstr ""
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__mst_account_id
@@ -1589,7 +1573,6 @@ msgstr ""
 #: model:ir.actions.act_window,name:diligo_hr.hr_job_welfare_action
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job__welfare_ids
 #: model:ir.ui.menu,name:diligo_hr.menu_hr_job_welfare
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Phúc lợi"
 msgstr ""
 
@@ -1622,6 +1605,8 @@ msgid "Please enter the correct bank account number!"
 msgstr "Xin vui lòng nhập đúng số tài khoàn ngân hàng!"
 
 #. module: diligo_hr
+#: code:addons/diligo_hr/models/hr_applicant.py:0
+#: code:addons/diligo_hr/models/hr_applicant.py:0
 #: code:addons/diligo_hr/models/hr_employee.py:0
 #: code:addons/diligo_hr/models/hr_employee.py:0
 #, python-format
@@ -1645,6 +1630,11 @@ msgid "Position"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.module.category,name:diligo_hr.module_type_user_position
+msgid "Position user"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job__salary_proposed
 msgid "Proposed Salary"
 msgstr ""
@@ -1655,12 +1645,8 @@ msgid "Proposed Salary Extra"
 msgstr "Mức lương Đề xuất Thêm"
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.results_information_lookup
-msgid "Quay về trang chủ"
-msgstr ""
-
-#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job__hr_responsible_id
+#: model:res.groups,name:diligo_hr.group_hr_user_mar
 msgid "Quản lý"
 msgstr ""
 
@@ -1699,6 +1685,31 @@ msgstr ""
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.applicant_get_refuse_reason_inherit_view_form
 msgid "Refuse Reason"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_family__relation_id
+msgid "Relation"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee_relation__name
+msgid "Relationship"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee_family__relation_id
+msgid "Relationship with the employee"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee_relation__name
+msgid "Relationship with thw employee"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.ui.menu,name:hr_employee_updation.employee_report_menu
+msgid "Reports"
 msgstr ""
 
 #. module: diligo_hr
@@ -1748,15 +1759,15 @@ msgstr ""
 msgid "Select a CSV or Excel file to import."
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee_family__employee_id
+msgid "Select corresponding Employee"
+msgstr ""
+
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__work_duration
 msgid "Seniority"
 msgstr "Thâm niên"
-
-#. module: diligo_hr
-#: model:ir.model.fields,help:diligo_hr.field_hr_job__website_published
-msgid "Set if the application is published on the website of the company."
-msgstr "Đặt nếu đơn xin việc được đăng trên website của công ty. "
 
 #. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_job__state
@@ -1861,11 +1872,6 @@ msgid "Sản xuất"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.information_lookup
-msgid "Số điện thoại của bạn"
-msgstr ""
-
-#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__phone_partner
 msgid "Số điện thoại ứng viên"
 msgstr ""
@@ -1883,6 +1889,11 @@ msgstr ""
 "ty!"
 
 #. module: diligo_hr
+#: model:res.groups,comment:diligo_hr.group_hr_user_mar
+msgid "The user will be able to approve document created by employees."
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_employee__tz
 msgid ""
 "This field is used in order to define in which timezone the resources will "
@@ -1890,10 +1901,9 @@ msgid ""
 msgstr "Trường này được sử dụng để xác định múi giờ sẽ làm việc."
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.results_information_lookup
-msgid ""
-"Thông tin của bạn đã được gửi đến phòng ban tuyển dụng, cảm ơn bạn đã quan tâm đến vị trí tuyển dụng của\n"
-"                    Diligo."
+#: model:mail.template,name:diligo_hr.email_template_data_applicant
+#: model:mail.template,subject:diligo_hr.email_template_data_applicant
+msgid "Thông báo ứng viên"
 msgstr ""
 
 #. module: diligo_hr
@@ -1913,6 +1923,11 @@ msgid "Thời gian (Ngày)"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_job__time_work
+msgid "Thời gian làm việc"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__tz
 msgid "Timezone"
 msgstr "Múi giờ"
@@ -1928,6 +1943,11 @@ msgid "Tin nổi bật"
 msgstr ""
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_group_job__title_web
+msgid "Title website"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_recruitment_period__to_recruit
 msgid "To recruit"
 msgstr ""
@@ -1935,11 +1955,6 @@ msgstr ""
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.view_employee_form_inherited
 msgid "Total"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.information_lookup
-msgid "Tra cứu kết quả ứng tuyển"
 msgstr ""
 
 #. module: diligo_hr
@@ -1965,6 +1980,12 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model.fields.selection,name:diligo_hr.selection__hr_applicant__priority__5
 msgid "Tuyệt vời"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_report_job__type
+#: model:ir.model.fields,field_description:diligo_hr.field_report_recruitment__type
+msgid "Type"
 msgstr ""
 
 #. module: diligo_hr
@@ -1998,16 +2019,6 @@ msgid "Tên nhân viên"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid "Tìm thấy"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid "Tìm việc"
-msgstr ""
-
-#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant__marital
 msgid "Tình trạng hôn nhân"
 msgstr ""
@@ -2015,11 +2026,6 @@ msgstr ""
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.view_employee_form_inherited
 msgid "Tạo tài khoản"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid "Tất cả"
 msgstr ""
 
 #. module: diligo_hr
@@ -2078,13 +2084,14 @@ msgid "VNĐ"
 msgstr ""
 
 #. module: diligo_hr
-#: model:ir.model.fields,field_description:diligo_hr.field_hr_job__website_published
-msgid "Visible on current website"
-msgstr "Hiển thị ở website hiện tại"
+#: code:addons/diligo_hr/models/hr_applicant.py:0
+#, python-format
+msgid "Vui lòng nhập email ứng viên."
+msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.information_lookup
-msgid "Vui lòng nhập đủ thông tin"
+#: model:ir.model.fields.selection,name:diligo_hr.selection__hr_channel__area__office
+msgid "Văn phòng"
 msgstr ""
 
 #. module: diligo_hr
@@ -2106,6 +2113,11 @@ msgid "Website Messages"
 msgstr "Thông báo Website"
 
 #. module: diligo_hr
+#: model:ir.model.fields,field_description:diligo_hr.field_hr_job__website_published
+msgid "Website Published"
+msgstr ""
+
+#. module: diligo_hr
 #: model:ir.model.fields,help:diligo_hr.field_hr_applicant_state__website_message_ids
 msgid "Website communication history"
 msgstr "Lịch sử thông tin liên lạc website"
@@ -2119,16 +2131,6 @@ msgstr "Địa điểm làm việc"
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job__work_address
 msgid "Work address"
 msgstr "Địa chỉ làm việc"
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.information_lookup
-msgid "Xem kết quả ứng tuyển"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.results_information_lookup
-msgid "Xin chúc mừng!"
-msgstr ""
 
 #. module: diligo_hr
 #. openerp-web
@@ -2157,6 +2159,16 @@ msgstr ""
 msgid "You are not allowed to enter more than the current date!"
 msgstr "Xin vui lòng không nhập quá ngày hiện tại!"
 
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__passport_attachment_id
+msgid "You can attach the copy of Passport"
+msgstr ""
+
+#. module: hr_employee_updation
+#: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__id_attachment_id
+msgid "You can attach the copy of your Id"
+msgstr ""
+
 #. module: diligo_hr
 #: code:addons/diligo_hr/models/hr_applicant.py:0
 #, python-format
@@ -2178,7 +2190,6 @@ msgstr ""
 
 #. module: diligo_hr
 #: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
 msgid "Yêu cầu công việc"
 msgstr ""
 
@@ -2191,16 +2202,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_employee__classification
 msgid "classification"
 msgstr "Xếp loại"
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-msgid "công việc"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.hr_job_survey
-msgid "e.g. Sales Manager"
-msgstr "vd Quản lý bán hàng"
 
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_department__employee_count
@@ -2217,6 +2218,11 @@ msgstr "Năm tốt nghiệp"
 msgid "hr.channel"
 msgstr ""
 
+#. module: hr_employee_updation
+#: model:ir.model,name:hr_employee_updation.model_hr_employee_relation
+msgid "hr.employee.relation"
+msgstr ""
+
 #. module: diligo_hr
 #: model:ir.model,name:diligo_hr.model_hr_job_position
 msgid "hr.job.position"
@@ -2225,6 +2231,16 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model,name:diligo_hr.model_hr_job_welfare
 msgid "hr.job.welfare"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model,name:diligo_hr.model_report_job
+msgid "report.job"
+msgstr ""
+
+#. module: diligo_hr
+#: model:ir.model,name:diligo_hr.model_report_recruitment
+msgid "report.recruitment"
 msgstr ""
 
 #. module: diligo_hr
@@ -2269,11 +2285,6 @@ msgid "Địa chỉ"
 msgstr ""
 
 #. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.information_lookup
-msgid "Địa chỉ email"
-msgstr ""
-
-#. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_applicant_state__location
 msgid "Địa điểm"
 msgstr ""
@@ -2281,17 +2292,6 @@ msgstr ""
 #. module: diligo_hr
 #: model:ir.model.fields,field_description:diligo_hr.field_hr_job__address_location
 msgid "Địa điểm làm việc"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_all_jobs_inherit
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_detail_jobs_inherit
-msgid "đến"
-msgstr ""
-
-#. module: diligo_hr
-#: model_terms:ir.ui.view,arch_db:diligo_hr.view_apply_jobs_inherit
-msgid "Ứng tuyển"
 msgstr ""
 
 #. module: diligo_hr

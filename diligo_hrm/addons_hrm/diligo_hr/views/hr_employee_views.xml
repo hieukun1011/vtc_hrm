@@ -92,9 +92,12 @@
                     <field name="address_home" readonly="1"/>
                 </xpath>
                 <xpath expr="//field[@name='id_attachment_id']" position="after">
-                    <field name="bank"/>
+                    <field name="bank" string="Ngân hàng MB Bank"/>
                     <field name="bank_branch"/>
                     <field name="bank_account"/>
+                    <field name="bank_agri"/>
+                    <field name="bank_branch_agri" string="Chi nhánh"/>
+                    <field name="bank_account_agri" string="Tài khoản ngân hàng"/>
                 </xpath>
                 <page name="hr_settings" position="after">
                     <page name="stage_history" string="Lịch sử trạng thái">
