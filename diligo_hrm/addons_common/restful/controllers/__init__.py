@@ -10,5 +10,5 @@ from . import kpis
 from . import main, token
 from . import project
 from . import quiz
-# from . import recruitment
+from . import recruitment
 from . import user
