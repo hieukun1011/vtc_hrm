@@ -23,10 +23,11 @@
                                    modifiers="{'required':true}"/>
                         </h1>
                         <div>
-                             <div>
+                            <div>
                                 <label for="employee_id" modifiers="{}"/>
                                 <h3>
-                                    <field name="employee_id" modifiers="{}" style="width:50%" readonly="1" force_save="1"/>
+                                    <field name="employee_id" modifiers="{}" style="width:50%" readonly="1"
+                                           force_save="1"/>
                                 </h3>
                             </div>
                         </div>
@@ -41,14 +42,15 @@
                 <xpath expr="//field[@name='mobile_phone']" position="after">
                     <field name="birthday"/>
                 </xpath>
-               <xpath expr="//field[@name='work_location_id']" position="attributes">
+                <xpath expr="//field[@name='work_location_id']" position="attributes">
                     <attribute name="invisible">True</attribute>
                 </xpath>
                 <xpath expr="//field[@name='company_id']" position="attributes">
-                        <attribute name="invisible">1</attribute>
+                    <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='department_id']" position="replace">
-                    <field name="department_id" required="1" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                    <field name="department_id" required="1"
+                           options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
                     <field name="position"/>
                     <field name="group_job"/>
                 </xpath>
@@ -65,8 +67,8 @@
                     <field name="graduation_year"/>
                     <field name="classification"/>
                 </xpath>
-<!--                <xpath expr="//div[@class='oe_chatter']" position="replace">-->
-<!--                </xpath>-->
+                <!--                <xpath expr="//div[@class='oe_chatter']" position="replace">-->
+                <!--                </xpath>-->
                 <xpath expr="//field[@name='parent_id']" position="replace">
                     <field name="parent_id" domain="[('id', '!=', id)]"/>
                 </xpath>
@@ -75,19 +77,21 @@
                 <xpath expr="//field[@name='joining_date']" position="after">
                     <field name="work_duration"/>
                 </xpath>
-<!--                <xpath expr="//page[@name='received_badges']" position="replace">-->
-<!--                </xpath>-->
-<!--                <xpath expr="//group[@name='payroll_group']" position="attributes">-->
-<!--                    <attribute name="invisible">1</attribute>-->
-<!--                </xpath>-->
+                <!--                <xpath expr="//page[@name='received_badges']" position="replace">-->
+                <!--                </xpath>-->
+                <!--                <xpath expr="//group[@name='payroll_group']" position="attributes">-->
+                <!--                    <attribute name="invisible">1</attribute>-->
+                <!--                </xpath>-->
                 <xpath expr="//group[@name='application_group']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='address_home_id']" position="replace">
                     <field name="address_home_id" invisible="1"/>
-                    <field name="res_country_state"/>
-                    <field name="res_country_district" domain="[('state_id', '=', res_country_state)]"/>
-                    <field name="res_country_ward" domain="[('district_id', '=', res_country_district)]"/>
+                    <field name="res_country_state" options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                    <field name="res_country_district" domain="[('state_id', '=', res_country_state)]"
+                           options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
+                    <field name="res_country_ward" domain="[('district_id', '=', res_country_district)]"
+                           options="{'no_create': True, 'no_edit': True, 'no_open': True}"/>
                     <field name="apartment_number"/>
                     <field name="address_home" readonly="1"/>
                 </xpath>
@@ -140,28 +144,28 @@
             </field>
         </record>
 
-         <record id="view_employee_tree_inherited" model="ir.ui.view">
+        <record id="view_employee_tree_inherited" model="ir.ui.view">
             <field name="name">hr.employee.tree.inherited</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_tree"/>
-             <field name="arch" type="xml">
-                 <xpath expr="//field[@name='activity_ids']" position="attributes">
-                        <attribute name="invisible">1</attribute>
-                 </xpath>
-                 <xpath expr="//field[@name='activity_user_id']" position="attributes">
-                        <attribute name="invisible">1</attribute>
-                 </xpath>
-                 <xpath expr="//field[@name='activity_date_deadline']" position="attributes">
-                        <attribute name="invisible">1</attribute>
-                 </xpath>
-                 <xpath expr="//field[@name='company_id']" position="attributes">
-                        <attribute name="invisible">1</attribute>
-                 </xpath>
-                 <xpath expr="//field[@name='parent_id']" position="after">
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='activity_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='activity_user_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='activity_date_deadline']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
                     <field name="work_duration"/>
                 </xpath>
-             </field>
-         </record>
+            </field>
+        </record>
 
         <template id="print_employee_badge_inherit" inherit_id="hr.print_employee_badge">
             <xpath expr="//div[@class='col-md-6']" position="replace">
@@ -170,21 +174,41 @@
                         <table style="width:77pt; height:150pt">
                             <tr style="height:30%">
                                 <td align="center" valign="center">
-                                    <img t-if="employee.company_id.logo" t-att-src="image_data_uri(employee.company_id.logo)" style="max-height:45pt;max-width:90%" alt="Company Logo"/>
+                                    <img t-if="employee.company_id.logo"
+                                         t-att-src="image_data_uri(employee.company_id.logo)"
+                                         style="max-height:45pt;max-width:90%" alt="Company Logo"/>
                                 </td>
                             </tr>
                             <tr style="height:70%;">
                                 <td align="center" valign="center">
-                                    <img t-att-src="image_data_uri(employee.avatar_1920)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
+                                    <img t-att-src="image_data_uri(employee.avatar_1920)"
+                                         style="max-height:85pt;max-width:90%" alt="Employee Image"/>
                                 </td>
                             </tr>
                         </table>
                     </td>
                     <td style="width:67%" valign="center">
                         <table style="width:155pt; height:85pt">
-                            <tr><th><div style="font-size:15pt; margin-bottom:0pt;margin-top:0pt;" align="center"><t t-esc="employee.name"/></div></th></tr>
-                            <tr><td><div align="center" style="font-size:10pt;margin-bottom:5pt;"><t t-esc="employee.job_id.name"/></div></td></tr>
-                            <tr><td><div t-if="employee.employee_id" t-field="employee.employee_id" t-options="{'widget': 'barcode', 'width': 600, 'height': 120, 'img_style': 'max-height:50pt;max-width:100%;', 'img_align': 'center'}"/></td></tr>
+                            <tr>
+                                <th>
+                                    <div style="font-size:15pt; margin-bottom:0pt;margin-top:0pt;" align="center">
+                                        <t t-esc="employee.name"/>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="center" style="font-size:10pt;margin-bottom:5pt;">
+                                        <t t-esc="employee.job_id.name"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div t-if="employee.employee_id" t-field="employee.employee_id"
+                                         t-options="{'widget': 'barcode', 'width': 600, 'height': 120, 'img_style': 'max-height:50pt;max-width:100%;', 'img_align': 'center'}"/>
+                                </td>
+                            </tr>
                         </table>
                     </td>
                 </table>
@@ -192,10 +216,10 @@
         </template>
 
         <menuitem
-            id="hr.menu_human_resources_configuration"
-            name="Configuration"
-            parent="hr.menu_hr_root"
-            groups="hr.group_hr_manager"
-            sequence="100"/>
+                id="hr.menu_human_resources_configuration"
+                name="Configuration"
+                parent="hr.menu_hr_root"
+                groups="hr.group_hr_manager"
+                sequence="100"/>
     </data>
 </odoo>
