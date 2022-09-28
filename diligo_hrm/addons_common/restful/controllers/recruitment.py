@@ -67,7 +67,7 @@ class RecruitmentController(http.Controller):
         for rec in list_job:
             # print(rec.city_id)
             data = {'id': rec.id,
-                    'name': rec.name_web,
+                    'name': rec.name,
                     'state': rec.state or '',
                     # 'address': {'id': rec.city_id.id, 'name': rec.city_id.name} or '',
                     'department': {'id': rec.department_id.id, 'name': rec.department_id.name} or '',
