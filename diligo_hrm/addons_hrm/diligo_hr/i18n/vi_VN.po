@@ -720,7 +720,7 @@ msgstr ""
 #. module: hr_employee_updation
 #: model:ir.model.fields,field_description:hr_employee_updation.field_hr_employee__fam_ids
 msgid "Family"
-msgstr ""
+msgstr "Gia đình"
 
 #. module: hr_employee_updation
 #: model:ir.model.fields,help:hr_employee_updation.field_hr_employee__fam_ids
