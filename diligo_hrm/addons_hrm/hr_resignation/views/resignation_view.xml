@@ -59,11 +59,14 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Lý do nghỉ việc">
+                            <page string="Reason">
                                 <group>
                                     <field name="resignation_type" string="Type" groups="hr.group_hr_user" required="1"
                                            attrs="{'readonly': [('state','=','approved')]}"/>
                                     <field name="reason" attrs="{'readonly': [('state','=','approved')]}"/>
+                                    <field name="date_from" attrs="{'invisible': [('resignation_type', '!=', 'resigned')]}"/>
+                                    <field name="date_to" attrs="{'invisible': [('resignation_type', '!=', 'resigned')]}"/>
+                                     <field name="date_fired" attrs="{'invisible': [('resignation_type', '!=', 'fired')]}"/>
                                 </group>
                             </page>
                         </notebook>
@@ -85,7 +88,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="employee_resignation" name="Từ chức/Nghỉ việc"
+        <menuitem id="employee_resignation" name="Nghỉ phép/Nghỉ việc"
                   groups="base.group_user"
                   parent="hr.menu_hr_root"
                   action="view_employee_resignation"
