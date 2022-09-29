@@ -33,7 +33,7 @@ msgstr "Phệ duyệt"
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__approved_revealing_date
 msgid "Approved Last Day Of Employee"
-msgstr ""
+msgstr "Ngày phê duyệt"
 
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_attachment_count
@@ -59,7 +59,7 @@ msgstr "Gửi duyệt"
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__resign_confirm_date
 msgid "Confirmed Date"
-msgstr ""
+msgstr "Ngày duyệt"
 
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__create_uid
@@ -89,12 +89,12 @@ msgstr ""
 #. module: hr_resignation
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
 msgid "Dates"
-msgstr ""
+msgstr "Thời gian"
 
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__department_id
 msgid "Department"
-msgstr ""
+msgstr "Phòng/ Ban"
 
 #. module: hr_resignation
 #: model:ir.model.fields,help:hr_resignation.field_hr_resignation__department_id
@@ -120,19 +120,19 @@ msgstr "Nhân viên"
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__employee_contract
 msgid "Employee Contract"
-msgstr ""
+msgstr "Hợp đồng nhân viên"
 
 #. module: hr_resignation
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
 msgid "Employee Details"
-msgstr ""
+msgstr "Thông tin nhân sự"
 
 #. module: hr_resignation
 #: model:ir.actions.act_window,name:hr_resignation.view_employee_resignation
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_tree
 msgid "Employee Resignation"
-msgstr ""
+msgstr "Nghỉ phép/ Nghỉ việc"
 
 #. module: hr_resignation
 #: model_terms:ir.actions.act_window,help:hr_resignation.view_employee_resignation
@@ -217,7 +217,7 @@ msgstr ""
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__joined_date
 msgid "Join Date"
-msgstr ""
+msgstr "Ngày vào làm"
 
 #. module: hr_resignation
 #: model:ir.model.fields,help:hr_resignation.field_hr_resignation__joined_date
@@ -227,7 +227,7 @@ msgstr ""
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__expected_revealing_date
 msgid "Last Day of Employee"
-msgstr ""
+msgstr "Ngày nghỉ việc"
 
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation____last_update
@@ -318,7 +318,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__reason
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
 msgid "Reason"
-msgstr ""
+msgstr "Lý do"
 
 #. module: hr_resignation
 #: model:ir.model.fields.selection,name:hr_resignation.selection__hr_resignation__state__cancel
@@ -364,7 +364,7 @@ msgstr ""
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__state
 msgid "Status"
-msgstr ""
+msgstr "Trạng thái"
 
 #. module: hr_resignation
 #: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__date_to
@@ -374,7 +374,7 @@ msgstr "Đến ngày"
 #. module: hr_resignation
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_form
 msgid "Type"
-msgstr ""
+msgstr "Loại"
 
 #. module: hr_resignation
 #: model_terms:ir.ui.view,arch_db:hr_resignation.employee_resignation_form

@@ -46,27 +46,30 @@
                                 <field name="employee_id" attrs="{'readonly': ['|',('read_only','=',False),('state','=','approved')]}" required="1"/>
                                 <field name="department_id"/>
                                 <field name="employee_contract"/>
+                                <field name="resignation_type" string="Type" groups="hr.group_hr_user" required="1"
+                                           attrs="{'readonly': [('state','=','approved')]}"/>
+                                <field name="date_from" attrs="{'invisible': [('resignation_type', '!=', 'resigned')]}"/>
+                                <field name="date_to" attrs="{'invisible': [('resignation_type', '!=', 'resigned')]}"/>
+                                <field name="date_fired" attrs="{'invisible': [('resignation_type', '!=', 'fired')]}"/>
+
                             </group>
                             <group string="Dates">
                                 <field name="joined_date"/>
                                 <field name="resign_confirm_date"
                                        readonly="1"
                                        attrs="{'invisible':[('resign_confirm_date','=',False)]}"/>
-                                <field name="expected_revealing_date" attrs="{'readonly': [('state','=','approved')]}"/>
+                                <field name="expected_revealing_date" attrs="{'readonly': [('state','=','approved')],'invisible': [('resignation_type', '!=', 'fired')]}"/>
                                 <field name="approved_revealing_date"
-                                        groups="hr.group_hr_user"/>
+                                        groups="hr.group_hr_user" attrs="{'invisible': [('resignation_type', '!=', 'fired')]}"/>
                                 <field name="notice_period" invisible="1"/>
                             </group>
                         </group>
                         <notebook>
                             <page string="Reason">
                                 <group>
-                                    <field name="resignation_type" string="Type" groups="hr.group_hr_user" required="1"
-                                           attrs="{'readonly': [('state','=','approved')]}"/>
+
                                     <field name="reason" attrs="{'readonly': [('state','=','approved')]}"/>
-                                    <field name="date_from" attrs="{'invisible': [('resignation_type', '!=', 'resigned')]}"/>
-                                    <field name="date_to" attrs="{'invisible': [('resignation_type', '!=', 'resigned')]}"/>
-                                     <field name="date_fired" attrs="{'invisible': [('resignation_type', '!=', 'fired')]}"/>
+
                                 </group>
                             </page>
                         </notebook>
