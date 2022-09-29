@@ -41,6 +41,9 @@ class DisciplinaryAction(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Disciplinary Action"
 
+    document = fields.Binary('File upload')
+    document_name = fields.Char('File name')
+
     state = fields.Selection([
         ('draft', 'Dự Thảo'),
         ('explain', 'Giải Thích'),
@@ -135,6 +138,9 @@ class LaudatoryEmployee(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Laudatory Action"
 
+    document = fields.Binary('File upload')
+    document_name = fields.Char('File name')
+
     name = fields.Char(string='name', states={'draft': [('readonly', False)]}, readonly=True)
     announcement_type = fields.Selection(
         [('employee', 'Nhân viên'), ('department', 'Phòng ban'), ('job_position', 'Vị trí công việc')],
@@ -164,6 +170,7 @@ class LaudatoryEmployee(models.Model):
 
     def cancel(self):
         self.state = 'cancel'
+
 
 
 
