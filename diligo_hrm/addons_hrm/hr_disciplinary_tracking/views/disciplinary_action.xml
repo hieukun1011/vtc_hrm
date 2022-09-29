@@ -59,6 +59,8 @@
                                 <field name="company_id" domain="[('id', 'in', allowed_company_ids)]" options="{'no_create':True}"
                                 invisible="1"/>
                                 <field name="announcement_type" required="1"/>
+                                <field name="document" filename="document_name"/>
+                                <field name="document_name" invisible="1"/>
                             </group>
                             <group>
                                 <field name="department_ids" widget="many2many_tags"
