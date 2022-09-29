@@ -6,10 +6,11 @@ class ProjectTaskSendMail(models.TransientModel):
     _name = 'project.task.send.mail'
     _description = 'Send mail from project task'
 
-    send_mail = fields.Boolean("Send Email", default=False, readonly=False)
-    template_id = fields.Many2one('mail.template', string='Email Template',
-                                readonly=False,
-                                  domain="[('model', '=', 'res.users')]")
+    project_name = fields.Char('Project name')
+    send_mail = fields.Boolean("Send Email", default=True, readonly=False)
+    # template_id = fields.Many2one('mail.template', string='Email Template',
+    #                             readonly=False,
+    #                               domain="[('model', '=', 'res.users')]")
     user_ids = fields.Many2many('project.task')
     user_without_email = fields.Text(compute='_compute_user_without_email',
                                           string='Applicant(s) not having email')
@@ -29,23 +30,29 @@ class ProjectTaskSendMail(models.TransientModel):
                 wizard.user_without_email = False
 
     def action_project_task_send_mail(self):
-        # print('self.user_ids', self.user_ids)
-        # print('res users', self.user_ids.user_ids)
-        # print('ids', self.user_ids.ids)
-
         res_users = self.env['res.users'].browse(self.user_ids.ids)
-        # print(res_users)
         res_users_has_mail = res_users.filtered(lambda x: x.email)
-        # print('have mail', res_users_has_mail)
         if self.send_mail:
-            if not self.template_id:
-                raise UserError(_("Email template must be selected to send a mail"))
+            # if not self.template_id:
+            #     raise UserError(_("Email template must be selected to send a mail"))
             if not res_users_has_mail:
                 raise UserError(_("Email of the user is not set, email won't be sent."))
 
         if self.send_mail:
-            res_users_has_mail.with_context(active_test=True).message_post_with_template(self.template_id.id, **{
-                'auto_delete_message': True,
-                'subtype_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_note'),
-                'email_layout_xmlid': 'mail.mail_notification_light'
-            })
+            # res_users_has_mail.with_context(active_test=True).message_post_with_template(self.template_id.id, **{
+            #     'auto_delete_message': True,
+            #     'subtype_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_note'),
+            #     'email_layout_xmlid': 'mail.mail_notification_light'
+            # })
+
+            mail_server = self.env['ir.mail_server'].sudo().search([('active', '=', True)], limit=1,
+                                                                      order='sequence DESC')
+            for each in res_users_has_mail:
+                main_content = {
+                    'subject': _("Thư thông báo."),
+                    'email_from': mail_server.smtp_user,
+                    'body_html': '<p>Xin chào %s.</p><p>Bạn được giao làm dự án: <strong>%s</strong></p>' %(each.name, self.project_name),  #.format(each.name, self.user_ids.name),
+                    'email_to': each.email,
+                }
+                self.env['mail.mail'].sudo().create(main_content).send()
+

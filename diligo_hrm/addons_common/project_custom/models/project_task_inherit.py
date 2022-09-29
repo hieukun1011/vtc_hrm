@@ -176,7 +176,7 @@ class ProjectMission(models.Model):
             'res_model': 'project.task.send.mail',
             'view_mode': 'form',
             'target': 'new',
-            'context': {'default_user_ids': users, 'active_test': False},
+            'context': {'default_user_ids': users, 'default_project_name': self.name,'active_test': False},
             'views': [[False, 'form']]
         }
 

@@ -10,7 +10,7 @@
                     </div>
                     <group class="oe_title">
                         <field name="send_mail"/>
-                        <field name="template_id" attrs="{'invisible': [('send_mail', '=', False)], 'required': [('send_mail', '=', True)]}"/>
+<!--                        <field name="template_id" attrs="{'invisible': [('send_mail', '=', False)], 'required': [('send_mail', '=', True)]}"/>-->
                         <field name="user_ids" invisible="1"/>
                     </group>
                     <footer>
