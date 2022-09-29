@@ -30,6 +30,7 @@ creates next activities for the related approvers.
         'views/approval_product.xml',
         'views/approval_request_views.xml',
         'views/res_users_views.xml',
+        'views/menu.xml',
     ],
     'demo':[
         'data/approval_demo.xml',
