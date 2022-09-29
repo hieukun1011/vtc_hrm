@@ -34,7 +34,7 @@ class HrResignation(models.Model):
     joined_date = fields.Date(string="Join Date", store=True, states={'draft': [('readonly', False)]}, readonly=True,
                               help='Joining date of the employee.i.e Start date of the first contract')
 
-    expected_revealing_date = fields.Date(string="Last Day of Employee", required=True, states={'draft': [('readonly', False)]}, readonly = True,
+    expected_revealing_date = fields.Date(string="Last Day of Employee", states={'draft': [('readonly', False)]}, readonly = True,
                                           help='Employee requested date on which he is revealing from the company.')
     reason = fields.Text(string="Reason", required=True, states={'draft': [('readonly', False)]}, readonly=True,
                          help='Specify reason for leaving the company')
