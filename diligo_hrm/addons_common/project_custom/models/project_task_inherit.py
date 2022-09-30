@@ -30,11 +30,20 @@ class ProjectMission(models.Model):
 
     child_2_ids = fields.One2many('project.task', 'parent_id',
                                     help='Use to view tab')
-    is_due_soon = fields.Boolean('Is due soon', default=False, compute='_compute_is_due_soon')
+    is_due_soon = fields.Boolean('Is due soon', default=False, compute='_compute_is_due_soon',)
+    user_ids = fields.Many2many('res.users', relation='project_task_user_rel', column1='task_id', column2='user_id',
+                                string='Assignees',
+                                context={'active_test': False}, tracking=True, compute='_compute_user_ids', store=True)
+
     # child_dev_ids= fields.One2many('project.task', 'parent_id', string='Child dev', domain=[('is_dev', '=', True)], help='Use to view dev tab')
     # child_tester_ids = fields.One2many('project.task', 'parent_id', string='Child tester',
     #                                 help='Use to view tester tab')  #domain=[('is_dev', '=', False)],
 
+    # người được giao onchange theo người nhận nhiệm vụ
+    @api.depends('child_2_ids.user_id')
+    def _compute_user_ids(self):
+        if self.child_2_ids:
+            self.user_ids = self.child_2_ids.user_id
 
     # ràng buộc ngày hạn chót phải không được nhỏ hơn ngày kết thúc kế hoạch
     @api.constrains('date_end', 'date_deadline')
@@ -49,9 +58,9 @@ class ProjectMission(models.Model):
     def rule_change_stage(self):
         if not self.env.user.has_group('base.group_system'):
             if self.env.uid not in self.user_ids.ids and self.env.uid not in self.manager_ids.ids and self.env.uid != self.user_id.id:
-                raise ValidationError(_('Bạn không được quyền thay đổi trạng thái công việc của %s') %self.user_id.name)
+                raise ValidationError(_('Bạn không được quyền thay đổi trạng thái công việc này.'))
 
-    @api.onchange('date_deadline')
+    @api.depends('date_deadline')
     def _compute_is_due_soon(self):
         days = fields.Date.today() + timedelta(days=1)
         for rec in self:
@@ -167,10 +176,10 @@ class ProjectMission(models.Model):
             'res_model': 'project.task.send.mail',
             'view_mode': 'form',
             'target': 'new',
-            'context': {'default_user_ids': users, 'active_test': False},
+            'context': {'default_user_ids': users, 'default_project_name': self.name,'active_test': False},
             'views': [[False, 'form']]
         }
-#
+
 # class ResUsersInherit(models.Model):
 #     _name = "res.users"
 #
