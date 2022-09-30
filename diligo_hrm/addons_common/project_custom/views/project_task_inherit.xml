@@ -94,7 +94,7 @@
 			<field name="inherit_id" ref="project.project_project_view_form_simplified"/>
 			<field name="arch" type="xml">
 				<xpath expr="//field[@name='name']" position="after">
-					<field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+					<field name="type_ids" widget="many2many_tags"/>
 					<label for="date_start" string="Ngày"/>
 					<div name="dates" class="o_row">
 						<field name="date_start" widget="daterange" options="{&quot;related_end_date&quot;: &quot;date&quot;}"/>
