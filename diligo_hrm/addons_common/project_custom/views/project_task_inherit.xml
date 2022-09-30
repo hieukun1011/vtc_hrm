@@ -91,7 +91,7 @@
 		<record id="project_project_view_form_simplified_custom" model="ir.ui.view">
 			<field name="name">project.form.inherit</field>
 			<field name="model">project.project</field>
-			<field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+			<field name="inherit_id" ref="project.project_project_view_form_simplified_footer"/>
 			<field name="arch" type="xml">
 				<xpath expr="//field[@name='name']" position="after">
 					<field name="type_ids" widget="many2many_tags"/>
