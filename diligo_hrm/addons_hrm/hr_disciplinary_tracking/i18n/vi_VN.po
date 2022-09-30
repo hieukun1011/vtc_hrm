@@ -1,0 +1,608 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_disciplinary_tracking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-29 09:38+0000\n"
+"PO-Revision-Date: 2022-09-29 09:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__action_details
+msgid "Action Details"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__action_information
+msgid "Action Information"
+msgstr "Thông tin"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_needaction
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_state
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_type_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_attachment_count
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_laudatory_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__state__cancel
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__laudatory_action__state__cancel
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_discipline_category__code
+msgid "Category code"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_discipline_category__name
+msgid "Category name"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__discipline_reason
+msgid "Choose a disciplinary reason"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+msgid "Chuyển về dự thảo"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.actions.act_window,help:hr_disciplinary_tracking.action_disciplinary_action
+#: model_terms:ir.actions.act_window,help:hr_disciplinary_tracking.action_laudatory_action
+msgid "Click tạo mới"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__code
+msgid "Code"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_laudatory_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__company_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__company_id
+msgid "Công ty"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_discipline_category__description
+msgid "Details for this category"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_disciplinary_action
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_tree
+msgid "Disciplinary Action"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.disciplinary_action_details_view
+msgid "Disciplinary Action Details"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.disciplinary_category_view_tree
+msgid "Discipline Categories"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.disciplinary_category_view_form
+msgid "Discipline Category"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__discipline_count
+msgid "Discipline Count"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__state__draft
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__laudatory_action__state__draft
+msgid "Dự Thảo"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__attachment_ids
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__attachment_ids
+msgid "Employee can submit any documents which supports their explanation"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__explanation
+msgid ""
+"Employee have to give Explanationto manager about the violation of "
+"discipline"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__document_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__document_name
+msgid "File name"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__document
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__document
+msgid "File upload"
+msgstr "Tệp đính kèm"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__attachment_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__attachment_ids
+msgid "File đính kèm"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_follower_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_partner_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__activity_type_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__note
+msgid "Ghi chú"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__action_details
+msgid "Give the details for this action"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__state__explain
+msgid "Giải Thích"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+msgid "Giải thích"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__has_message
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+msgid "Hủy"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__activity_exception_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_needaction
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_unread
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_needaction
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_has_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_has_sms_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_has_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_is_follower
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.action_laudatory_details
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.laudatory_action_create
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_form_inherit_laudatory
+msgid "Khen thưởng"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.action_disciplinary_action
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.disciplinary_action_details
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.disciplinary_action_create
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_form_inherit_disciplinary
+msgid "Kỷ luật"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_laudatory_action
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_laudatory_form
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_laudatory_tree
+msgid "Laudatory Action"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__laudatory_count
+msgid "Laudatory Count"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__announcement_type
+msgid "Loại khen thưởng"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__announcement_type
+msgid "Loại kỷ luật"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_has_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__name
+msgid "Mã tham chiếu"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__description
+msgid "Mô tả"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_summary
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_type_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__employee_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__employee_ids
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__announcement_type__employee
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__laudatory_action__announcement_type__employee
+msgid "Nhân viên"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__explanation
+msgid "Nhân viên giải thích"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.action_disciplinary_category_view
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__discipline_reason
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.disciplinary_category_view
+msgid "Nhóm kỷ luật"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_needaction_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_has_error_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__message_unread_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__department_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__department_ids
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__announcement_type__department
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__laudatory_action__announcement_type__department
+msgid "Phòng ban"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__read_only
+msgid "Read Only"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_discipline_category
+msgid "Reason Category"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_user_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__reward_reason
+msgid "Reward reason"
+msgstr "Lí do khen thưởng"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.disciplinary_search_view
+msgid "Search information"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__activity_state
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_laudatory_form
+msgid "Thông tin hành động"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_laudatory_form
+msgid "Thông tin khen thưởng"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+msgid "Thông tin kỷ luật"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__warning_letter
+msgid "Thư cảnh báo"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__state
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__state
+msgid "Trạng thái"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__activity_exception_decoration
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_unread
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_unread_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__position_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__position_ids
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__announcement_type__job_position
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__laudatory_action__announcement_type__job_position
+msgid "Vị trí công việc"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__warning
+msgid "Warning"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__website_message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__website_message_ids
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_laudatory_action__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__state__action
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__laudatory_action__state__action
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+msgid "Xác nhận"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.action_laudatory_action
+msgid "laudatory"
+msgstr "Khen thưởng"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_laudatory_action__name
+msgid "name"
+msgstr "Tên"

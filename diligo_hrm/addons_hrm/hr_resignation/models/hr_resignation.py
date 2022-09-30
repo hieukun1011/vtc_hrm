@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
 import datetime
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
 date_format = "%Y-%m-%d"
-RESIGNATION_TYPE = [('resigned', 'Nghỉ việc'),
-                    ('fired', 'Công ty sa thải')]
+RESIGNATION_TYPE = [('resigned', 'Nghỉ phép'),
+                    ('fired', 'Từ chức')]
 
 
 class HrResignation(models.Model):
     _name = 'hr.resignation'
     _inherit = 'mail.thread'
     _rec_name = 'employee_id'
+
+    date_from = fields.Date('From date')
+    date_to = fields.Date('To date')
+    date_fired = fields.Date('Fired')
 
     name = fields.Char(string='Order Reference', required=True, copy=False, readonly=True, index=True,
                        default=lambda self: _('New'))
@@ -30,7 +34,7 @@ class HrResignation(models.Model):
     joined_date = fields.Date(string="Join Date", store=True, states={'draft': [('readonly', False)]}, readonly=True,
                               help='Joining date of the employee.i.e Start date of the first contract')
 
-    expected_revealing_date = fields.Date(string="Last Day of Employee", required=True, states={'draft': [('readonly', False)]}, readonly = True,
+    expected_revealing_date = fields.Date(string="Last Day of Employee", states={'draft': [('readonly', False)]}, readonly = True,
                                           help='Employee requested date on which he is revealing from the company.')
     reason = fields.Text(string="Reason", required=True, states={'draft': [('readonly', False)]}, readonly=True,
                          help='Specify reason for leaving the company')
@@ -44,6 +48,22 @@ class HrResignation(models.Model):
     read_only = fields.Boolean(string="check field")
     employee_contract = fields.Char(String="Contract")
     job = fields.Many2one('hr.job', 'Chức vụ', related='employee_id.job_id', store=True)
+
+
+    @api.constrains('date_from', 'date_to', 'date_fired', 'resignation_type')
+    def _constrains_time_on_leave(self):
+        for rec in self:
+            if rec.resignation_type == 'resigned':
+
+                if rec.date_from and rec.date_to:
+                    if rec.date_from > rec.date_to:
+                        raise ValidationError(_('Từ ngày phải nhỏ hơn đến ngày.'))
+                else:
+                    if not rec.date_from or not rec.date_to:
+                        raise ValidationError(_('Bạn cần cung cấp đầy đủ thời gian bắt đầu và kết thúc của kì nghỉ.'))
+            else:
+                if not rec.date_fired:
+                    raise ValidationError(_('Bạn cần cung cấp ngày nghỉ việc'))
 
     @api.onchange('employee_id')
     @api.depends('employee_id')
@@ -113,6 +133,19 @@ class HrResignation(models.Model):
                                         ' approved state for this employee'))
 
     def confirm_resignation(self):
+        if self.resignation_type == 'resigned':
+            if self.date_from and self.date_to:
+                if abs(date.today() - self.date_from).days < 7:
+                    raise ValidationError(_('Từ ngày phải cách ngày hiện tại ít nhất 7 ngày'))
+            else:
+                raise ValidationError(_('Bạn cần cung cấp đầy đủ thời gian bắt đầu và kết thúc của kì nghỉ.'))
+        else:
+            if self.date_fired:
+                if abs(date.today() - self.date_fired).days < 45:
+                    raise ValidationError(_('Thời gian nghỉ việc phải cách ngày hiện tại ít nhất 45 ngày'))
+            else:
+                raise ValidationError(_('Bạn cần cung cấp ngày nghỉ việc'))
+
         if self.joined_date:
             if self.joined_date >= self.expected_revealing_date:
                 raise ValidationError(_('Last date of the Employee must be anterior to Joining date'))
