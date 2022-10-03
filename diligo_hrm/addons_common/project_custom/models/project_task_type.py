@@ -22,6 +22,7 @@ class ProjectTaskType(models.Model):
             if each not in list:
                 list.append(each)
 
-        if self.name and self.name in list:
-            raise ValidationError("You already have that name. Please give another name.")
+        if self.name:
+            if self.name in list or self.name.upper() in list or self.name.lower() in list:
+                raise ValidationError("You already have that name. Please give another name.")
 
