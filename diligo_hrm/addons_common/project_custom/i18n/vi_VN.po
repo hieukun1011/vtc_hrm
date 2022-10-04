@@ -15,6 +15,13 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/legacy/js/fields/basic_fields.js:0
+#, python-format
+msgid "In %s days"
+msgstr "Trong %s ngày tới"
+
 #. module: project_custom
 #: model_terms:ir.ui.view,arch_db:project_custom.project_task_form_vtc
 msgid "Assignee"

@@ -119,7 +119,7 @@
             </field>
         </record>
 
-        <menuitem action="act_hr_chancel" name="Kênh" id="menu_action_hr_channel" parent="hr.menu_hr_department_kanban"/>
+        <menuitem action="act_hr_chancel" name="Kênh" id="menu_action_hr_channel" parent="hr.menu_hr_department_kanban" groups="base.group_no_one"/>
         <menuitem action="hr.hr_department_kanban_action" name="Phòng/ban" id="menu_action_hr_department" parent="hr.menu_hr_department_kanban"/>
     </data>
 </odoo>
