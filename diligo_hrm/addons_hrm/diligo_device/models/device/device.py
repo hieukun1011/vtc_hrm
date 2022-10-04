@@ -29,6 +29,12 @@ class DeviceImages(models.Model):
     parts_device_id = fields.Many2one('sci.device.parts.in')
     description = fields.Text('Description', size=600)
 
+    @api.model
+    def create(self, vals):
+        print(vals)
+        res = super(DeviceImages, self).create(vals)
+        return res
+
 class DeviceGroup(models.Model):
     _name = 'device.group'
 

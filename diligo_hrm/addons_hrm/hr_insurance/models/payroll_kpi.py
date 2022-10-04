@@ -48,6 +48,10 @@ class SHEmployeeKPI(models.Model):
     attachment_id = fields.Many2many('ir.attachment', 'employee_kpi_rel', 'employee_kpi_id', 'attach_kpi',
                                      string="Tệp đính kèm", help='You can attach the copy of your Letter')
 
+    @api.onchange('employee_name')
+    def onchange_employee_name(self):
+        if self.employee_name:
+            self.name = self.employee_name.name
 
 class PayrollKPI(models.Model):
     _name = 'payroll.kpi'
