@@ -88,6 +88,7 @@
 			</field>
 		</record>
 
+<!--		view mini form create dự án-->
 		<record id="project_project_view_form_simplified_custom" model="ir.ui.view">
 			<field name="name">project.form.inherit</field>
 			<field name="model">project.project</field>
@@ -106,16 +107,30 @@
 			</field>
 		</record>
 
+<!--		view form dự án-->
 		<record id="project_form_view_add_mission_stages" model="ir.ui.view">
-        <field name="name">project.project.form.inherit</field>
-        <field name="model">project.project</field>
-        <field name="inherit_id" ref="project.edit_project"/>
-        <field name="arch" type="xml">
-           <xpath expr="//field[@name='tag_ids']" position="after">
-					<field name="type_ids" widget="many2many_tags"/>
-                </xpath>
-        </field>
-    </record>
+			<field name="name">project.project.form.inherit</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.edit_project"/>
+			<field name="arch" type="xml">
+			   <xpath expr="//field[@name='tag_ids']" position="after">
+						<field name="type_ids" widget="many2many_tags"/>
+					</xpath>
+			</field>
+		</record>
+
+<!--		nút cập nhật lại giai đoạn nhiệm vụ-->
+		<record id="update_project_task_type" model="ir.ui.view">
+			<field name="name">project.task.type.list.inherit</field>
+			<field name="model">project.task.type</field>
+			<field name="inherit_id" ref="project.task_type_tree"/>
+			<field name="arch" type="xml">
+			   <xpath expr="//tree" position="inside">
+<!--				   <button name="update_project_task_type" type="object" class="btn-primary" string="Update project task type"/>-->
+				   <button name="update_project_task_type_2" type="object"  string="Update project task type 2"/>
+			   </xpath>
+			</field>
+		</record>
 
     </data>
 </odoo>
