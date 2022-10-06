@@ -111,8 +111,14 @@
         </field>
     </record>
 
+    <record id="action_hr_payroll_kpi_employee" model="ir.actions.act_window">
+        <field name="name">Bảng KPI nhân viên</field>
+        <field name="res_model">sh.employee.kpi</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="action_hr_payroll_kpi" model="ir.actions.act_window">
-        <field name="name">Bảng KPI</field>
+        <field name="name">Kỳ KPI</field>
         <field name="res_model">payroll.kpi</field>
         <field name="view_mode">tree,kanban,form</field>
     </record>
@@ -120,4 +126,9 @@
     <menuitem id="menu_hr_payroll_kpi"
           action="action_hr_payroll_kpi"
           parent="om_hr_payroll.menu_hr_payroll_root"/>
+
+    <menuitem id="menu_hr_payroll_kpi_employee"
+          action="action_hr_payroll_kpi_employee"
+          parent="om_hr_payroll.menu_hr_payroll_root"/>
+
 </odoo>

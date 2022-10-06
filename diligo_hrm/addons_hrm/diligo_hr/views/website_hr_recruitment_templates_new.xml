@@ -124,7 +124,7 @@
                                 <!--                                <div style="color: red;"></div>-->
                                 <div class="col-md-2">
                                     <div class="hr-logo">
-                                        <img src="/diligo_hr/static/description/icon_diligo.png"/>
+                                        <img src="/diligo_hr/static/description/icon_tuyendung.png" style="width: 100px; object-fit: contain"/>
                                     </div>
                                 </div>
                                 <div class="col-md-10 detail-left" style="padding-left:60px;">
@@ -283,7 +283,7 @@
                                     <div class="row no-gutters">
                                         <div class="col-md-3">
                                             <img style="padding-left:60px;"
-                                                 t-attf-src="/diligo_hr/static/description/icon_diligo.png"/>
+                                                 t-attf-src="/diligo_hr/static/description/icon_tuyendung.png"/>
                                         </div>
                                         <div class="col-md-9" style="padding-left:10px;">
                                             <!--                                            <img style="padding-left:60px;" t-attf-src="/diligo_hr/static/description/icon_diligo2.png"/>-->

@@ -81,13 +81,13 @@ class HRJob(models.Model):
     employees_out = fields.Integer('Employees move out', compute='_get_employee_moves')
     employees_out_name = fields.Char('NS nghỉ - ngày nghỉ', compute='_get_employee_moves')
     no_of_employee_name = fields.Char("NS nhận - ngày nhận", compute='compute_employees_name')
-    work_address = fields.Selection([('kinhdoanh', 'Kinh Doanh'),
+    work_address = fields.Selection([('taichinh', 'Tài Chính'),
                                      ('marketing', 'Marketing'),
-                                     ('nhasanxuat', 'Sản xuất'),
-                                     ('taichinh', 'Tài chính'),
+                                     ('daotao', 'Đào tạo'),
+                                     ('chuyenmon', 'Chuyên môn'),
                                      ('nhansu', 'Nhân sự'),
                                      ('congnghe', 'Công nghệ'),
-                                     ('nhaphanphoi', 'Nhà phân phối'),
+                                     ('vanhanh', 'Vận hành'),
                                      ], string='Work address', required=True)
 
     job_source = fields.One2many('hr.recruitment.source', 'job_id', 'Nguồn tuyển dụng')

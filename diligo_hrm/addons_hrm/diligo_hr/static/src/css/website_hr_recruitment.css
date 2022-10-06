@@ -303,6 +303,7 @@ margin:auto;
 .hr-logo{
       width: 100px;
       height: 100px;
+      display: flex;
 }
 .right-col .box{
       max-width: 290px;
