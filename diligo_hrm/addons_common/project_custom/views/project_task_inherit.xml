@@ -120,17 +120,17 @@
 		</record>
 
 <!--		nút cập nhật lại giai đoạn nhiệm vụ-->
-		<record id="update_project_task_type" model="ir.ui.view">
-			<field name="name">project.task.type.list.inherit</field>
-			<field name="model">project.task.type</field>
-			<field name="inherit_id" ref="project.task_type_tree"/>
-			<field name="arch" type="xml">
-			   <xpath expr="//tree" position="inside">
+<!--		<record id="update_project_task_type" model="ir.ui.view">-->
+<!--			<field name="name">project.task.type.list.inherit</field>-->
+<!--			<field name="model">project.task.type</field>-->
+<!--			<field name="inherit_id" ref="project.task_type_tree"/>-->
+<!--			<field name="arch" type="xml">-->
+<!--			   <xpath expr="//tree" position="inside">-->
 <!--				   <button name="update_project_task_type" type="object" class="btn-primary" string="Update project task type"/>-->
-				   <button name="update_project_task_type_2" type="object"  string="Update project task type 2"/>
-			   </xpath>
-			</field>
-		</record>
+<!--&lt;!&ndash;				   <button name="update_project_task_type_2" type="object"  string="Update project task type 2"/>&ndash;&gt;-->
+<!--			   </xpath>-->
+<!--			</field>-->
+<!--		</record>-->
 
     </data>
 </odoo>

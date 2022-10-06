@@ -110,68 +110,6 @@ class ProjectTaskType(models.Model):
                 if task.stage_id.name == type['name']:
                     task.stage_id = type['id']
 
-    #     # print(list_dict_update_type)
-    #     # print('list stage', list_stage)
-    #     # print('after', list_stage_after)
-    def update_project_task_type_2(self):
-        all_types = self.env["project.task.type"].search([('user_id', '=', False)])    # '|', ('active', '=', True), ('active', '=', False)
-        print('len all type', len(all_types))
-        list_all_type = []
-        """[{
-        'name': name,
-        'id': [id],
-        'project_ids': [project_ids],
-        }]"""
-        list_types_name_no_duplicate = list(set(list(all_types.mapped('name'))))
 
-        for type in list_types_name_no_duplicate:
-            list_id = []
-            list_projects = []
-            for rec in all_types:
-                if rec.name == type:
-                    list_id.append(rec.id)
-                    if rec.project_ids.ids:
-                        list_projects.extend(rec.project_ids.ids)
-
-            dict = {
-                'id': list_id,
-                'name': type,
-                'project_ids': list(set(list_projects)),
-            }
-            list_all_type.append(dict)
-        # print('list', list_all_type)
-
-        # cập nhật lại dự án không có giai đoạn nhiệm vụ
-        projects = self.env['project.project'].search(['|', ('active', '=', True), ('active', '=', False)])
-        # print(len(projects))
-        for project in projects:
-            project.write({'type_ids': ()})
-
-        for each in list_all_type:
-            update_record = all_types.browse(each['id'][0])
-            if each['project_ids']:
-                # cập nhật lại task type cho project
-                update_record.project_ids = each['project_ids']
-                # update_record.write({
-                #     'project_ids': each['project_ids'],
-                # })
-                # print('update stage for project', update_record.id, each['project_ids'])
-
-                # cập nhật lại stage cho project.task của từng project
-                # for project in each['project_ids']:
-                #     update_project = self.env["project.project"].browse(project)
-                #     update_task = update_project.task_ids
-                #     # print('update task', update_task)
-                #     for task in update_task:
-                #         # print('task', task.stage_id.id, each['id'][0], each['id'][1:])
-                #         if each['id'][1:] and task.stage_id.id and task.stage_id.id in each['id'][1:]:
-                #             task.stage_id = each['id'][0]
-                #             print('doi stage cho task', task.id, task.stage_id)
-
-        tasks = self.env['project.task'].search(['|', ('active', '=', True), ('active', '=', False)])
-        for task in tasks:
-            for type in list_all_type:
-                if task.stage_id.name == type['name']:
-                    task.stage_id = type['id'][0]
 
 
