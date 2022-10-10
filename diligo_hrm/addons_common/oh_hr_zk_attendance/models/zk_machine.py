@@ -24,6 +24,7 @@ import sys
 import datetime
 import logging
 import binascii
+from datetime import timedelta, datetime
 
 from . import zklib
 from .zkconst import *
@@ -116,6 +117,15 @@ class ZkMachine(models.Model):
         for machine in machines:
             machine.download_attendance()
 
+    def change_utc_to_local_datetime(self, souce_date):
+        user = self.env.user.read(['tz'])
+        user_tz = str(pytz.utc) or user['tz']
+        tz_now = datetime.now(pytz.timezone(user_tz))
+        difference = tz_now.utcoffset().total_seconds() / 60 / 60
+        difference = int(difference) or 7
+        utc_date = datetime.strptime(souce_date,'%Y-%m-%d %H:%M:%S')
+        utc_date = utc_date + timedelta(hours=difference)
+        return utc_date.strftime('%Y-%m-%d %H:%M:%S')
     def download_attendance(self):
         _logger.info("++++++++++++Cron Executed++++++++++++++++++++++")
         zk_attendance = self.env['zk.machine.attendance']
@@ -149,7 +159,8 @@ class ZkMachine(models.Model):
                         utc_dt = local_dt.astimezone(pytz.utc)
                         utc_dt = utc_dt.strftime("%Y-%m-%d %H:%M:%S")
                         atten_time = datetime.strptime(
-                            utc_dt, "%Y-%m-%d %H:%M:%S")
+                            utc_dt, "%Y-%m-%d %H:%M:%S") + timedelta(hours=-7)
+                        # if atten_time > atten_time.replace(hour=1, minute=0, second=0):
                         atten_time = fields.Datetime.to_string(atten_time)
                         if user:
                             for uid in user:

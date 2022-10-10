@@ -25,7 +25,9 @@ class ZkMachine(models.Model):
                                    ('2', 'Break Out'),
                                    ('3', 'Break In'),
                                    ('4', 'Overtime In'),
-                                   ('5', 'Overtime Out')],
+                                   ('5', 'Overtime Out'),
+                                   ('25', 'checking'),
+                                   ('255', 'checking_out')],
                                   string='Punching Type')
 
     attendance_type = fields.Selection([('1', 'Finger'),
@@ -56,7 +58,8 @@ class ReportZkDevice(models.Model):
                                    ('2', 'Break Out'),
                                    ('3', 'Break In'),
                                    ('4', 'Overtime In'),
-                                   ('5', 'Overtime Out')], string='Punching Type', help="Select the punch type")
+                                   ('5', 'Overtime Out'),
+                                   ('25', 'Checking In'), ('255', 'Checking')], string='Punching Type', help="Select the punch type")
     punching_time = fields.Datetime(string='Punching Time', help="Punching Time")
 
     def init(self):
