@@ -33,8 +33,10 @@
       # 'demo/demo_data.xml',
                             ],
   'demo': [],
-  "assets"               : {
-
+  "assets": {
+        'web.assets_backend': [
+            'project_custom/static/src/css/project_backend.css',
+        ],
     },
     "images": [],
     "application": False,
