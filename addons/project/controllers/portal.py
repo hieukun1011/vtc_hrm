@@ -28,6 +28,7 @@ class ProjectCustomerPortal(CustomerPortal):
                 if request.env['project.task'].check_access_rights('read', raise_exception=False) else 0
         return values
 
+
     # ------------------------------------------------------------
     # My Project
     # ------------------------------------------------------------
