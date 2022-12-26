@@ -11,7 +11,7 @@
                 'diligo_maintenance',
                 'garazd_product_label',
                 'base',
-                # 'website',
+                'website',
                 'base_unit_vn',
                 'fims_login_background_and_styles',
                 'to_attendance_device',
