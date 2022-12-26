@@ -17,6 +17,7 @@
                 'to_attendance_device',
                 'om_hr_payroll_account',
                 'hr_insurance',
+
                 ],
     'data': [
         'views/menu_item.xml'
